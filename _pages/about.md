@@ -8,11 +8,11 @@ profile:
   align: right
   image: prof_pic.jpg
   image_circular: false
-  address: |
-      <p>Dept. of Mechanical and Energy Engineering</p>
-      <p>Southern University of Science and Technology</p>
-      <p>Shenzhen, China</p>
-      <p><i class="fas fa-envelope"></i> <a href="mailto:12312836@mail.sustech.edu.cn">12312836@mail.sustech.edu.cn</a></p>
+  address: >
+    <p>Dept. of Mechanical and Energy Engineering</p>
+    <p>Southern University of Science and Technology</p>
+    <p>Shenzhen, China</p>
+    <p><i class="fas fa-envelope"></i> <a href="mailto:12312836@mail.sustech.edu.cn">12312836@mail.sustech.edu.cn</a></p>
 
 selected_papers: true
 social: true
@@ -28,3 +28,8 @@ Currently, I am focusing on:
 - **Dexterous Grasping**: RL training in high-fidelity Isaac Sim environments.
 
 🌟 **I am actively seeking 2026 Summer Research opportunities in Robotics!**
+
+<!-- 下面这两行是找回“新闻”和“论文”的关键 -->
+{% include news.html %}
+
+{% include selected_papers.html %}
