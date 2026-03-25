@@ -37,3 +37,21 @@
 @use "font-awesome/brands";
 @use "font-awesome/solid";
 @use "font-awesome/regular";
+
+
+// 让照片下方的地址文字更精致
+.profile .address {
+  text-align: left; // 左对齐比居中更像学术简历
+  padding: 1rem 0;
+  font-weight: 300;
+  p {
+    margin-bottom: 0.2rem;
+  }
+  a {
+    color: var(--global-theme-color);
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
