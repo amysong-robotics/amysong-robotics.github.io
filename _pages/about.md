@@ -25,13 +25,14 @@ latest_posts:
   enabled: false # 如果你现在不打算写博客，建议先改成 false 隐藏掉
 ---
 
-I am an undergraduate student majoring in **Robotics Engineering** at **Southern University of Science and Technology (SUSTech)**, expected to graduate in 2027. 
+I am an undergraduate researcher in **Robotics Engineering** at Southern University of Science and Technology (SUSTech). 
 
-My research interests lie at the intersection of **Robot Learning**, **Bio-mechanics**, and **Autonomous Navigation**. I am particularly passionate about bridging the gap between simulation and reality (**Sim-to-Real**) and developing intelligent control systems for complex robotic platforms.
+My research interests lie at the intersection of **Robot Learning, Bio-mechanics, and Autonomous Navigation**. I focus on bridging the gap between simulation and reality (**Sim-to-Real**) to develop intelligent control systems.
 
-Currently, I am working as an Undergraduate Researcher focusing on:
-- **Locomotion Control**: Developing center-of-mass assistance systems for bipedal/quadruped robots.
-- **Mobile Manipulation**: Integrating SLAM, Nav2, and visual servoing for autonomous service robots.
-- **Dexterous Grasping**: Building high-fidelity simulation environments in Isaac Sim for Reinforcement Learning training.
+Currently, I am focusing on:
+- **Locomotion**: CoM assistance for bipedal/quadruped robots.
+- **Manipulation**: SLAM, Nav2, and visual servoing for service robots.
+- **Grasping**: RL training in high-fidelity Isaac Sim environments.
 
-I am actively seeking **2026 Summer Research opportunities** in Robotics labs worldwide. Feel free to explore my [Projects](/projects/) or check my [CV](/assets/pdf/cv.pdf).
+🌟 **I am actively seeking 2026 Summer Research opportunities!** 
+[Projects]({{ '/projects/' | relative_url }}) / [CV]({{ '/assets/pdf/cv.pdf' | relative_url }}) / [Email](mailto:你的邮箱地址)
