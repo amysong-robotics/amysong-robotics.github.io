@@ -7,14 +7,10 @@ subtitle: <a href="https://www.sustech.edu.cn/">SUSTech</a> · Robotics Engineer
 profile:
   align: right
   image: prof_pic.jpg
-  address: >
-    Dept. of Mechanical and Energy Engineering <br />
-    Southern University of Science and Technology <br />
-    Shenzhen, China <br />
-    12312836@mail.sustech.edu.cn
+  image_circular: false
+  address: "Dept. of Mechanical and Energy Engineering<br />Southern University of Science and Technology<br />Shenzhen, China<br /><a href='mailto:12312836@mail.sustech.edu.cn'>12312836@mail.sustech.edu.cn</a>"
 
-news: true
-selected_papers: true
+selected_papers: false # 先关掉，等有论文了再开
 social: true
 ---
 
