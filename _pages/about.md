@@ -8,10 +8,14 @@ profile:
   align: right
   image: prof_pic.jpg
   image_circular: false
-  address: "Dept. of Mechanical and Energy Engineering<br />Southern University of Science and Technology<br />Shenzhen, China<br /><a href='mailto:12312836@mail.sustech.edu.cn'>12312836@mail.sustech.edu.cn</a>"
+  address: |
+    Dept. of Mechanical and Energy Engineering
+    Southern University of Science and Technology
+    Shenzhen, China
+    12312836@mail.sustech.edu.cn
 
-selected_papers: false # 先关掉，等有论文了再开
-social: true
+selected_papers: false # 彻底关掉论文标题
+social: false          # 彻底关掉那一排巨大的图标
 ---
 
 I am an undergraduate researcher in **Robotics Engineering** at Southern University of Science and Technology (SUSTech). 
