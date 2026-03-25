@@ -14,6 +14,7 @@ profile:
     <p>Shenzhen, China</p>
     <p><i class="fas fa-envelope"></i> <a href="mailto:12312836@mail.sustech.edu.cn">12312836@mail.sustech.edu.cn</a></p>
 
+news: true
 selected_papers: true
 social: true
 ---
@@ -29,7 +30,6 @@ Currently, I am focusing on:
 
 🌟 **I am actively seeking 2026 Summer Research opportunities in Robotics!**
 
-<!-- 下面这两行是找回“新闻”和“论文”的关键 -->
 {% include news.html %}
 
 {% include selected_papers.html %}
