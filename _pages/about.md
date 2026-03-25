@@ -9,10 +9,23 @@ profile:
   image: prof_pic.jpg
   image_circular: false
   address: >
-    <p>Dept. of Mechanical and Energy Engineering</p>
-    <p>Southern University of Science and Technology</p>
-    <p>Shenzhen, China</p>
-    <p><a href="mailto:your_email@mail.sustech.edu.cn"><i class="fas fa-envelope"></i> Email Me</a></p>
+    <div style="font-size: 0.85rem; line-height: 1.4; color: #555;">
+      <p style="margin:0;">Dept. of Mechanical and Energy Engineering</p>
+      <p style="margin:0;">Southern University of Science and Technology</p>
+      <p style="margin:0;">Shenzhen, China</p>
+      <p style="margin-top:5px;"><i class="fas fa-envelope"></i> <a href="mailto:12312836@mail.sustech.edu.cn">Email Me</a></p>
+    </div>
+
+selected_papers: true
+social: true
+
+announcements:
+  enabled: true
+  scrollable: true
+  limit: 5
+
+latest_posts:
+  enabled: false
 ---
 
 I am an undergraduate researcher in **Robotics Engineering** at Southern University of Science and Technology (SUSTech). 
@@ -22,6 +35,6 @@ My research interests lie at the intersection of **Robot Learning, Bio-mechanics
 Currently, I am focusing on:
 - **Locomotion**: CoM assistance for bipedal/quadruped robots.
 - **Mobile Manipulation**: SLAM, Nav2, and visual servoing for service robots.
-- **Grasping**: RL training in high-fidelity Isaac Sim environments.
+- **Dexterous Grasping**: RL training in high-fidelity Isaac Sim environments.
 
-🌟 **I am actively seeking 2026 Summer Research opportunities!**
+🌟 **I am actively seeking 2026 Summer Research opportunities in Robotics!**
