@@ -5,8 +5,6 @@
       value: Yuzhen Song
     - name: Email
       value: 12312836@mail.sustech.edu.cn
-    - name: Phone
-      value: +86 18186518423
     - name: University
       value: Southern University of Science and Technology (SUSTech)
 
@@ -18,24 +16,21 @@
       year: 2023 - Present
       description:
         - "Overall GPA: 3.85/4.0 | Weighted Avg: 92.63/100"
-        - "Leadership: President of Student Organizations Council, President of Robotics Club"
 
 - title: Research Experience
   type: time_table
   contents:
     - title: Undergraduate Researcher (UAV Navigation)
-      institution: Advisor: Prof. Boyu Zhou
+      institution: "Advisor: Prof. Boyu Zhou"
       year: 2025.10 - 2025.12
       description:
         - Deployed Fast-Planner framework on ROS for real-time UAV navigation.
-        - Engineered a custom circular benchmark track in RViz.
 
     - title: Undergraduate Researcher (Human Gait Assistance)
-      institution: Advisor: Prof. Chenglong Fu
+      institution: "Advisor: Prof. Chenglong Fu"
       year: 2025.12 - Present
       description:
         - Designed an experimental testbed for slope CoM assistance.
-        - Developed an STM32-based embedded control architecture.
         - **Manuscript in preparation; target submission to IROS.**
 
 - title: Honors & Awards
@@ -43,17 +38,3 @@
   contents:
     - year: 2025
       title: National Second Prize, China Undergraduate Engineering Practice Competition
-    - year: 2025
-      title: First-Class Scholarship for Outstanding Students
-    - year: 2024
-      title: Outstanding Student Award
-
-- title: Skills
-  type: list
-  contents:
-    - name: Programming
-      value: C/C++, Python, MATLAB
-    - name: Robotics & Sim
-      value: ROS2, Gazebo, Webots, Isaac Sim, Rviz2
-    - name: Design
-      value: SolidWorks, AutoCAD, Abaqus
