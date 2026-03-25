@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Undergraduate Researcher **SUSTech**. 
+subtitle: <a href="https://www.sustech.edu.cn/">SUSTech</a> · Robotics Engineering · 2027
 
 profile:
   align: right
