@@ -55,3 +55,29 @@
     }
   }
 }
+
+/* 强制覆盖全站配色为嫩绿色 */
+:root {
+  --global-theme-color: #8fb162 !important;
+  --global-hover-color: #eec14d !important;
+  --global-bg-color: #fcfdf9 !important;
+}
+
+/* 强制修改顶部导航栏的紫线 */
+.navbar {
+  border-bottom: 1px solid #8fb162 !important;
+}
+
+/* 强制修改选中的菜单颜色 */
+.navbar-light .navbar-nav .nav-item.active>.nav-link {
+  color: #8fb162 !important;
+}
+
+/* 修正照片下方文字间距 */
+.profile .address p {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin-bottom: 4px;
+  color: #555;
+}
