@@ -5,6 +5,18 @@
 
 @use "sass:color";
 
+// 核心：嫩绿色调
+$global-theme-color: #8fb162;  // 嫩叶绿，作为主色
+$global-hover-color: #f2c12e;  // 柠檬黄，作为悬停色
+
+// 背景与文字微调
+$global-bg-color: #fdfdfa;     // 极浅的米白色，比纯白更嫩
+$global-text-color: #333333;   // 深灰色文字
+$global-header-color: #222222;
+
+// 顶部导航栏被选中的颜色
+$navbar-light-active-color: $global-theme-color;
+
 // Colors
 $red-color: #ff3636 !default;
 $red-color-dark: #b71c1c !default;
