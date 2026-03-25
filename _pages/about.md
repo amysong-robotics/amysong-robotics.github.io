@@ -22,9 +22,9 @@ I am an undergraduate researcher in **Robotics Engineering** at Southern Univers
 
 My research interests lie at the intersection of **Robot Learning, Bio-mechanics, and Autonomous Navigation**. I focus on bridging the gap between simulation and reality (**Sim-to-Real**) to develop intelligent control systems.
 
-Currently, I am focusing on:
+### 🛠 Current Research
 - **Locomotion**: CoM assistance for bipedal/quadruped robots.
 - **Mobile Manipulation**: SLAM, Nav2, and visual servoing for service robots.
 - **Dexterous Grasping**: RL training in high-fidelity Isaac Sim environments.
 
-🌟 **I am actively seeking 2026 Summer Research opportunities in Robotics!**
+> 🌟 **I am actively seeking 2026 Summer Research opportunities in Robotics!**
