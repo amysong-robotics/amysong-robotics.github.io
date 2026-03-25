@@ -28,7 +28,3 @@ Currently, I am focusing on:
 - **Dexterous Grasping**: RL training in high-fidelity Isaac Sim environments.
 
 🌟 **I am actively seeking 2026 Summer Research opportunities in Robotics!**
-
-{% include news.html %}
-
-{% include selected_papers.html %}
