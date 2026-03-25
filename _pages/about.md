@@ -7,12 +7,14 @@ subtitle: <a href="https://www.sustech.edu.cn/">SUSTech</a> · Robotics Engineer
 profile:
   align: right
   image: prof_pic.jpg
-  image_circular: false # 如果你想让头像变圆，可以改成 true
-  more_info: >
-    <p>Dept. of Mechanical and Energy Engineering</p>
-    <p>Southern University of Science and Technology</p>
-    <p>Shenzhen, China</p>
-
+  image_circular: false # 如果想让照片变圆，这里改 true
+  address: >
+    <p style="font-family: 'Inter'; font-size: 0.95rem; line-height: 1.5; color: #555;">
+    Dept. of Mechanical and Energy Engineering<br>
+    Southern University of Science and Technology<br>
+    Shenzhen, China<br>
+    <i class="fas fa-envelope"></i> <a href="mailto:your_email@mail.sustech.edu.cn">your_email@mail.sustech.edu.cn</a>
+    </p>
 selected_papers: true # 以后有论文了，会自动显示在这里
 social: true # 显示你在 _config.yml 里填的邮箱、Github 等图标
 
