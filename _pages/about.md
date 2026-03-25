@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Undergraduate Researcher @ **SUSTech**. 
+subtitle: Undergraduate Researcher @  **SUSTech**. 
 
 profile:
   align: right
