@@ -1,22 +1,16 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
+# Main Sass file
 ---
 @charset "utf-8";
-
-/* Built-in Sass modules you’ll likely use across partials */
 @use "sass:math";
 @use "sass:string";
 
-/* Configure your design tokens BEFORE loading any of your partials. */
 @use "variables" with (
-  $max-content-width: {{ site.max_width | default:  "930px" }}
+  $max-content-width: {{ site.max_width | default: "930px" }}
 );
 
-/* Your project partials */
 @use "themes";
 @use "layout";
-
-// Core styles organized by usage
 @use "typography";
 @use "navbar";
 @use "footer";
@@ -24,67 +18,77 @@
 @use "publications";
 @use "components";
 @use "utilities";
-
-// Other specialized styles
-@use "distill";
-@use "cv";
-@use "tabs";
-@use "teachings";
-@use "typograms";
 @use "font-awesome/fontawesome";
 @use "font-awesome/brands";
 @use "font-awesome/solid";
 @use "font-awesome/regular";
 
 // ==========================================
-// CUSTOM OVERRIDES & CLEANUP
+// 🚀 网页美化：高级科技感排版
 // ==========================================
 
-// 1. 全局配色修改
 :root {
   --global-theme-color: #8fb162 !important; // 嫩绿色
-  --global-hover-color: #eec14d !important; // 悬停柠檬黄
-  --global-bg-color: #ffffff !important;    // 纯白背景
+  --global-hover-color: #eec14d !important; // 柠檬黄
+  --global-bg-color: #fcfdf9 !important;    // 底色
 }
 
-// 2. 移除不需要的板块与图标
-.social,
-.contact-note,
-#selected-publications {
+body {
+  // 1. 增加极简波点背景（类似工程绘图纸）
+  background-color: #fcfdf9;
+  background-image: radial-gradient(#d1d8c1 0.6px, transparent 0.6px);
+  background-size: 24px 24px;
+  
+  font-family: 'Inter', sans-serif !important;
+  color: #333;
+}
+
+// 2. 标题美化
+h1, h2, h3, .navbar-brand {
+  font-family: 'Outfit', sans-serif !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.02em;
+}
+
+// 3. 导航栏美化
+.navbar {
+  background-color: rgba(252, 253, 249, 0.8) !important;
+  backdrop-filter: blur(10px); // 磨砂玻璃效果
+  border-bottom: 1px solid rgba(143, 177, 98, 0.2) !important;
+}
+
+// 4. 个人照片美化
+.profile img {
+  border-radius: 20px !important; // 圆角照片
+  box-shadow: 0 15px 35px rgba(143, 177, 98, 0.15) !important; // 浅绿色柔和阴影
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px); // 鼠标指上去轻轻浮起
+  }
+}
+
+// 5. 个人简介地址文字
+.profile .address {
+  display: block !important;
+  margin-top: 25px !important;
+  padding: 15px !important;
+  background: rgba(255, 255, 255, 0.5); // 半透明小卡片感
+  border-left: 3px solid #8fb162;
+  border-radius: 0 10px 10px 0;
+  font-size: 0.85rem !important;
+  line-height: 1.6 !important;
+  
+  p { margin-bottom: 4px !important; color: #555 !important; }
+  a { color: #8fb162 !important; font-weight: 500; }
+}
+
+// 6. 隐藏不需要的元素
+.social, .contact-note, #selected-publications {
   display: none !important;
 }
 
-// 3. 顶部导航栏线条与激活颜色修正
-.navbar {
-  border-bottom: 1px solid #8fb162 !important;
-}
-
-.navbar-light .navbar-nav .nav-item.active > .nav-link {
-  color: #8fb162 !important;
-}
-
-// 4. 照片下方地址文字排版优化
-.profile .address {
-  display: block !important;
-  visibility: visible !important;
-  text-align: left !important;
-  margin-top: 20px !important;
-  font-family: 'Inter', sans-serif !important;
-  font-size: 0.88rem !important;
-  line-height: 1.6 !important;
-  color: #444444 !important;
-  font-weight: 400 !important;
-
-  p {
-    margin-bottom: 3px !important;
-  }
-
-  a {
-    color: #8fb162 !important;
-    text-decoration: none !important;
-  
-    &:hover {
-      text-decoration: underline !important;
-    }
-  }
+// 7. 内容区块间距优化
+.post {
+  padding-top: 2rem;
 }
