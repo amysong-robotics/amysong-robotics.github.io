@@ -2,25 +2,29 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: Yuzhen Song # the website title (if blank, full name will be used instead)
+title: Yuzhen Song
 first_name: Yuzhen
 middle_name: ""
 last_name: Song
 contact_note: >
   Feel free to reach out for collaborations or research opportunities!
-description: "Undergraduate Researcher in Robotics at SUSTech. Passionate about Sim-to-Real, Mobile Manipulation, and Autonomous Systems. Actively seeking Summer Research and Fall 2027 PhD opportunities."
+description: "Undergraduate Researcher in Robotics at SUSTech."
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-keywords: robotics, ros2, sim-to-real, control, computer vision
+keywords: robotics, ros2, sim-to-real, control
 lang: en
 icon: 🐱
 email: 12312836@mail.sustech.edu.cn
 
 url: "https://amysong-robotics.github.io"
 baseurl: ""
-last_updated: false # set to true if you want to display last updated in the footer
-impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
-back_to_top: true # set to false to disable the back to top button
+last_updated: false
+back_to_top: true
+
+social_icons:
+  email: "mailto:12312836@mail.sustech.edu.cn"
+  github: amysong-robotics
+  # linkedin: 
 
 # -----------------------------------------------------------------------------
 # Theme
@@ -152,8 +156,6 @@ newsletter:
 # Social integration (这是我为你找回的缺失代码)
 # -----------------------------------------------------------------------------
 
-email: 12312836@mail.sustech.edu.cn
-github_username: amysong-robotics
 # scholar_userid: 
 # linkedin_username: 
 # twitter_username: 
