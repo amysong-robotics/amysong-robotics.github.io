@@ -72,54 +72,162 @@
 html[data-theme="dark"] {
   color-scheme: dark;
   
-  // === 星空蓝夜间模式核心配色 ===
-  --global-bg-color: #0b1021;                 // 极深的夜空蓝
-  --global-card-bg-color: #131b2f;            // 卡片略浅的蓝
-  --global-theme-color: #ffd700;              // 亮金色（星星色）
-  --global-hover-color: #ffea00;              // 悬停亮黄
-  --global-text-color: #e0e6ed;               // 护眼冷白字
-  --global-text-color-light: #8b9ab3;         // 较暗的次要文字
-  --global-code-bg-color: rgba(255, 215, 0, 0.05); 
+  /* === 星空蓝夜间模式核心配色 === */
+  --global-bg-color: #0b1021;
+  --global-code-bg-color: rgba(255, 215, 0, 0.05);
+  --global-text-color: #e0e6ed;
+  --global-text-color-light: #8b9ab3;
+  --global-theme-color: #ffd700;
+  --global-hover-color: #ffea00;
+  --global-hover-text-color: #0b1021;
   --global-footer-bg-color: #080c18;
   --global-footer-text-color: #8b9ab3;
   --global-footer-link-color: #ffd700;
-  --global-divider-color: rgba(255, 215, 0, 0.15); 
-  --global-hover-text-color: #0b1021;         
   --global-distill-app-color: #8b9ab3;
+  --global-divider-color: rgba(255, 215, 0, 0.15);
+  --global-card-bg-color: #131b2f;
+  --global-highlight-color: #ffd700;
   --global-back-to-top-bg-color: rgba(255, 215, 0, 0.5);
   --global-back-to-top-text-color: #0b1021;
   --global-newsletter-bg-color: #131b2f;
   --global-newsletter-text-color: #e0e6ed;
 
-  /* =========================================================
-     终极背景覆盖：炸掉白底，画上星空网格！
-     ========================================================= */
-  body {
-    background-color: var(--global-bg-color) !important;
-    /* 把原版的灰黑波点，换成散发微光的黄色星光波点 */
-    background-image: radial-gradient(rgba(255, 215, 0, 0.2) 1px, transparent 1px) !important;
-    background-size: 20px 20px !important;
-  }
+  --global-tip-block: #42b983;
+  --global-tip-block-bg: #215d42;
+  --global-tip-block-text: #beffe2;
+  --global-tip-block-title: #e2f5ec;
+  --global-warning-block: #e7c000;
+  --global-warning-block-bg: #6b5900;
+  --global-warning-block-text: #fff2af;
+  --global-warning-block-title: #fff8d8;
+  --global-danger-block: #c00;
+  --global-danger-block-bg: #600;
+  --global-danger-block-text: #ffb9b9;
+  --global-danger-block-title: #ffe0e0;
 
-  main, .page-content, .container {
-    /* 把中间被写死的白板变透明，让底层的星空透出来 */
-    background-color: transparent !important;
-    background-image: none !important;
-  }
-
-  .card, .navbar {
-    background-color: var(--global-card-bg-color) !important;
-    background-image: none !important;
-  }
-
-  p, h1, h2, h3, h4, h5, h6, .text-muted, span, li {
-    color: var(--global-text-color) !important;
-  }
-  
   .only-light {
     display: none;
   }
   .only-dark {
     display: block;
   }
+}
+
+/* =========================================================
+   强制消灭"幽灵白"的平铺样式（绝对不会报错的平级写法）
+   ========================================================= */
+
+html[data-theme="dark"] body {
+  background-color: var(--global-bg-color) !important;
+  /* 散发微光的黄色星光波点 */
+  background-image: radial-gradient(rgba(255, 215, 0, 0.2) 1px, transparent 1px) !important;
+  background-size: 20px 20px !important;
+  color: var(--global-text-color) !important;
+}
+
+html[data-theme="dark"] .container,
+html[data-theme="dark"] .page-content,
+html[data-theme="dark"] main {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+html[data-theme="dark"] .card {
+  background-color: var(--global-card-bg-color) !important;
+  background-image: none !important;
+  border: 1px solid rgba(255, 215, 0, 0.1) !important;
+}
+
+html[data-theme="dark"] .navbar {
+  background-color: var(--global-card-bg-color) !important;
+}
+
+/* 强制文字护眼色 */
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] h5,
+html[data-theme="dark"] p,
+html[data-theme="dark"] span,
+html[data-theme="dark"] li {
+  color: var(--global-text-color) !important;
+}
+
+/* --------------------------------------------------------- */
+
+html[data-theme-setting="dark"] {
+  #light-toggle-system {
+    display: none;
+  }
+  #light-toggle-dark {
+    display: inline-block;
+  }
+  #light-toggle-light {
+    display: none;
+  }
+  #back-to-top {
+    color: var(--global-back-to-top-text-color);
+    background: var(--global-back-to-top-bg-color);
+  }
+}
+
+html[data-theme-setting="light"] {
+  #light-toggle-system {
+    display: none;
+  }
+  #light-toggle-dark {
+    display: none;
+  }
+  #light-toggle-light {
+    display: inline-block;
+  }
+}
+
+.fa-half-sun-moon {
+  position: relative;
+  display: inline-block;
+
+  --fa-font: var(--fa-font-solid);
+  speak: none;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  width: 1em;
+  height: 1em;
+}
+
+.fa-half-sun-moon::before,
+.fa-half-sun-moon::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  top: -0.5px;
+  bottom: -0.5px;
+  text-align: center;
+  line-height: 1em;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  font: var(--fa-font);
+}
+
+.fa-half-sun-moon::before {
+  content: "\f111";
+  color: var(--global-text-color);
+  clip-path: polygon(0 0, calc(50% - 0.5px) 0, calc(50% - 0.5px) 100%, 0 100%);
+}
+
+.fa-half-sun-moon::after {
+  content: "\f185";
+  color: var(--global-text-color);
+  clip-path: polygon(calc(50% + 0.5px) 0, 100% 0, 100% 100%, calc(50% + 0.5px) 100%);
+  right: -1.5px; 
+  transform: translateX(-1px); 
+}
+
+#light-toggle:hover .fa-half-sun-moon::before,
+#light-toggle:hover .fa-half-sun-moon::after {
+  color: var(--global-theme-color);
 }
