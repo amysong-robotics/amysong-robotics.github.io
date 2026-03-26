@@ -1,7 +1,3 @@
-# ==========================================
-#  Yuzhen Song's Professional CV (RenderCV)
-# ==========================================
-
 - title: Contact Information
   type: map
   contents:
@@ -15,10 +11,7 @@
       value: "+86 18186518423"
     - name: Location
       value: "Shenzhen, Guangdong"
-    - name: GitHub
-      value: amysong-robotics
-      url: "https://github.com/amysong-robotics"
-    - name: Portfolio Website
+    - name: Website
       value: amysong-robotics.github.io
       url: "https://amysong-robotics.github.io"
 
@@ -41,31 +34,35 @@
       description:
         - "Designed an experimental testbed for dynamic traction (200 N peak) with <5% force error."
         - "Developed STM32 control for motor torque regulation; achieved 20-30% reduction in metabolic cost."
-        - "Manuscript in preparation for IROS."
     - title: Autonomous UAV Mission Navigation (Fast-Planner)
       institution: Advisor - Prof. Boyu Zhou
       year: 2025
       description:
-        - "Deployed Fast-Planner on ROS for real-time trajectory generation in randomized obstacle environments."
+        - "Deployed Fast-Planner on ROS for real-time trajectory generation in randomized point-cloud environments."
         - "Engineered custom circular benchmark tracks in RViz to validate obstacle avoidance."
     - title: ROS2-Based Mobile Manipulator (Multimodal HRI)
       institution: Advisor - Prof. Wende Ke
       year: 2025
       description:
         - "Architected a ROS2 mobile manipulator with SLAM and Nav2; integrated EKF for sensor fusion."
-        - "Developed HRI interface using MediaPipe (gestures) and Vosk (voice) for offline control."
+        - "Developed HRI interface using MediaPipe for gestures and Vosk for offline voice commands."
     - title: Sim-to-Real Infrastructure for Dexterous Hand
       institution: Advisor - Prof. Zhao Tang
       year: 2025
       description:
-        - "Established robust RL grasping pipelines in NVIDIA Isaac Sim and Webots."
+        - "Established robust simulation environments in NVIDIA Isaac Sim and Webots for RL training."
         - "Optimized URDF models and kinematic constraints for high-fidelity physics simulation."
     - title: Autonomous Intelligent Rescue Vehicle
       institution: Advisor - Prof. Dong Lu
       year: 2024 - 2025
       description:
         - "Won National Second Prize. Programmed STM32 FSM for chassis kinematics and servo grasping."
-        - "Trained/deployed YOLOv11 model for real-time multi-class recognition."
+        - "Trained YOLOv11 model for real-time multi-class recognition."
+    - title: CV-Guided 6-DOF Robotic Sketching System
+      institution: Advisor - Prof. Chenglong Fu
+      year: 2024
+      description:
+        - "Developed OpenCV pipeline for sub-pixel contour extraction and solved 6-DOF IK via D-H parameters."
 
 - title: Technical Skills
   type: list
@@ -79,10 +76,11 @@
   contents:
     - year: 2025
       items: 
-        - National Second Prize, China Undergraduate Eng. Practice and Innovation Ability Competition
-        - Provincial First Prize, Guangdong Undergraduate Eng. Practice and Innovation Ability Competition
-        - First-Class Scholarship for Outstanding Students
+        - "National Second Prize, China Undergraduate Engineering Practice and Innovation Ability Competition"
+        - "Provincial First Prize, Guangdong Undergraduate Engineering Practice and Innovation Ability Competition"
+        - "First-Class Scholarship for Outstanding Students, SUSTech"
+        - "Provincial Second Prize, Guangdong Undergraduate Mechanical Innovational Competition"
     - year: 2024
       items:
-        - Outstanding Student Award
-        - Second-Class Scholarship for Outstanding Students
+        - "Outstanding Student Award, Southern University of Science and Technology"
+        - "Second-Class Scholarship for Outstanding Students, SUSTech"
