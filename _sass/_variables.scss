@@ -1,23 +1,17 @@
 /*******************************************************************************
- * Variables used throughout the theme.
- * To adjust anything, simply edit the variables below and rebuild the theme.
+ * Variables - 嫩绿与星空版 (完整代码，严禁删减)
  ******************************************************************************/
 
 @use "sass:color";
 
-// 核心：嫩绿色调
-$global-theme-color: #8fb162;  // 嫩叶绿，作为主色
-$global-hover-color: #f2c12e;  // 柠檬黄，作为悬停色
+// 1. 核心自定义色值 (嫩绿 & 柠檬黄)
+$global-theme-color: #8fb162 !default; // 嫩叶绿
+$global-hover-color: #f2c12e !default; // 柠檬黄
+$global-bg-color: #fdfdfa !default;    // 极浅米白
+$global-text-color: #333333 !default;
+$global-header-color: #222222 !default;
 
-// 背景与文字微调
-$global-bg-color: #fdfdfa;     // 极浅的米白色，比纯白更嫩
-$global-text-color: #333333;   // 深灰色文字
-$global-header-color: #222222;
-
-// 顶部导航栏被选中的颜色
-$navbar-light-active-color: $global-theme-color;
-
-// Colors
+// 2. 基础调色板 (必须完整保留，否则编译必报错)
 $red-color: #ff3636 !default;
 $red-color-dark: #b71c1c !default;
 $orange-color: #f29105 !default;
@@ -44,15 +38,17 @@ $grey-900: #212529;
 $white-color: #ffffff !default;
 $black-color: #000000 !default;
 
-// Theme colors
-
-$code-bg-color-light: rgba($purple-color, 0.05);
+// 3. 导航栏与代码块
+$navbar-light-active-color: $global-theme-color;
+$code-bg-color-light: rgba($global-theme-color, 0.05);
 $code-bg-color-dark: #2c3237 !default;
 
-// Font awesome location
+// 4. 系统必须的路径与布局配置
 $fa-font-path: "../webfonts";
+$max-content-width: 930px !default;
+$font-family-sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
 
-// Back To Top button config
+// 5. 回到顶部按钮配置
 $back-to-top-z-index: 10;
 $back-to-top-bottom: 30px;
 $back-to-top-right: 30px;
@@ -60,28 +56,7 @@ $back-to-top-diameter: 40px;
 $back-to-top-height: $back-to-top-diameter;
 $back-to-top-width: $back-to-top-diameter;
 
-// Max width default
-$max-content-width: 930px !default;
-
-$font-family-sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
-
-html[data-theme='dark'] {
-  // 深蓝夜空背景与卡片
-  --global-bg-color: #0b1021;          // 极深的夜空蓝
-  --global-card-bg-color: #131b2f;     // 卡片稍浅，增加层次感
-  --global-footer-bg-color: #080c18;   // 页脚更深
-  
-  // 明黄星空点缀（主题色与悬停色）
-  --global-theme-color: #ffd700;       // 亮金色（星星的颜色）
-  --global-hover-color: #ffea00;       // 悬停时更耀眼的黄色
-  --navbar-light-active-color: #ffd700;// 导航栏高亮
-  
-  // 文字颜色适配
-  --global-text-color: #e0e6ed;        // 偏冷色的柔和亮白，护眼
-  --global-header-color: #ffffff;      // 纯白标题
-  --global-text-color-light: #8b9ab3;  // 较暗的次要文字
-  
-  // 细节微调
-  --global-divider-color: rgba(255, 255, 255, 0.1); 
-  --global-code-bg-color: rgba(255, 215, 0, 0.05); // 代码块带一丝丝黄光
-}
+// 6. 深色模式占位符 (防止部分插件找不到变量)
+$starry-night: #0b1021;
+$starry-card: #131b2f;
+$star-gold: #ffd700;
