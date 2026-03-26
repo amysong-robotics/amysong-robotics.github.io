@@ -1,22 +1,22 @@
 /*******************************************************************************
- * Variables - 嫩绿与星空 (修正版)
+ * Variables - 嫩绿与星空 (最终修复版)
  ******************************************************************************/
 
 @use "sass:color";
 
-// --- 1. 自定义核心颜色 (确保与 themes 文件完全一致) ---
-$soft-white: #fdfdfa;        // 白天背景
-$green-leaf: #8fb162;        // 嫩叶绿
-$lemon-yellow: #f2c12e;      // 柠檬黄
-$text-dark: #333333;         // 报错点：白天文字深灰色
+// --- [核心变量：必须与 themes 文件完全对应] ---
+$soft-white: #fdfdfa;           // 白天背景
+$green-leaf: #8fb162;           // 嫩叶绿 (白天主色)
+$lemon-yellow: #f2c12e;         // 柠檬黄 (白天悬停)
+$global-text-color: #333333;    // 报错修复点：白天文字颜色
 
-$starry-night: #0b1021;      // 深蓝背景
-$starry-card: #131b2f;       // 深蓝卡片
-$star-gold: #ffd700;         // 金色高亮
-$star-hover: #ffea00;        // 闪耀黄
-$text-light: #e0e6ed;        // 深色模式文字亮色
+$starry-night: #0b1021;         // 深蓝背景
+$starry-card: #131b2f;          // 星空卡片
+$star-gold: #ffd700;            // 星星星金 (深夜主色)
+$star-hover: #ffea00;           // 闪耀黄 (深夜悬停)
+$text-light: #e0e6ed;           // 深色模式文字
 
-// --- 2. 基础调色板 (必须全部保留，严禁删除，否则主题报错) ---
+// --- [基础色板：必须完整保留，否则系统其他部分会报错] ---
 $red-color: #ff3636 !default;
 $red-color-dark: #b71c1c !default;
 $orange-color: #f29105 !default;
@@ -43,7 +43,7 @@ $grey-900: #212529;
 $white-color: #ffffff !default;
 $black-color: #000000 !default;
 
-// --- 3. 布局与系统配置 ---
+// --- [系统必需配置] ---
 $fa-font-path: "../webfonts";
 $max-content-width: 930px !default;
 $font-family-sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
