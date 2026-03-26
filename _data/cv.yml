@@ -98,24 +98,24 @@ cv:
       - name: "Programming Languages"
         label: "Programming Languages"
         title: "Programming Languages"
-        subitems:["C / C++", "Python", "MATLAB"]
-        keywords: ["C / C++", "Python", "MATLAB"]
-        items: ["C / C++", "Python", "MATLAB"]
+        subitems: ["C / C++", "Python", "MATLAB"]
+        keywords:["C / C++", "Python", "MATLAB"]
+        items:["C / C++", "Python", "MATLAB"]
       - name: "Mechanical Design & Manufacturing"
         label: "Mechanical Design & Manufacturing"
         title: "Mechanical Design & Manufacturing"
-        subitems: ["AutoCAD", "SolidWorks", "Edgecam", "Abaqus"]
-        keywords: ["AutoCAD", "SolidWorks", "Edgecam", "Abaqus"]
+        subitems:["AutoCAD", "SolidWorks", "Edgecam", "Abaqus"]
+        keywords:["AutoCAD", "SolidWorks", "Edgecam", "Abaqus"]
         items:["AutoCAD", "SolidWorks", "Edgecam", "Abaqus"]
       - name: "IDEs"
         label: "IDEs"
         title: "IDEs"
         subitems:["Visual Studio", "VScode", "Keil5", "Arduino"]
-        keywords:["Visual Studio", "VScode", "Keil5", "Arduino"]
-        items:["Visual Studio", "VScode", "Keil5", "Arduino"]
+        keywords: ["Visual Studio", "VScode", "Keil5", "Arduino"]
+        items: ["Visual Studio", "VScode", "Keil5", "Arduino"]
       - name: "Robot Simulation & Visualization"
         label: "Robot Simulation & Visualization"
         title: "Robot Simulation & Visualization"
-        subitems:["Gazebo", "Webots", "Isaac Sim", "Rviz2"]
-        keywords:["Gazebo", "Webots", "Isaac Sim", "Rviz2"]
-        items:["Gazebo", "Webots", "Isaac Sim", "Rviz2"]
+        subitems: ["Gazebo", "Webots", "Isaac Sim", "Rviz2"]
+        keywords: ["Gazebo", "Webots", "Isaac Sim", "Rviz2"]
+        items: ["Gazebo", "Webots", "Isaac Sim", "Rviz2"]
