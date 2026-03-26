@@ -1,17 +1,19 @@
 /*******************************************************************************
- * Themes Logic - 颜色映射 (修正版)
+ * Themes Logic - 颜色映射 (最终修复版)
  ******************************************************************************/
 @use "variables" as v;
 @use "sass:color";
 
 :root {
   color-scheme: light;
+  // --- 白天模式映射 ---
   --global-bg-color: #{v.$soft-white};
-  --global-code-bg-color: #{v.$code-bg-color-light};
-  --global-text-color: #{v.$text-dark};
-  --global-text-color-light: #{v.$grey-color};
+  --global-text-color: #{v.$global-text-color};
   --global-theme-color: #{v.$green-leaf};
   --global-hover-color: #{v.$lemon-yellow};
+  
+  --global-code-bg-color: #{v.$code-bg-color-light};
+  --global-text-color-light: #{v.$grey-color};
   --global-hover-text-color: #{v.$white-color};
   --global-footer-bg-color: #{v.$grey-color-dark};
   --global-footer-text-color: #{v.$grey-color-light};
@@ -41,13 +43,15 @@
 
 html[data-theme="dark"] {
   color-scheme: dark;
+  // --- 深色模式映射 ---
   --global-bg-color: #{v.$starry-night};
   --global-card-bg-color: #{v.$starry-card};
-  --global-code-bg-color: rgba(255, 215, 0, 0.05);
   --global-text-color: #{v.$text-light};
-  --global-text-color-light: #8b9ab3;
   --global-theme-color: #{v.$star-gold};
   --global-hover-color: #{v.$star-hover};
+  
+  --global-code-bg-color: rgba(255, 215, 0, 0.05);
+  --global-text-color-light: #8b9ab3;
   --global-hover-text-color: #{v.$starry-night};
   --global-footer-bg-color: #080c18;
   --global-footer-text-color: #8b9ab3;
@@ -60,6 +64,7 @@ html[data-theme="dark"] {
   .only-dark { display: block; }
 }
 
+// 切换按钮逻辑
 html[data-theme-setting="dark"] {
   #light-toggle-system { display: none; }
   #light-toggle-dark { display: inline-block; }
