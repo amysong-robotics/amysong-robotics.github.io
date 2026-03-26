@@ -1,22 +1,19 @@
 /*******************************************************************************
- * Variables - 嫩绿与星空 (最终修复版)
+ * Variables - 嫩绿与星空 (最终彻底修复版)
  ******************************************************************************/
 
 @use "sass:color";
 
-// --- [核心变量：必须与 themes 文件完全对应] ---
-$soft-white: #fdfdfa;           // 白天背景
-$green-leaf: #8fb162;           // 嫩叶绿 (白天主色)
-$lemon-yellow: #f2c12e;         // 柠檬黄 (白天悬停)
-$global-text-color: #333333;    // 报错修复点：白天文字颜色
+// --- [白天模式核心变量] ---
+$global-bg-color: #fdfdfa !default;    // 极浅米白背景
+$global-theme-color: #8fb162 !default; // 嫩叶绿
+$global-hover-color: #f2c12e !default; // 柠檬黄
+$global-text-color: #333333 !default;  // 报错点修复：定义变量
+$global-header-color: #222222 !default;
+$global-footer-bg-color: #1c1c1d !default;
+$global-footer-text-color: #828282 !default;
 
-$starry-night: #0b1021;         // 深蓝背景
-$starry-card: #131b2f;          // 星空卡片
-$star-gold: #ffd700;            // 星星星金 (深夜主色)
-$star-hover: #ffea00;           // 闪耀黄 (深夜悬停)
-$text-light: #e0e6ed;           // 深色模式文字
-
-// --- [基础色板：必须完整保留，否则系统其他部分会报错] ---
+// --- [调色板全家桶：严禁删除，防止系统其他组件崩溃] ---
 $red-color: #ff3636 !default;
 $red-color-dark: #b71c1c !default;
 $orange-color: #f29105 !default;
@@ -55,5 +52,5 @@ $back-to-top-diameter: 40px;
 $back-to-top-height: $back-to-top-diameter;
 $back-to-top-width: $back-to-top-diameter;
 
-$code-bg-color-light: rgba($green-leaf, 0.05);
+$code-bg-color-light: rgba(143, 177, 98, 0.05);
 $code-bg-color-dark: #2c3237 !default;
