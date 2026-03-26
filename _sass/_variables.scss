@@ -1,17 +1,27 @@
 /*******************************************************************************
- * Variables - 嫩绿与星空版 (完整代码，严禁删减)
+ * Variables - 嫩绿 & 星空完整版
  ******************************************************************************/
 
 @use "sass:color";
 
-// 1. 核心自定义色值 (嫩绿 & 柠檬黄)
-$global-theme-color: #8fb162 !default; // 嫩叶绿
-$global-hover-color: #f2c12e !default; // 柠檬黄
-$global-bg-color: #fdfdfa !default;    // 极浅米白
+// 1. 自定义核心颜色（必须叫这些名字，对应 themes 文件）
+$soft-white: #fdfdfa;        // 白天背景
+$green-leaf: #8fb162;        // 白天主色（嫩绿）
+$lemon-yellow: #f2c12e;      // 白天悬停（柠檬黄）
+
+$starry-night: #0b1021;      // 深蓝背景
+$starry-card: #131b2f;       // 深蓝卡片
+$star-gold: #ffd700;         // 金色主色
+$star-hover: #ffea00;        // 闪耀黄
+
+// 2. 默认主题必需变量（防止系统报错）
+$global-theme-color: $green-leaf !default;
+$global-hover-color: $lemon-yellow !default;
+$global-bg-color: $soft-white !default;
 $global-text-color: #333333 !default;
 $global-header-color: #222222 !default;
 
-// 2. 基础调色板 (必须完整保留，否则编译必报错)
+// 3. 调色板全家桶（必须要全部保留，否则主题其他组件会报错）
 $red-color: #ff3636 !default;
 $red-color-dark: #b71c1c !default;
 $orange-color: #f29105 !default;
@@ -38,17 +48,11 @@ $grey-900: #212529;
 $white-color: #ffffff !default;
 $black-color: #000000 !default;
 
-// 3. 导航栏与代码块
-$navbar-light-active-color: $global-theme-color;
-$code-bg-color-light: rgba($global-theme-color, 0.05);
-$code-bg-color-dark: #2c3237 !default;
-
-// 4. 系统必须的路径与布局配置
+// 4. 其他系统参数
 $fa-font-path: "../webfonts";
 $max-content-width: 930px !default;
 $font-family-sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
 
-// 5. 回到顶部按钮配置
 $back-to-top-z-index: 10;
 $back-to-top-bottom: 30px;
 $back-to-top-right: 30px;
@@ -56,7 +60,5 @@ $back-to-top-diameter: 40px;
 $back-to-top-height: $back-to-top-diameter;
 $back-to-top-width: $back-to-top-diameter;
 
-// 6. 深色模式占位符 (防止部分插件找不到变量)
-$starry-night: #0b1021;
-$starry-card: #131b2f;
-$star-gold: #ffd700;
+$code-bg-color-light: rgba($green-leaf, 0.05);
+$code-bg-color-dark: #2c3237 !default;
