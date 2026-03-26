@@ -87,11 +87,15 @@ cv:
         date: "2024"
 
     Skills:
-      - label: "Programming Languages"
-        details: "C / C++, Python, MATLAB"
-      - label: "Mechanical Design & Manufacturing"
-        details: "AutoCAD, SolidWorks, Edgecam, Abaqus"
-      - label: "IDEs"
-        details: "Visual Studio, VScode, Keil5, Arduino"
-      - label: "Robot Simulation & Visualization"
-        details: "Gazebo, Webots, Isaac Sim, Rviz2"
+      - name: "Programming Languages"
+        keywords:
+          - "C / C++, Python, MATLAB"
+      - name: "Mechanical Design & Manufacturing"
+        keywords:
+          - "AutoCAD, SolidWorks, Edgecam, Abaqus"
+      - name: "IDEs"
+        keywords:
+          - "Visual Studio, VScode, Keil5, Arduino"
+      - name: "Robot Simulation & Visualization"
+        keywords:
+          - "Gazebo, Webots, Isaac Sim, Rviz2"
