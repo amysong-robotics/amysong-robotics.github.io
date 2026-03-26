@@ -46,23 +46,18 @@
   #light-toggle-system {
     display: inline-block;
   }
-
   #light-toggle-dark {
     display: none;
   }
-
   #light-toggle-light {
     display: none;
   }
-
   .only-light {
     display: block;
   }
-
   .only-dark {
     display: none;
   }
-
   #back-to-top {
     color: var(--global-back-to-top-text-color);
     background: var(--global-back-to-top-bg-color);
@@ -79,9 +74,9 @@ html[data-theme="dark"] {
   
   // === 星空蓝夜间模式核心配色 ===
   --global-bg-color: #0b1021;                 // 极深的夜空蓝
-  --global-card-bg-color: #131b2f;            // 卡片略浅的蓝，增加立体感
-  --global-theme-color: #ffd700;              // 亮金色（星星的主色调）
-  --global-hover-color: #ffea00;              // 悬停时更亮的黄色
+  --global-card-bg-color: #131b2f;            // 卡片略浅的蓝
+  --global-theme-color: #ffd700;              // 亮金色（星星色）
+  --global-hover-color: #ffea00;              // 悬停亮黄
   --global-text-color: #e0e6ed;               // 护眼冷白字
   --global-text-color-light: #8b9ab3;         // 较暗的次要文字
   --global-code-bg-color: rgba(255, 215, 0, 0.05); 
@@ -89,49 +84,38 @@ html[data-theme="dark"] {
   --global-footer-text-color: #8b9ab3;
   --global-footer-link-color: #ffd700;
   --global-divider-color: rgba(255, 215, 0, 0.15); 
-  
-  --global-hover-text-color: #0b1021;         // 亮黄色背景上的字变成深色
+  --global-hover-text-color: #0b1021;         
   --global-distill-app-color: #8b9ab3;
   --global-back-to-top-bg-color: rgba(255, 215, 0, 0.5);
   --global-back-to-top-text-color: #0b1021;
   --global-newsletter-bg-color: #131b2f;
   --global-newsletter-text-color: #e0e6ed;
 
-  --global-tip-block: #42b983;
-  --global-tip-block-bg: #215d42;
-  --global-tip-block-text: #beffe2;
-  --global-tip-block-title: #e2f5ec;
-  --global-warning-block: #e7c000;
-  --global-warning-block-bg: #6b5900;
-  --global-warning-block-text: #fff2af;
-  --global-warning-block-title: #fff8d8;
-  --global-danger-block: #c00;
-  --global-danger-block-bg: #600;
-  --global-danger-block-text: #ffb9b9;
-  --global-danger-block-title: #ffe0e0;
-
+  /* =========================================================
+     强制覆盖修复补丁（解决背景变白、文字看不清的问题）
+     ========================================================= */
+  body, main, .page-content, .container {
+    background-color: var(--global-bg-color) !important;
+  }
+  .card, .navbar {
+    background-color: var(--global-card-bg-color) !important;
+  }
+  p, h1, h2, h3, h4, h5, h6, .text-muted, span, li {
+    color: var(--global-text-color) !important;
+  }
+  
   .only-light {
     display: none;
   }
-
   .only-dark {
     display: block;
   }
 }
 
 html[data-theme-setting="dark"] {
-  #light-toggle-system {
-    display: none;
-  }
-
-  #light-toggle-dark {
-    display: inline-block;
-  }
-
-  #light-toggle-light {
-    display: none;
-  }
-
+  #light-toggle-system { display: none; }
+  #light-toggle-dark { display: inline-block; }
+  #light-toggle-light { display: none; }
   #back-to-top {
     color: var(--global-back-to-top-text-color);
     background: var(--global-back-to-top-bg-color);
@@ -139,23 +123,14 @@ html[data-theme-setting="dark"] {
 }
 
 html[data-theme-setting="light"] {
-  #light-toggle-system {
-    display: none;
-  }
-
-  #light-toggle-dark {
-    display: none;
-  }
-
-  #light-toggle-light {
-    display: inline-block;
-  }
+  #light-toggle-system { display: none; }
+  #light-toggle-dark { display: none; }
+  #light-toggle-light { display: inline-block; }
 }
 
 .fa-half-sun-moon {
   position: relative;
   display: inline-block;
-
   --fa-font: var(--fa-font-solid);
   speak: none;
   font-style: normal;
@@ -163,7 +138,6 @@ html[data-theme-setting="light"] {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
   width: 1em;
   height: 1em;
 }
@@ -181,26 +155,21 @@ html[data-theme-setting="light"] {
   font: var(--fa-font);
 }
 
-/* Left half: MOON */
 .fa-half-sun-moon::before {
   content: "\f111";
   color: var(--global-text-color);
   clip-path: polygon(0 0, calc(50% - 0.5px) 0, calc(50% - 0.5px) 100%, 0 100%);
 }
 
-/* Right half: SUN */
 .fa-half-sun-moon::after {
   content: "\f185";
   color: var(--global-text-color);
   clip-path: polygon(calc(50% + 0.5px) 0, 100% 0, 100% 100%, calc(50% + 0.5px) 100%);
-  right: -1.5px; /* slight overflow to avoid right-edge clipping */
-  transform: translateX(-1px); /* visually re-center the sun half */
+  right: -1.5px; 
+  transform: translateX(-1px); 
 }
 
-#light-toggle:hover .fa-half-sun-moon::before {
-  color: var(--global-theme-color);
-}
-
+#light-toggle:hover .fa-half-sun-moon::before,
 #light-toggle:hover .fa-half-sun-moon::after {
   color: var(--global-theme-color);
 }
