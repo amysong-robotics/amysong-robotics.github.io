@@ -73,22 +73,22 @@
         - Programmed an STM32 Finite State Machine (FSM) for chassis kinematics and PWM-based servo grasping.
         - Trained and deployed a custom YOLOv11 object detection model for robust real-time multi-class recognition under variable lighting.
 
-    - title: Technical Skills
-      type: list
-      contents:
-        - "<b>Programming:</b> C++, Python, MATLAB, C"
-        - "<b>Frameworks & Libraries:</b> ROS/ROS2, Nav2, MoveIt 2, OpenCV, MediaPipe, Pytorch"
-        - "<b>Software & Simulation:</b> Gazebo, NVIDIA Isaac Sim, Webots, RViz2, SolidWorks, AutoCAD"
+- title: Technical Skills
+  type: list
+  contents:
+    - "<b>Programming:</b> C++, Python, MATLAB, C"
+    - "<b>Frameworks & Libraries:</b> ROS/ROS2, Nav2, MoveIt 2, OpenCV, MediaPipe, Pytorch"
+    - "<b>Software & Simulation:</b> Gazebo, NVIDIA Isaac Sim, Webots, RViz2, SolidWorks, AutoCAD"
     
-  - title: Honors & Awards
-    type: time_table
-    contents:
-      - year: 2025
-        items: 
-          - National Second Prize, China Undergraduate Engineering Practice and Innovation Ability Competition
-          - Provincial First Prize, Guangdong Undergraduate Engineering Practice and Innovation Ability Competition
-          - First-Class Scholarship for Outstanding Students
-      - year: 2024
-        items:
-          - Outstanding Student Award
-          - Second-Class Scholarship for Outstanding Students
+- title: Honors & Awards
+  type: time_table
+  contents:
+    - year: 2025
+      items: 
+        - National Second Prize, China Undergraduate Engineering Practice and Innovation Ability Competition
+        - Provincial First Prize, Guangdong Undergraduate Engineering Practice and Innovation Ability Competition
+        - First-Class Scholarship for Outstanding Students
+    - year: 2024
+      items:
+        - Outstanding Student Award
+        - Second-Class Scholarship for Outstanding Students
