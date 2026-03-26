@@ -1,39 +1,95 @@
 cv:
-  name: "Yuzhen (Amy) Song"
+  name: "Yuzhen Song"
   email: "12312836@mail.sustech.edu.cn"
   phone: "tel:+86-18186518423"
-  location: "Shenzhen, Guangdong"
+  location: "Shenzhen, China"
   website: "https://amysong-robotics.github.io"
-  
+
   sections:
     education:
       - institution: "Southern University of Science and Technology"
+        location: "Shenzhen, China"
         area: "Robotics Engineering"
         degree: "B.Eng."
-        date: "2023 - Present"
+        date: "Aug 2023 - Present"
         highlights:
-          - "Overall GPA: 3.85 / 4.0 (Weighted Avg: 92.63/100)"
-          - "Core: ROS, Robot Modeling, Mechanical Design, Control Engineering"
-          
-    projects:
-      - name: "Slope Center-of-Mass (CoM) Assistance System"
-        date: "2025 - Present"
+          - "Overall GPA: 3.85/4.0 , Weighted Avg: 92.63/100"
+          - "Core Courses: Robot Operating System(100), Mechanics of Materials M(100), Robot Modeling and Control(97), Mechanical Design(97), CAD and Engineering Drawing(93), Intelligent Manufacturing System Technology(95), Signals and Systems(95), Theoretical Mechanics I-B(93), Cognitive Practice in Manufacturing Engineering(93), Fundamentals of Control Engineering(90)"
+          - "Leadership: President, Student Organizations Council (SOC); President, Robotics Club; Class President, Dept. of Mechanical & Energy Engineering"
+
+    projects_and_research:
+      - name: "Slope Center-of-Mass (CoM) Assistance System for Human Gait"
+        date: "12/2025 - Present"
         highlights:
-          - "Advisor: Prof. Chenglong Fu"
-          - "Achieved 20-30% reduction in metabolic cost."
-      - name: "Autonomous UAV Navigation (Fast-Planner)"
-        date: "2025"
+          - "**Role:** Undergraduate Researcher | **Advisor:** Prof. Chenglong Fu"
+          - "Designed an experimental testbed on an aluminum profile frame, integrating a motor-driven winch and a compound pulley system (fixed & movable) to deliver dynamic, regulated traction (up to 200 N peak) with <5% force control error to the human Center of Mass (CoM)."
+          - "Developed an STM32-based embedded control architecture for high-fidelity motor torque and speed regulation, synchronized with force sensor telemetry to ensure accurate assistance delivery during slope walking."
+          - "Performed biomechanical model validation by analyzing the correlation between slope gradients and gait parameters (e.g., step length, impulses, and CoM fluctuations) across multi-slope kinematic datasets."
+          - "Evaluated the relationship between metabolic energy reduction and assistance strategies, confirming the model's efficacy in predicting energy-efficient walking patterns and achieving an estimated 20–30% reduction in metabolic cost under various incline conditions."
+          - "Manuscript in preparation; target submission to IROS."
+
+      - name: "Autonomous UAV Mission Navigation via Fast-Planner Framework"
+        date: "10/2025 - 12/2025"
         highlights:
-          - "Advisor: Prof. Boyu Zhou"
-          - "Deployed Fast-Planner on ROS for real-time trajectory generation."
-      - name: "ROS2-Based Mobile Manipulator"
-        date: "2025"
+          - "**Role:** Undergraduate Researcher | **Advisor:** Prof. Boyu Zhou"
+          - "Deployed the Fast-Planner framework on ROS to generate real-time, kinodynamically feasible trajectories within randomized point-cloud and cuboid obstacle environments."
+          - "Engineered a custom circular benchmark track in RViz featuring ring-shaped point clouds; developed autonomous mission logic to execute sequential waypoint traversal and return-to-origin navigation."
+          - "Evaluated system performance through consistent autonomous traversal of constrained circular circuits, validating the efficacy of the planner's obstacle avoidance and trajectory smoothing in user-defined scenarios."
+
+      - name: "ROS2-Based Mobile Manipulator with Multimodal HRI"
+        date: "09/2025 - 12/2025"
         highlights:
-          - "Advisor: Prof. Wende Ke"
-          - "Architected a ROS2 mobile manipulator with SLAM and Nav2."
-          
-    awards:
-      - name: "National Second Prize, Engineering Practice Competition"
+          - "**Role:** Project Leader | **Advisor:** Prof. Wende Ke"
+          - "Architected a two-wheeled differential drive mobile base integrated with a 4-DOF manipulator in SolidWorks; optimized its URDF/xacro model with Gazebo plugins for LiDAR, RGB camera, and IMU."
+          - "Deployed ROS2 Nav2 and LiDAR-based SLAM for autonomous mapping and navigation; engineered an Image-Based Visual Servoing pipeline combining HSV color segmentation and dual-loop PID control, achieving ±5-pixel (≈±5 mm) horizontal alignment accuracy for robust dynamic grasping."
+          - "Integrated an Extended Kalman Filter (EKF) (robot_localization) to fuse IMU and wheel odometry data, effectively mitigating sensor drift and improving localization stability."
+          - "Implemented a multimodal Human-Robot Interaction (HRI) interface using MediaPipe for 21-keypoint gesture recognition and Vosk API for offline voice-command execution."
+          - "GitHub Repository: https://github.com/amysongswimkim/ros2-mobile-manipulator"
+
+      - name: "Sim-to-Real Infrastructure for Closed-Loop Dexterous Hand"
+        date: "07/2025 - 11/2025"
+        highlights:
+          - "**Role:** Undergraduate Researcher | **Advisor:** Prof. Zhao Tang"
+          - "Refined the URDF model of a multi-fingered robotic palm; optimized closed-loop kinematic constraints and collision geometries to ensure physical accuracy within high-fidelity physics engines."
+          - "Established robust simulation environments in Webots and NVIDIA Isaac Sim, constructing a foundational pipeline designed for future Reinforcement Learning (RL) grasping policy training."
+          - "Configured contact dynamics and joint parameters within simulation, laying the essential technical framework for future Sim-to-Real policy transfer and closed-loop feedback experiments."
+
+      - name: "Autonomous Intelligent Rescue Vehicle (National Competition)"
+        date: "11/2024 - 08/2025"
+        highlights:
+          - "**Role:** Project Leader | **Advisors:** Prof. Dong Lu, Yuanjian Huang"
+          - "Programmed STM32 (C/C++) to process visual telemetry via UART and orchestrated a Finite State Machine (FSM) for chassis kinematics and PWM-based servo grasping; developed active perception logic (dynamic camera pitching) to verify target capture and optimize manipulation precision."
+          - "Curated a domain-specific dataset utilizing X-AnyLabeling for automated annotation; trained and deployed a custom YOLOv11 object detection model, achieving robust real-time multi-class recognition (targets, safe zones) under variable lighting."
+          - "Achievement: Led the team to win the National Second Prize and Provincial First Prize (3rd out of 46 teams) in the China Undergraduate Engineering Practice and Innovation Ability Competition."
+
+      - name: "CV-Guided 6-DOF Robotic Sketching System"
+        date: "03/2024 - 06/2024"
+        highlights:
+          - "**Role:** Project Leader | **Advisor:** Prof. Chenglong Fu"
+          - "Engineered a custom compliant end-effector with a spring-buffered linear guide, enabling adaptive Z-axis pressure regulation to replicate authentic brushstrokes and leverage the manipulator's spatial dexterity."
+          - "Developed an OpenCV vision pipeline (skeletonization, connected-component analysis) and a greedy Euclidean search algorithm to extract sub-pixel contours and generate optimized continuous toolpaths."
+          - "Solved 6-DOF inverse kinematics (IK) via D-H parameters to orchestrate high-precision physical sketching on planar paper via MATLAB; expanded the framework to generate and validate 3D spatial trajectories for curved surfaces (e.g., cylinders) within Simulink."
+
+    honors_and_awards:
+      - name: "National Second Prize, China Undergraduate Engineering Practice and Innovation Ability Competition"
         date: "2025"
-      - name: "First-Class Scholarship for Outstanding Students, SUSTech"
+      - name: "Provincial First Prize, Guangdong Undergraduate Engineering Practice and Innovation Ability Competition"
         date: "2025"
+      - name: "First-Class Scholarship for Outstanding Students (2024-2025 Academic Year)"
+        date: "2025"
+      - name: "Provincial Second Prize, Guangdong Undergraduate Mechanical Innovational Competition"
+        date: "2025"
+      - name: "Outstanding Student Award"
+        date: "2024, 2025"
+      - name: "Second-Class Scholarship for Outstanding Students (2023-2024 Academic Year)"
+        date: "2024"
+
+    skills:
+      - name: "Programming Languages"
+        details: "C Language, C++, Python, MATLAB"
+      - name: "Mechanical Design and Manufacturing Software"
+        details: "AutoCAD, SolidWorks, Edgecam, Abaqus"
+      - name: "Integrated Development Environments (IDEs)"
+        details: "Visual Studio, VScode, Keil5, Arduino"
+      - name: "Robot Simulation and Visualization"
+        details: "Gazebo, Webots, Issac Sim, Rviz2"
