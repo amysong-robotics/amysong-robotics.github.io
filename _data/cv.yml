@@ -1,65 +1,51 @@
-[
-  {
-    "title": "Contact Information",
-    "type": "map",
-    "contents": [
-      { "name": "Name", "value": "Yuzhen (Amy) Song" },
-      { "name": "Email", "value": "12312836@mail.sustech.edu.cn" },
-      { "name": "Phone", "value": "+86 18186518423" },
-      { "name": "Location", "value": "Shenzhen, Guangdong" },
-      { "name": "Website", "value": "amysong-robotics.github.io", "url": "https://amysong-robotics.github.io" }
-    ]
-  },
-  {
-    "title": "Education",
-    "type": "time_table",
-    "contents": [
-      {
-        "title": "B.Eng. in Robotics Engineering",
-        "institution": "Southern University of Science and Technology",
-        "year": "2023 - Present",
-        "description": [
-          "Overall GPA: 3.85 / 4.0 (Weighted Avg: 92.63/100)",
-          "Core: ROS, Robot Modeling, Mechanical Design, Control Engineering"
-        ]
-      }
-    ]
-  },
-  {
-    "title": "Projects and Research",
-    "type": "time_table",
-    "contents": [
-      {
-        "title": "Slope Center-of-Mass (CoM) Assistance System",
-        "institution": "Advisor: Prof. Chenglong Fu",
-        "year": "2025 - Present",
-        "description": ["Achieved 20-30% reduction in metabolic cost."]
-      },
-      {
-        "title": "Autonomous UAV Navigation (Fast-Planner)",
-        "institution": "Advisor: Prof. Boyu Zhou",
-        "year": "2025",
-        "description": ["Deployed Fast-Planner on ROS for real-time trajectory generation."]
-      },
-      {
-        "title": "ROS2-Based Mobile Manipulator",
-        "institution": "Advisor: Prof. Wende Ke",
-        "year": "2025",
-        "description": ["Architected a ROS2 mobile manipulator with SLAM and Nav2."]
-      }
-    ]
-  },
-  {
-    "title": "Honors and Awards",
-    "type": "time_table",
-    "contents": [
-      {
-        "year": "2025",
-        "items": [
-          "National Second Prize, Engineering Practice Competition",
-          "First-Class Scholarship for Outstanding Students, SUSTech"
-        ]
-      }
-    ]
-  }
-]
+- title: Contact Information
+  type: map
+  contents:
+    - name: Name
+      value: Yuzhen (Amy) Song
+    - name: Email
+      value: 12312836@mail.sustech.edu.cn
+    - name: Phone
+      value: "+86 18186518423"
+    - name: Location
+      value: Shenzhen, Guangdong
+    - name: Website
+      value: amysong-robotics.github.io
+      url: https://amysong-robotics.github.io
+
+- title: Education
+  type: time_table
+  contents:
+    - title: B.Eng. in Robotics Engineering
+      institution: Southern University of Science and Technology
+      year: 2023 - Present
+      description:
+        - "Overall GPA: 3.85 / 4.0 (Weighted Avg: 92.63/100)"
+        - "Core: ROS, Robot Modeling, Mechanical Design, Control Engineering"
+
+- title: Projects and Research
+  type: time_table
+  contents:
+    - title: Slope Center-of-Mass (CoM) Assistance System
+      institution: Advisor: Prof. Chenglong Fu
+      year: 2025 - Present
+      description:
+        - Achieved 20-30% reduction in metabolic cost.
+    - title: Autonomous UAV Navigation (Fast-Planner)
+      institution: Advisor: Prof. Boyu Zhou
+      year: 2025
+      description:
+        - Deployed Fast-Planner on ROS for real-time trajectory generation.
+    - title: ROS2-Based Mobile Manipulator
+      institution: Advisor: Prof. Wende Ke
+      year: 2025
+      description:
+        - Architected a ROS2 mobile manipulator with SLAM and Nav2.
+
+- title: Honors and Awards
+  type: time_table
+  contents:
+    - year: 2025
+      items:
+        - National Second Prize, Engineering Practice Competition
+        - First-Class Scholarship for Outstanding Students, SUSTech
