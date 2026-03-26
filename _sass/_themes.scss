@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Themes Logic
+ * Themes Logic - 颜色映射 (修正版)
  ******************************************************************************/
 @use "variables" as v;
 @use "sass:color";
@@ -8,7 +8,7 @@
   color-scheme: light;
   --global-bg-color: #{v.$soft-white};
   --global-code-bg-color: #{v.$code-bg-color-light};
-  --global-text-color: #{v.$global-text-color};
+  --global-text-color: #{v.$text-dark};
   --global-text-color-light: #{v.$grey-color};
   --global-theme-color: #{v.$green-leaf};
   --global-hover-color: #{v.$lemon-yellow};
@@ -44,7 +44,7 @@ html[data-theme="dark"] {
   --global-bg-color: #{v.$starry-night};
   --global-card-bg-color: #{v.$starry-card};
   --global-code-bg-color: rgba(255, 215, 0, 0.05);
-  --global-text-color: #e0e6ed;
+  --global-text-color: #{v.$text-light};
   --global-text-color-light: #8b9ab3;
   --global-theme-color: #{v.$star-gold};
   --global-hover-color: #{v.$star-hover};
