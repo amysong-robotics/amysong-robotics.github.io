@@ -18,13 +18,15 @@ selected_papers: false # 彻底关掉论文标题
 social: false          # 彻底关掉那一排巨大的图标
 ---
 
+# 替换原本的自我介绍部分
 I am an undergraduate researcher in **Robotics Engineering** at Southern University of Science and Technology (SUSTech). 
 
-My research interests lie at the intersection of **Robot Learning, Bio-mechanics, and Autonomous Navigation**. I focus on bridging the gap between simulation and reality (**Sim-to-Real**) to develop intelligent control systems.
+My research is driven by the goal of enabling **autonomous systems** to perform **safe social interactions** and **dynamic locomotion** in complex, real-world environments. I focus on bridging the gap between simulation and reality (**Sim-to-Real**) to develop robust, intelligent control algorithms.
 
-### 🛠 Current Research
-- **Locomotion**: CoM assistance for bipedal/quadruped robots.
-- **Mobile Manipulation**: SLAM, Nav2, and visual servoing for service robots.
-- **Dexterous Grasping**: RL training in high-fidelity Isaac Sim environments.
-
-> 🌟 **I am actively seeking 2026 Summer Research opportunities in Robotics!**
+# 下面是显眼的暑研寻求框 (Call to Action)
+:::block-warning
+### 📢 Seeking 2026 Research Opportunities
+I am actively seeking **2026 Summer & Fall Research Internships** in Robotics! 
+**Availability:** June 2026 – December 2026 (6 months+).
+[[Download My CV]](assets/pdf/cv.pdf) [[Email Me]](mailto:12312836@mail.sustech.edu.cn)
+:::
