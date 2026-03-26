@@ -1,205 +1,115 @@
 /*******************************************************************************
- * Themes
+ * Themes Logic
  ******************************************************************************/
 @use "variables" as v;
 @use "sass:color";
 
 :root {
   color-scheme: light;
-  --global-bg-color: #{v.$white-color};
-  --global-code-bg-color: #{v.$code-bg-color-light};
-  --global-text-color: #{v.$black-color};
+  
+  /* === 白天模式：嫩绿主题 === */
+  --global-bg-color: #{v.$soft-white};
+  --global-code-bg-color: rgba(143, 177, 98, 0.05); // 带绿意的代码块
+  --global-text-color: #{v.$text-dark};
   --global-text-color-light: #{v.$grey-color};
-  --global-theme-color: #{v.$purple-color};
-  --global-hover-color: #{v.$purple-color};
+  --global-theme-color: #{v.$green-leaf};        // 嫩绿主色
+  --global-hover-color: #{v.$lemon-yellow};      // 悬停黄
   --global-hover-text-color: #{v.$white-color};
   --global-footer-bg-color: #{v.$grey-color-dark};
   --global-footer-text-color: #{v.$grey-color-light};
-  --global-footer-link-color: #{v.$white-color};
-  --global-distill-app-color: #{v.$grey-color};
-  --global-divider-color: rgba(0, 0, 0, 0.1);
+  --global-footer-link-color: #{v.$green-leaf};
+  --global-divider-color: rgba(0, 0, 0, 0.08);
   --global-card-bg-color: #{v.$white-color};
   --global-highlight-color: #{v.$red-color-dark};
-  --global-back-to-top-bg-color: rgba(
-    #{color.channel(v.$black-color, "red", v.$space: rgb)},
-    #{color.channel(v.$black-color, "green", v.$space: rgb)},
-    #{color.channel(v.$black-color, "blue", v.$space: rgb)},
-    0.4
-  );
+  
+  --global-back-to-top-bg-color: rgba(143, 177, 98, 0.5);
   --global-back-to-top-text-color: #{v.$white-color};
-  --global-newsletter-bg-color: #{v.$white-color};
-  --global-newsletter-text-color: #{v.$black-color};
 
+  // 提示框颜色同步嫩绿
   --global-tip-block: #42b983;
   --global-tip-block-bg: #e2f5ec;
-  --global-tip-block-text: #215d42;
-  --global-tip-block-title: #359469;
-  --global-warning-block: #e7c000;
-  --global-warning-block-bg: #fff8d8;
-  --global-warning-block-text: #6b5900;
-  --global-warning-block-title: #b29400;
-  --global-danger-block: #c00;
-  --global-danger-block-bg: #ffe0e0;
-  --global-danger-block-text: #600;
-  --global-danger-block-title: #c00;
 
-  #light-toggle-system {
-    display: inline-block;
-  }
-
-  #light-toggle-dark {
-    display: none;
-  }
-
-  #light-toggle-light {
-    display: none;
-  }
-
-  .only-light {
-    display: block;
-  }
-
-  .only-dark {
-    display: none;
-  }
+  /* 切换开关逻辑 */
+  #light-toggle-system { display: inline-block; }
+  #light-toggle-dark { display: none; }
+  #light-toggle-light { display: none; }
+  .only-light { display: block; }
+  .only-dark { display: none; }
 
   #back-to-top {
-    color: var(--global-back-to-top-text-color);
-    background: var(--global-back-to-top-bg-color);
+    position: fixed;
     bottom: v.$back-to-top-bottom;
     right: v.$back-to-top-right;
     height: v.$back-to-top-height;
     width: v.$back-to-top-width;
     z-index: v.$back-to-top-z-index;
-  }
-}
-
-html[data-theme="dark"] {
-  color-scheme: dark;
-  
-  /* === 完美替换的星空暗黑配色 === */
-  --global-bg-color: #0b1021;
-  --global-code-bg-color: rgba(255, 215, 0, 0.05);
-  --global-text-color: #e0e6ed;
-  --global-text-color-light: #8b9ab3;
-  --global-theme-color: #ffd700;
-  --global-hover-color: #ffea00;
-  --global-hover-text-color: #0b1021;
-  --global-footer-bg-color: #080c18;
-  --global-footer-text-color: #8b9ab3;
-  --global-footer-link-color: #ffd700;
-  --global-distill-app-color: #8b9ab3;
-  --global-divider-color: rgba(255, 215, 0, 0.15);
-  --global-card-bg-color: #131b2f;
-  --global-back-to-top-bg-color: rgba(255, 215, 0, 0.5);
-  --global-back-to-top-text-color: #0b1021;
-  --global-newsletter-bg-color: #131b2f;
-  --global-newsletter-text-color: #e0e6ed;
-
-  --global-tip-block: #42b983;
-  --global-tip-block-bg: #215d42;
-  --global-tip-block-text: #beffe2;
-  --global-tip-block-title: #e2f5ec;
-  --global-warning-block: #e7c000;
-  --global-warning-block-bg: #6b5900;
-  --global-warning-block-text: #fff2af;
-  --global-warning-block-title: #fff8d8;
-  --global-danger-block: #c00;
-  --global-danger-block-bg: #600;
-  --global-danger-block-text: #ffb9b9;
-  --global-danger-block-title: #ffe0e0;
-
-  .only-light {
-    display: none;
-  }
-
-  .only-dark {
-    display: block;
-  }
-}
-
-html[data-theme-setting="dark"] {
-  #light-toggle-system {
-    display: none;
-  }
-
-  #light-toggle-dark {
-    display: inline-block;
-  }
-
-  #light-toggle-light {
-    display: none;
-  }
-
-  #back-to-top {
     color: var(--global-back-to-top-text-color);
     background: var(--global-back-to-top-bg-color);
   }
 }
 
-html[data-theme-setting="light"] {
-  #light-toggle-system {
-    display: none;
-  }
+/* === 深夜模式：星空深蓝 === */
+html[data-theme="dark"] {
+  color-scheme: dark;
+  
+  --global-bg-color: #{v.$starry-night};         // 深蓝背景
+  --global-card-bg-color: #{v.$starry-card};     // 稍浅的蓝卡片
+  --global-code-bg-color: rgba(255, 215, 0, 0.05);
+  --global-text-color: #{v.$text-light};         // 亮色文字
+  --global-text-color-light: #8b9ab3;
+  --global-theme-color: #{v.$star-gold};         // 金色高亮
+  --global-hover-color: #{v.$star-hover};        // 亮黄悬停
+  --global-hover-text-color: #{v.$starry-night};
+  --global-footer-bg-color: #080c18;
+  --global-footer-text-color: #8b9ab3;
+  --global-footer-link-color: #{v.$star-gold};
+  --global-divider-color: rgba(255, 215, 0, 0.15);
+  
+  --global-back-to-top-bg-color: rgba(255, 215, 0, 0.4);
+  --global-back-to-top-text-color: #{v.$starry-night};
 
-  #light-toggle-dark {
-    display: none;
-  }
-
-  #light-toggle-light {
-    display: inline-block;
-  }
+  .only-light { display: none; }
+  .only-dark { display: block; }
 }
 
+/* 按钮切换状态显示 */
+html[data-theme-setting="dark"] {
+  #light-toggle-system { display: none; }
+  #light-toggle-dark { display: inline-block; }
+  #light-toggle-light { display: none; }
+}
+
+html[data-theme-setting="light"] {
+  #light-toggle-system { display: none; }
+  #light-toggle-dark { display: none; }
+  #light-toggle-light { display: inline-block; }
+}
+
+/* 切换图标样式 (半月半阳) */
 .fa-half-sun-moon {
   position: relative;
   display: inline-block;
-
-  --fa-font: var(--fa-font-solid);
-  speak: none;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
   width: 1em;
   height: 1em;
 }
-
 .fa-half-sun-moon::before,
 .fa-half-sun-moon::after {
   content: "";
   position: absolute;
   inset: 0;
-  top: -0.5px;
-  bottom: -0.5px;
-  text-align: center;
-  line-height: 1em;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  font: var(--fa-font);
+  font: var(--fa-font-solid);
 }
-
-/* Left half: MOON */
 .fa-half-sun-moon::before {
-  content: "\f111";
+  content: "\f111"; // Moon shape
   color: var(--global-text-color);
-  clip-path: polygon(0 0, calc(50% - 0.5px) 0, calc(50% - 0.5px) 100%, 0 100%);
+  clip-path: polygon(0 0, 48% 0, 48% 100%, 0 100%);
 }
-
-/* Right half: SUN */
 .fa-half-sun-moon::after {
-  content: "\f185";
+  content: "\f185"; // Sun shape
   color: var(--global-text-color);
-  clip-path: polygon(calc(50% + 0.5px) 0, 100% 0, 100% 100%, calc(50% + 0.5px) 100%);
-  right: -1.5px; 
-  transform: translateX(-1px); 
+  clip-path: polygon(52% 0, 100% 0, 100% 100%, 52% 100%);
 }
-
-#light-toggle:hover .fa-half-sun-moon::before {
-  color: var(--global-theme-color);
-}
-
+#light-toggle:hover .fa-half-sun-moon::before,
 #light-toggle:hover .fa-half-sun-moon::after {
   color: var(--global-theme-color);
 }
