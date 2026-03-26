@@ -6,7 +6,7 @@ cv:
   website: "https://amysong-robotics.github.io"
 
   sections:
-    education:
+    Education:
       - institution: "Southern University of Science and Technology"
         location: "Shenzhen, China"
         area: "Robotics Engineering"
@@ -17,7 +17,7 @@ cv:
           - "Core Courses: ROS, Robot Modeling and Control, Mechanical Design, Control Engineering"
           - "Leadership: President, Student Organizations Council (SOC); President, Robotics Club"
 
-    projects:
+    Projects:
       - name: "Slope Center-of-Mass (CoM) Assistance System"
         date: "12/2025 - Present"
         summary: "Undergraduate Researcher | Advisor: Prof. Chenglong Fu"
@@ -61,51 +61,26 @@ cv:
           - "Engineered an OpenCV vision pipeline for sub-pixel contour extraction and continuous toolpath generation."
           - "Solved 6-DOF inverse kinematics via D-H parameters for high-precision physical sketching."
 
-    awards:
+    Awards:
       - name: "National Second Prize, Engineering Practice & Innovation Ability Competition"
-        summary: "National Second Prize, Engineering Practice & Innovation Ability Competition"
         date: "2025"
       - name: "Provincial First Prize, Engineering Practice & Innovation Ability Competition"
-        summary: "Provincial First Prize, Engineering Practice & Innovation Ability Competition"
         date: "2025"
       - name: "First-Class Scholarship for Outstanding Students"
-        summary: "First-Class Scholarship for Outstanding Students"
         date: "2025"
       - name: "Provincial Second Prize, Mechanical Innovational Competition"
-        summary: "Provincial Second Prize, Mechanical Innovational Competition"
         date: "2025"
       - name: "Outstanding Student Award"
-        summary: "Outstanding Student Award"
         date: "2024, 2025"
       - name: "Second-Class Scholarship"
-        summary: "Second-Class Scholarship"
         date: "2024"
 
-    skills:
-      - name: "Programming Languages"
+    Skills:
+      - label: "Programming Languages"
         details: "C / C++, Python, MATLAB"
-        keywords: 
-          - "C / C++"
-          - "Python"
-          - "MATLAB"
-      - name: "Mechanical Design & Manufacturing"
+      - label: "Mechanical Design & Manufacturing"
         details: "AutoCAD, SolidWorks, Edgecam, Abaqus"
-        keywords: 
-          - "AutoCAD"
-          - "SolidWorks"
-          - "Edgecam"
-          - "Abaqus"
-      - name: "IDEs"
+      - label: "IDEs"
         details: "Visual Studio, VScode, Keil5, Arduino"
-        keywords: 
-          - "Visual Studio"
-          - "VScode"
-          - "Keil5"
-          - "Arduino"
-      - name: "Robot Simulation & Visualization"
+      - label: "Robot Simulation & Visualization"
         details: "Gazebo, Webots, Isaac Sim, Rviz2"
-        keywords: 
-          - "Gazebo"
-          - "Webots"
-          - "Isaac Sim"
-          - "Rviz2"
