@@ -92,14 +92,26 @@ html[data-theme="dark"] {
   --global-newsletter-text-color: #e0e6ed;
 
   /* =========================================================
-     强制覆盖修复补丁（解决背景变白、文字看不清的问题）
+     终极背景覆盖：炸掉白底，画上星空网格！
      ========================================================= */
-  body, main, .page-content, .container {
+  body {
     background-color: var(--global-bg-color) !important;
+    /* 把原版的灰黑波点，换成散发微光的黄色星光波点 */
+    background-image: radial-gradient(rgba(255, 215, 0, 0.2) 1px, transparent 1px) !important;
+    background-size: 20px 20px !important;
   }
+
+  main, .page-content, .container {
+    /* 把中间被写死的白板变透明，让底层的星空透出来 */
+    background-color: transparent !important;
+    background-image: none !important;
+  }
+
   .card, .navbar {
     background-color: var(--global-card-bg-color) !important;
+    background-image: none !important;
   }
+
   p, h1, h2, h3, h4, h5, h6, .text-muted, span, li {
     color: var(--global-text-color) !important;
   }
@@ -110,66 +122,4 @@ html[data-theme="dark"] {
   .only-dark {
     display: block;
   }
-}
-
-html[data-theme-setting="dark"] {
-  #light-toggle-system { display: none; }
-  #light-toggle-dark { display: inline-block; }
-  #light-toggle-light { display: none; }
-  #back-to-top {
-    color: var(--global-back-to-top-text-color);
-    background: var(--global-back-to-top-bg-color);
-  }
-}
-
-html[data-theme-setting="light"] {
-  #light-toggle-system { display: none; }
-  #light-toggle-dark { display: none; }
-  #light-toggle-light { display: inline-block; }
-}
-
-.fa-half-sun-moon {
-  position: relative;
-  display: inline-block;
-  --fa-font: var(--fa-font-solid);
-  speak: none;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  width: 1em;
-  height: 1em;
-}
-
-.fa-half-sun-moon::before,
-.fa-half-sun-moon::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  top: -0.5px;
-  bottom: -0.5px;
-  text-align: center;
-  line-height: 1em;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  font: var(--fa-font);
-}
-
-.fa-half-sun-moon::before {
-  content: "\f111";
-  color: var(--global-text-color);
-  clip-path: polygon(0 0, calc(50% - 0.5px) 0, calc(50% - 0.5px) 100%, 0 100%);
-}
-
-.fa-half-sun-moon::after {
-  content: "\f185";
-  color: var(--global-text-color);
-  clip-path: polygon(calc(50% + 0.5px) 0, 100% 0, 100% 100%, calc(50% + 0.5px) 100%);
-  right: -1.5px; 
-  transform: translateX(-1px); 
-}
-
-#light-toggle:hover .fa-half-sun-moon::before,
-#light-toggle:hover .fa-half-sun-moon::after {
-  color: var(--global-theme-color);
 }
