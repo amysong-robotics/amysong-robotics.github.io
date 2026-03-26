@@ -76,28 +76,26 @@
 
 html[data-theme="dark"] {
   color-scheme: dark;
-  --global-bg-color: #{v.$grey-color-dark};
-  --global-code-bg-color: #{v.$code-bg-color-dark};
-  --global-text-color: #{v.$grey-color-light};
-  --global-text-color-light: #{v.$grey-color};
-  --global-theme-color: #{v.$cyan-color};
-  --global-hover-color: #{v.$cyan-color};
-  --global-hover-text-color: #{v.$white-color};
-  --global-footer-bg-color: #{v.$grey-color-light};
-  --global-footer-text-color: #{v.$grey-color-dark};
-  --global-footer-link-color: #{v.$black-color};
-  --global-distill-app-color: #{v.$grey-color-light};
-  --global-divider-color: #424246;
-  --global-card-bg-color: #{v.$grey-900};
-  --global-back-to-top-bg-color: rgba(
-    #{color.channel(v.$white-color, "red", v.$space: rgb)},
-    #{color.channel(v.$white-color, "green", v.$space: rgb)},
-    #{color.channel(v.$white-color, "blue", v.$space: rgb)},
-    0.5
-  );
-  --global-back-to-top-text-color: #{v.$black-color};
-  --global-newsletter-bg-color: #{v.$grey-color-light};
-  --global-newsletter-text-color: #{v.$grey-color-dark};
+  
+  // === 星空蓝夜间模式核心配色 ===
+  --global-bg-color: #0b1021;                 // 极深的夜空蓝
+  --global-card-bg-color: #131b2f;            // 卡片略浅的蓝，增加立体感
+  --global-theme-color: #ffd700;              // 亮金色（星星的主色调）
+  --global-hover-color: #ffea00;              // 悬停时更亮的黄色
+  --global-text-color: #e0e6ed;               // 护眼冷白字
+  --global-text-color-light: #8b9ab3;         // 较暗的次要文字
+  --global-code-bg-color: rgba(255, 215, 0, 0.05); 
+  --global-footer-bg-color: #080c18;
+  --global-footer-text-color: #8b9ab3;
+  --global-footer-link-color: #ffd700;
+  --global-divider-color: rgba(255, 215, 0, 0.15); 
+  
+  --global-hover-text-color: #0b1021;         // 亮黄色背景上的字变成深色
+  --global-distill-app-color: #8b9ab3;
+  --global-back-to-top-bg-color: rgba(255, 215, 0, 0.5);
+  --global-back-to-top-text-color: #0b1021;
+  --global-newsletter-bg-color: #131b2f;
+  --global-newsletter-text-color: #e0e6ed;
 
   --global-tip-block: #42b983;
   --global-tip-block-bg: #215d42;
