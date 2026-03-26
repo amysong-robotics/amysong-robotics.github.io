@@ -1,277 +1,152 @@
-/*****************************
- * CV shared styles
- *****************************/
+/* =========================================================
+   高级学术版 CV 重塑计划 (High-End Academic CV Remaster)
+   ========================================================= */
 
-div.container-link-button {
-  margin-right: 0.5rem;
-}
+/* 1. 引入顶级现代字体：Inter (科技感、易读性最强的字体) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-table.table-cv {
-  background-color: transparent !important;
+$font-family-modern: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 
-  td,
-  th {
-    padding: 1px;
+/* 2. 全局基础排版重设 */
+.resume {
+  font-family: $font-family-modern !important;
+  line-height: 1.7 !important; /* 增加全局行高，给眼睛留白 */
+  color: #333;
+  max-width: 900px;
+  margin: 0 auto;
+
+  h1, h2, h3, h4, .navbar-brand {
+    font-family: $font-family-modern !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.5px;
+    color: #111;
+  }
+
+  /* 移除丑陋的默认边框，改用轻微的投影和留白 */
+  .card {
+    border: none !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03) !important; /* 极轻的呼吸感投影 */
+    margin-bottom: 40px !important; /* 增加大模块之间的垂直留白 */
+    padding: 30px !important; /* 增加模块内部留白 */
+    background: #fff;
+    border-radius: 12px !important;
+  }
+
+  /* 3. 修改标题 (Section Titles) */
+  h3 {
+    font-size: 1.6rem !important;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 25px !important;
+    display: flex;
+    align-items: center;
+    
+    &::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: #f0f0f0;
+      margin-left: 20px;
+    }
+  }
+
+  /* 4. 优化联系方式 (Contact Info) */
+  table {
+    border-collapse: separate;
+    border-spacing: 0 12px; /* 增加表格行的间距 */
+    width: 100%;
+    
+    td {
+      border: none !important;
+      font-size: 1.05rem;
+      vertical-align: middle !important;
+      
+      &:first-child {
+        font-weight: 600;
+        color: #666;
+        width: 180px;
+      }
+      
+      &:last-child {
+        color: #111;
+      }
+      
+      a {
+        color: var(--global-theme-color) !important;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: all 0.2s;
+        &:hover { border-bottom-color: var(--global-theme-color); }
+      }
+    }
+  }
+
+  /* 5. 优化科研/工作经历 (Experience/Work) */
+  .time_table, .work, .projects {
+    .badge {
+      background-color: #f0f4f8 !important; /* 浅灰色背景，不再是死板的绿色 */
+      color: #556677 !important;
+      font-weight: 600 !important;
+      padding: 8px 14px !important;
+      font-size: 0.85rem !important;
+      border-radius: 6px !important;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .title {
+      font-size: 1.25rem !important;
+      font-weight: 600 !important;
+      color: var(--global-theme-color) !important;
+      margin-bottom: 5px;
+    }
+
+    .institution, .name {
+      font-weight: 500;
+      color: #444;
+      font-style: italic;
+    }
+
+    ul {
+      margin-top: 15px;
+      padding-left: 1.2rem;
+      li {
+        margin-bottom: 10px; /* 列表项之间的间距 */
+        color: #555;
+      }
+    }
+  }
+
+  /* 6. 左侧导航栏 (Sidebar) 美化 */
+  .col-sm-3 {
+    padding-right: 40px !important; /* 增加导航与内容的留白 */
+    .nav {
+      .nav-item {
+        .nav-link {
+          font-family: $font-family-modern;
+          font-weight: 500;
+          color: #888;
+          padding: 8px 0;
+          transition: all 0.3s;
+          &:hover, &.active {
+            color: var(--global-theme-color) !important;
+            padding-left: 5px;
+          }
+        }
+      }
+    }
   }
 }
 
-a.btncv {
-  color: var(--global-text-color) !important;
-  border: 1px solid var(--global-text-color) !important;
-  border-radius: 0.125rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  text-decoration: none;
-  font-weight: 400;
-  font-size: 0.7rem;
-  text-align: center;
-  vertical-align: middle;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-a.btncv:hover {
-  color: var(--global-theme-color) !important;
-  border-color: var(--global-theme-color) !important;
-  text-decoration: none !important;
-}
-
-/*****************************
- * CV TIME_TABLE styles
- *****************************/
-
-p.location {
-  font-size: 0.7rem;
-  white-space: nowrap;
-}
-
-i.iconlocation {
-  color: var(--global-theme-color);
-  font-size: 0.8rem;
-}
-
-i.iconinstitution {
-  color: var(--global-theme-color);
-  font-size: 0.95rem;
-  margin-right: 0.3rem;
-}
-
-i.icondepartment {
-  color: var(--global-theme-color);
-  font-size: 0.8rem;
-  margin-right: 0.3rem;
-}
-
-table.institution {
-  margin-bottom: 1rem;
-}
-
-td.department {
-  font-size: 0.8rem;
-}
-
-div.container-links {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-start;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-/*****************************
- * CV MAP styles
- *****************************/
-
-div.container-pdf {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-/*****************************
- * CV LIST_GROUPS styles
- *****************************/
-
-div.list-groups {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  flex-direction: row;
-  align-content: center;
-}
-
-div.list-group {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 2rem;
-}
-
-td.list-group-category {
-  color: var(--global-theme-color);
-  margin-bottom: 0.5rem;
-}
-
-td.list-group-category-icon {
-  font-size: 0.8rem;
-  color: var(--global-theme-color);
-  width: 1.4rem;
-  padding-right: 0.4rem;
-}
-
-td.list-group-name {
-  font-size: 0.8rem;
-}
-
-td.list-group-level {
-  font-size: 0.8rem;
-  padding-left: 0.5rem;
-}
-
-td.list-group-school {
-  font-size: 0.7rem;
-  padding-left: 0.5rem;
-  text-align: center;
-}
-
-p.list-group-time {
-  font-size: 0.7rem;
-  padding-left: 0.5rem;
-}
-
-td.list-group-link {
-  padding-left: 0.5rem;
-}
-
-/*****************************
- * CV TOC styles
- *****************************/
-
-a.anchor {
-  display: block;
-  position: relative;
-  top: -50px;
-  visibility: hidden;
-}
-
-ul.timeline {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-ul.timeline li {
-  position: relative;
-  min-height: 2.2rem;
-  color: var(--global-text-color);
-  list-style-position: inside;
-}
-
-span.badge-toc {
-  color: var(--global-bg-color);
-  background-color: var(--global-theme-color);
-  border-radius: 0.125rem;
-  padding: 0.125rem 0.5rem 0.125rem 0.5rem;
-  font-weight: 700 !important;
-  display: inline-block;
-  inline-size: fit-content;
-}
-
-ul.timeline li::before {
-  content: "";
-  min-height: 2.5rem;
-  width: 1px;
-  background: var(--global-text-color);
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  left: 2px;
-  top: -0.5rem;
-}
-
-/*ul.timeline::before {
-     content: "●";
-     font-size: 1em;
-     display: inline-block;
-     margin: 0;
-     padding: 0;
-     position: relative;
-     left: -2px;
-     top: 0.4rem;
-     color: var(--global-text-color);
-}
- ul.timeline::after {
-     content: "●";
-     font-size: 1em;
-     display: inline-block;
-     margin: 0;
-     padding: 0;
-     position: relative;
-     left: -2px;
-     top: -1rem;
-     color: var(--global-text-color);
-}
-*/
-
-/* =========================================================
-   自定义高级排版与字体注入 (Custom Typography & Layout)
-   ========================================================= */
-
-/* 1. 引入顶级现代无衬线字体 Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
-/* 2. 导航栏和全局标题字体替换 */
-.navbar, .navbar-brand, .nav-link, h1, h2, h3, h4, h5 {
+/* 7. 全局导航栏字体美化 (Poppins 用于菜单) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+.navbar {
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+  background: rgba(255,255,255,0.95) !important;
+  backdrop-filter: blur(10px);
+  
+  .navbar-brand, .nav-link {
     font-family: 'Poppins', sans-serif !important;
-}
-
-/* 导航栏左侧你的名字：加粗、增加字间距，显得更大气 */
-.navbar-brand {
-    font-weight: 700 !important; 
-    letter-spacing: 0.5px;
-    font-size: 1.4rem !important;
-}
-
-/* 导航栏右侧菜单：适度加粗 */
-.nav-link {
-    font-weight: 500 !important;
-    font-size: 1.05rem !important;
-}
-
-/* 3. 彻底修复 CV 页面 (Awards/Experience) 的对齐与间距 */
-/* 强制年份徽章与右侧文字顶部对齐，告别错位 */
-table td {
-    vertical-align: top !important; 
-}
-
-/* 优化奖项和经历的上下间距，添加优雅的分割线 */
-.cv .card {
-    border: none !important;
-    box-shadow: none !important;
-    border-bottom: 1px dashed rgba(0,0,0,0.1) !important;
-    margin-bottom: 15px !important;
-    padding-bottom: 10px !important;
-}
-
-/* 美化左侧绿色的年份徽章 */
-.cv .badge {
-    font-size: 0.9rem;
-    padding: 6px 12px;
-    margin-top: 4px; 
-    border-radius: 6px; 
-}
-
-/* 4. 美化 Skills 区域 */
-.cv .list-group-item {
-    line-height: 2.0; /* 增加行距，彻底告别拥挤 */
-    font-size: 1.05rem;
-    border: none !important;
-    border-bottom: 1px dashed rgba(0,0,0,0.1) !important;
-    padding: 12px 0 !important;
+  }
 }
