@@ -1,37 +1,41 @@
 /*******************************************************************************
- * Variables - 嫩绿白天 & 星空深夜
+ * Variables - 嫩绿 & 星空
  ******************************************************************************/
 
 @use "sass:color";
 
-// --- 基础白天颜色 (嫩绿色调) ---
-$green-leaf: #8fb162;        // 嫩叶绿 (主色)
-$lemon-yellow: #f2c12e;      // 柠檬黄 (悬停色)
-$soft-white: #fdfdfa;        // 极浅米白 (背景)
-$text-dark: #333333;         // 深灰 (主文字)
-
-// --- 基础深夜颜色 (星空深蓝) ---
+// --- 基础色值定义 ---
+$green-leaf: #8fb162;        // 嫩叶绿
+$lemon-yellow: #f2c12e;      // 柠檬黄
+$soft-white: #fdfdfa;        // 极浅米白
 $starry-night: #0b1021;      // 深邃夜空蓝
-$starry-card: #131b2f;       // 星空卡片色
-$star-gold: #ffd700;         // 星星金 (主题高亮)
-$star-hover: #ffea00;        // 闪耀黄 (悬停)
-$text-light: #e0e6ed;        // 柔和亮白 (主文字)
+$star-gold: #ffd700;         // 星星星金色
 
-// 默认基础颜色定义 (保留 al-folio 必须的变量名)
+// --- 默认主题变量 (必须保留这些命名以防报错) ---
+$global-theme-color: $green-leaf !default;
+$global-hover-color: $lemon-yellow !default;
+$global-bg-color: $soft-white !default;
+$global-text-color: #333333 !default;
+$global-header-color: #222222 !default;
+
 $grey-color: #828282 !default;
-$grey-color-light: color.adjust($grey-color, $lightness: 40%);
-$grey-color-dark: #1c1c1d;
+$grey-color-light: color.adjust($grey-color, $lightness: 40%) !default;
+$grey-color-dark: #1c1c1d !default;
 $white-color: #ffffff !default;
 $black-color: #000000 !default;
-$red-color-dark: #b71c1c !default;
 
+// 布局相关
 $max-content-width: 930px !default;
 $font-family-sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
 
-// Back To Top 布局
+// Back To Top
 $back-to-top-z-index: 10;
 $back-to-top-bottom: 30px;
 $back-to-top-right: 30px;
 $back-to-top-diameter: 40px;
 $back-to-top-height: $back-to-top-diameter;
 $back-to-top-width: $back-to-top-diameter;
+
+// 代码块
+$code-bg-color-light: rgba($green-leaf, 0.05);
+$code-bg-color-dark: #2c3237 !default;
