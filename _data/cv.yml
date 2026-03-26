@@ -1,50 +1,94 @@
 - title: Contact Information
-  type: contents
+  type: map
   contents:
     - name: Name
-      value: Yuzhen Song
-    - name: University
-      value: Southern University of Science and Technology
+      value: Yuzhen (Amy) Song
+    - name: Professional Title
+      value: Undergraduate Researcher in Robotics
     - name: Email
       value: 12312836@mail.sustech.edu.cn
     - name: Location
       value: Shenzhen, China
+    - name: GitHub
+      value: amysong-robotics
+      url: "https://github.com/amysong-robotics"
+    - name: Portfolio Website
+      value: amysong-robotics.github.io
+      url: "https://amysong-robotics.github.io"
 
 - title: Education
   type: time_table
   contents:
     - title: B.Eng. in Robotics Engineering
-      institution: Southern University of Science and Technology
-      year: 2023 - Present
+      institution: Southern University of Science and Technology (SUSTech), Shenzhen, China
+      year: 2023 - 2027 (Expected)
       description:
-        - "Overall GPA: 3.85/4.0 , Weighted Avg: 92.63/100"
-        - "Core Courses: ROS, Mechanics of Materials, Robot Modeling and Control, etc."
-        - "Leadership: President of SOC, President of Robotics Club"
-
-- title: Research Experience
+        - 'Overall GPA: 3.85 / 4.0'
+        - 'Core Competencies: ROS/ROS2, SLAM, Autonomous Navigation, Motion Planning, Computer Vision'
+        
+- title: Research & Engineering Experience
   type: time_table
   contents:
-    - title: Undergraduate Researcher
-      institution: "Advisor: Prof. Chenglong Fu"
-      year: 2025.12 - Present
+    - title: Undergraduate Researcher (Autonomous UAV Navigation)
+      institution: Advisor - Prof. Boyu Zhou, SUSTech
+      year: 2025
       description:
-        - Designed experimental testbed for Slope CoM Assistance System.
-        - Developed STM32-based embedded control architecture.
-        - **Manuscript in preparation; target submission to IROS.**
-
-    - title: Undergraduate Researcher
-      institution: "Advisor: Prof. Boyu Zhou"
-      year: 2025.10 - 2025.12
+        - Deployed and evaluated the Fast-Planner framework in ROS for kinodynamic trajectory generation.
+        - Constructed dense point-cloud benchmark environments to stress-test planner success rates in constrained scenarios.
+    
+    - title: Project Lead (ROS2 Mobile Manipulator)
+      institution: Advisor - Prof. Wende Ke, SUSTech
+      year: 2025
       description:
-        - Deployed Fast-Planner framework on ROS for UAV navigation.
-        - Developed autonomous mission logic for sequential waypoint traversal.
+        - Architected a full-stack mobile manipulator in ROS 2, integrating SLAM Toolbox, Nav2, and MoveIt 2.
+        - Implemented an Extended Kalman Filter (EKF) to fuse IMU and wheel odometry for robust state estimation.
+        - Developed multi-modal HRI with MediaPipe for gesture control and Vosk for offline voice commands.
+    
+    - title: Undergraduate Researcher (Slope CoM Assistance Exoskeleton)
+      institution: Advisor - Prof. Chenglong Fu, SUSTech
+      year: 2025
+      description:
+        - Developed an STM32-based embedded control architecture for high-fidelity motor torque/speed regulation.
+        - Validated biomechanical models correlating slope gradients and gait parameters across multi-slope datasets.
+        - Achieved an estimated 20-30% reduction in metabolic cost via optimized dynamic traction assistance.
+    
+    - title: Undergraduate Researcher (Sim-to-Real Dexterous Hand)
+      institution: Advisor - Prof. Zhao Tang, SUSTech
+      year: 2025
+      description:
+        - Established robust simulation environments in NVIDIA Isaac Sim and Webots for Reinforcement Learning (RL) policy training.
+        - Refined URDF models and optimized closed-loop kinematic constraints to ensure high-fidelity physics simulation.
 
-- title: Honors & Awards
-  type: time_table
-  contents:
-    - year: 2025
-      title: National Second Prize, China Undergraduate Engineering Practice Competition
-    - year: 2025
-      title: First-Class Scholarship for Outstanding Students
-    - year: 2024
-      title: Outstanding Student Award
+    - title: Project Lead (CV-Guided 6-DOF Robotic Sketching)
+      institution: Advisor - Prof. Chenglong Fu, SUSTech
+      year: 2024
+      description:
+        - Developed an OpenCV vision pipeline and Euclidean search algorithm to extract sub-pixel contours for optimal continuous toolpaths.
+        - Solved 6-DOF inverse kinematics (IK) via D-H parameters for high-precision physical sketching on planar and curved surfaces.
+        
+    - title: Project Lead (Autonomous Intelligent Rescue Vehicle)
+      institution: Advisor - Prof. Dong Lu, SUSTech
+      year: 2024
+      description:
+        - Programmed an STM32 Finite State Machine (FSM) for chassis kinematics and PWM-based servo grasping.
+        - Trained and deployed a custom YOLOv11 object detection model for robust real-time multi-class recognition under variable lighting.
+
+    - title: Technical Skills
+      type: list
+      contents:
+        - "<b>Programming:</b> C++, Python, MATLAB, C"
+        - "<b>Frameworks & Libraries:</b> ROS/ROS2, Nav2, MoveIt 2, OpenCV, MediaPipe, Pytorch"
+        - "<b>Software & Simulation:</b> Gazebo, NVIDIA Isaac Sim, Webots, RViz2, SolidWorks, AutoCAD"
+    
+  - title: Honors & Awards
+    type: time_table
+    contents:
+      - year: 2025
+        items: 
+          - National Second Prize, China Undergraduate Engineering Practice and Innovation Ability Competition
+          - Provincial First Prize, Guangdong Undergraduate Engineering Practice and Innovation Ability Competition
+          - First-Class Scholarship for Outstanding Students
+      - year: 2024
+        items:
+          - Outstanding Student Award
+          - Second-Class Scholarship for Outstanding Students
