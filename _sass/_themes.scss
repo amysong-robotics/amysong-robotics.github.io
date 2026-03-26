@@ -6,30 +6,21 @@
 
 :root {
   color-scheme: light;
-  
-  /* === 白天模式：嫩绿主题 === */
   --global-bg-color: #{v.$soft-white};
-  --global-code-bg-color: rgba(143, 177, 98, 0.05); // 带绿意的代码块
-  --global-text-color: #{v.$text-dark};
+  --global-code-bg-color: #{v.$code-bg-color-light};
+  --global-text-color: #{v.$global-text-color};
   --global-text-color-light: #{v.$grey-color};
-  --global-theme-color: #{v.$green-leaf};        // 嫩绿主色
-  --global-hover-color: #{v.$lemon-yellow};      // 悬停黄
+  --global-theme-color: #{v.$green-leaf};
+  --global-hover-color: #{v.$lemon-yellow};
   --global-hover-text-color: #{v.$white-color};
   --global-footer-bg-color: #{v.$grey-color-dark};
   --global-footer-text-color: #{v.$grey-color-light};
   --global-footer-link-color: #{v.$green-leaf};
-  --global-divider-color: rgba(0, 0, 0, 0.08);
+  --global-divider-color: rgba(0, 0, 0, 0.1);
   --global-card-bg-color: #{v.$white-color};
-  --global-highlight-color: #{v.$red-color-dark};
-  
   --global-back-to-top-bg-color: rgba(143, 177, 98, 0.5);
   --global-back-to-top-text-color: #{v.$white-color};
 
-  // 提示框颜色同步嫩绿
-  --global-tip-block: #42b983;
-  --global-tip-block-bg: #e2f5ec;
-
-  /* 切换开关逻辑 */
   #light-toggle-system { display: inline-block; }
   #light-toggle-dark { display: none; }
   #light-toggle-light { display: none; }
@@ -48,68 +39,56 @@
   }
 }
 
-/* === 深夜模式：星空深蓝 === */
 html[data-theme="dark"] {
   color-scheme: dark;
-  
-  --global-bg-color: #{v.$starry-night};         // 深蓝背景
-  --global-card-bg-color: #{v.$starry-card};     // 稍浅的蓝卡片
+  --global-bg-color: #{v.$starry-night};
+  --global-card-bg-color: #{v.$starry-card};
   --global-code-bg-color: rgba(255, 215, 0, 0.05);
-  --global-text-color: #{v.$text-light};         // 亮色文字
+  --global-text-color: #e0e6ed;
   --global-text-color-light: #8b9ab3;
-  --global-theme-color: #{v.$star-gold};         // 金色高亮
-  --global-hover-color: #{v.$star-hover};        // 亮黄悬停
+  --global-theme-color: #{v.$star-gold};
+  --global-hover-color: #{v.$star-hover};
   --global-hover-text-color: #{v.$starry-night};
   --global-footer-bg-color: #080c18;
   --global-footer-text-color: #8b9ab3;
   --global-footer-link-color: #{v.$star-gold};
   --global-divider-color: rgba(255, 215, 0, 0.15);
-  
-  --global-back-to-top-bg-color: rgba(255, 215, 0, 0.4);
-  --global-back-to-top-text-color: #{v.$starry-night};
+  --global-back-to-top-bg-color: rgba(255, 215, 0, 0.5);
+  --global-back-to-top-text-color: #0b1021;
 
   .only-light { display: none; }
   .only-dark { display: block; }
 }
 
-/* 按钮切换状态显示 */
 html[data-theme-setting="dark"] {
   #light-toggle-system { display: none; }
   #light-toggle-dark { display: inline-block; }
-  #light-toggle-light { display: none; }
 }
-
 html[data-theme-setting="light"] {
   #light-toggle-system { display: none; }
-  #light-toggle-dark { display: none; }
   #light-toggle-light { display: inline-block; }
 }
 
-/* 切换图标样式 (半月半阳) */
 .fa-half-sun-moon {
   position: relative;
   display: inline-block;
-  width: 1em;
-  height: 1em;
+  width: 1em; height: 1em;
 }
-.fa-half-sun-moon::before,
-.fa-half-sun-moon::after {
+.fa-half-sun-moon::before, .fa-half-sun-moon::after {
   content: "";
-  position: absolute;
-  inset: 0;
+  position: absolute; inset: 0;
   font: var(--fa-font-solid);
 }
 .fa-half-sun-moon::before {
-  content: "\f111"; // Moon shape
+  content: "\f111"; 
   color: var(--global-text-color);
   clip-path: polygon(0 0, 48% 0, 48% 100%, 0 100%);
 }
 .fa-half-sun-moon::after {
-  content: "\f185"; // Sun shape
+  content: "\f185"; 
   color: var(--global-text-color);
   clip-path: polygon(52% 0, 100% 0, 100% 100%, 52% 100%);
 }
-#light-toggle:hover .fa-half-sun-moon::before,
-#light-toggle:hover .fa-half-sun-moon::after {
+#light-toggle:hover .fa-half-sun-moon::before, #light-toggle:hover .fa-half-sun-moon::after {
   color: var(--global-theme-color);
 }
