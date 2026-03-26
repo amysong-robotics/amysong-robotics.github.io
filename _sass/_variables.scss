@@ -1,25 +1,23 @@
 /*******************************************************************************
- * Variables - 嫩绿 & 星空完整版 (防止编译报错)
+ * Variables used throughout the theme.
+ * To adjust anything, simply edit the variables below and rebuild the theme.
  ******************************************************************************/
 
 @use "sass:color";
 
-// --- 核心自定义颜色 ---
-$green-leaf: #8fb162;        // 嫩叶绿 (白天主色)
-$lemon-yellow: #f2c12e;      // 柠檬黄 (白天悬停)
-$soft-white: #fdfdfa;        // 极浅米白 (白天背景)
+// 核心：嫩绿色调
+$global-theme-color: #8fb162;  // 嫩叶绿，作为主色
+$global-hover-color: #f2c12e;  // 柠檬黄，作为悬停色
 
-// --- 基础主题变量 ---
-$global-theme-color: $green-leaf !default;
-$global-hover-color: $lemon-yellow !default;
-$global-bg-color: $soft-white !default;
-$global-text-color: #333333 !default;
-$global-header-color: #222222 !default;
+// 背景与文字微调
+$global-bg-color: #fdfdfa;     // 极浅的米白色，比纯白更嫩
+$global-text-color: #333333;   // 深灰色文字
+$global-header-color: #222222;
 
-// --- 顶部导航栏 ---
+// 顶部导航栏被选中的颜色
 $navbar-light-active-color: $global-theme-color;
 
-// --- 调色板 (必须全部保留，否则其他样式文件会报错) ---
+// Colors
 $red-color: #ff3636 !default;
 $red-color-dark: #b71c1c !default;
 $orange-color: #f29105 !default;
@@ -46,21 +44,44 @@ $grey-900: #212529;
 $white-color: #ffffff !default;
 $black-color: #000000 !default;
 
-// --- 代码块 ---
-$code-bg-color-light: rgba($green-leaf, 0.05);
+// Theme colors
+
+$code-bg-color-light: rgba($purple-color, 0.05);
 $code-bg-color-dark: #2c3237 !default;
 
-// --- 字体与图标 ---
+// Font awesome location
 $fa-font-path: "../webfonts";
-$font-family-sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
 
-// --- 布局控制 ---
-$max-content-width: 930px !default;
-
-// --- 回到顶部按钮 ---
+// Back To Top button config
 $back-to-top-z-index: 10;
 $back-to-top-bottom: 30px;
 $back-to-top-right: 30px;
 $back-to-top-diameter: 40px;
 $back-to-top-height: $back-to-top-diameter;
 $back-to-top-width: $back-to-top-diameter;
+
+// Max width default
+$max-content-width: 930px !default;
+
+$font-family-sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+
+html[data-theme='dark'] {
+  // 深蓝夜空背景与卡片
+  --global-bg-color: #0b1021;          // 极深的夜空蓝
+  --global-card-bg-color: #131b2f;     // 卡片稍浅，增加层次感
+  --global-footer-bg-color: #080c18;   // 页脚更深
+  
+  // 明黄星空点缀（主题色与悬停色）
+  --global-theme-color: #ffd700;       // 亮金色（星星的颜色）
+  --global-hover-color: #ffea00;       // 悬停时更耀眼的黄色
+  --navbar-light-active-color: #ffd700;// 导航栏高亮
+  
+  // 文字颜色适配
+  --global-text-color: #e0e6ed;        // 偏冷色的柔和亮白，护眼
+  --global-header-color: #ffffff;      // 纯白标题
+  --global-text-color-light: #8b9ab3;  // 较暗的次要文字
+  
+  // 细节微调
+  --global-divider-color: rgba(255, 255, 255, 0.1); 
+  --global-code-bg-color: rgba(255, 215, 0, 0.05); // 代码块带一丝丝黄光
+}
