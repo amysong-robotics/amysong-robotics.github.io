@@ -6,11 +6,11 @@ cv:
   website: "https://amysong-robotics.github.io"
 
   sections:
-    education:
+    Education:
       - institution: "Southern University of Science and Technology"
         location: "Shenzhen, China"
         area: "Robotics Engineering"
-        degree: "B.Eng."
+        study_type: "B.Eng."
         start_date: "2023-08"
         end_date: "present"
         highlights:
@@ -18,7 +18,7 @@ cv:
           - "Core Courses: ROS, Robot Modeling and Control, Mechanical Design, Control Engineering"
           - "Leadership: President, Student Organizations Council (SOC); President, Robotics Club"
 
-    projects:
+    Projects:
       - name: "Slope Center-of-Mass (CoM) Assistance System"
         start_date: "2025-12"
         end_date: "present"
@@ -26,7 +26,6 @@ cv:
         highlights:
           - "Designed a compound pulley experimental testbed to deliver dynamic, regulated traction to the human CoM."
           - "Developed an STM32 control architecture, achieving an estimated 20–30% reduction in metabolic cost under various incline conditions."
-
       - name: "Autonomous UAV Mission Navigation"
         start_date: "2025-10"
         end_date: "2025-12"
@@ -34,7 +33,6 @@ cv:
         highlights:
           - "Deployed Fast-Planner on ROS for real-time, kinodynamically feasible trajectory generation in obstacle environments."
           - "Engineered a custom RViz benchmark track to validate autonomous waypoint traversal and obstacle avoidance."
-
       - name: "ROS2-Based Mobile Manipulator"
         start_date: "2025-09"
         end_date: "2025-12"
@@ -43,7 +41,6 @@ cv:
           - "Architected a two-wheeled differential drive mobile base with a 4-DOF manipulator in SolidWorks and URDF."
           - "Deployed ROS2 Nav2, LiDAR SLAM, and Visual Servoing, achieving ±5 mm horizontal alignment accuracy."
           - "Implemented multimodal HRI using MediaPipe and Vosk API."
-
       - name: "Sim-to-Real Infrastructure for Dexterous Hand"
         start_date: "2025-07"
         end_date: "2025-11"
@@ -51,7 +48,6 @@ cv:
         highlights:
           - "Refined a multi-fingered robotic palm URDF and established robust simulation environments in Webots and Isaac Sim."
           - "Configured contact dynamics for future Reinforcement Learning (RL) grasping policy training."
-
       - name: "Autonomous Intelligent Rescue Vehicle"
         start_date: "2024-11"
         end_date: "2025-08"
@@ -59,7 +55,6 @@ cv:
         highlights:
           - "Programmed STM32 for visual telemetry and deployed a custom YOLOv11 model for real-time object detection."
           - "Led the team to win the National Second Prize and Provincial First Prize."
-
       - name: "CV-Guided 6-DOF Robotic Sketching System"
         start_date: "2024-03"
         end_date: "2024-06"
@@ -68,7 +63,7 @@ cv:
           - "Engineered an OpenCV vision pipeline for sub-pixel contour extraction and continuous toolpath generation."
           - "Solved 6-DOF inverse kinematics via D-H parameters for high-precision physical sketching."
 
-    awards:
+    Awards:
       - name: "National Second Prize, Engineering Practice & Innovation Ability Competition"
         date: "2025"
       - name: "Provincial First Prize, Engineering Practice & Innovation Ability Competition"
@@ -84,12 +79,12 @@ cv:
       - name: "Second-Class Scholarship"
         date: "2024"
 
-    skills:
-      - label: "Programming Languages"
+    Skills:
+      - name: "Programming Languages"
         details: "C / C++, Python, MATLAB"
-      - label: "Mechanical Design & Manufacturing"
+      - name: "Mechanical Design & Manufacturing"
         details: "AutoCAD, SolidWorks, Edgecam, Abaqus"
-      - label: "IDEs"
+      - name: "IDEs"
         details: "Visual Studio, VScode, Keil5, Arduino"
-      - label: "Robot Simulation & Visualization"
+      - name: "Robot Simulation & Visualization"
         details: "Gazebo, Webots, Isaac Sim, Rviz2"
