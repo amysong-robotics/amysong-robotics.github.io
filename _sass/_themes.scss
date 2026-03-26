@@ -1,23 +1,24 @@
 /*******************************************************************************
- * Themes Logic - 颜色映射 (最终修复版)
+ * Themes Logic - 最终彻底修复版
  ******************************************************************************/
 @use "variables" as v;
 @use "sass:color";
 
 :root {
   color-scheme: light;
-  // --- 白天模式映射 ---
-  --global-bg-color: #{v.$soft-white};
+  // --- 白天：映射变量 ---
+  --global-bg-color: #{v.$global-bg-color};
   --global-text-color: #{v.$global-text-color};
-  --global-theme-color: #{v.$green-leaf};
-  --global-hover-color: #{v.$lemon-yellow};
+  --global-theme-color: #{v.$global-theme-color};
+  --global-hover-color: #{v.$global-hover-color};
+  --global-header-color: #{v.$global-header-color};
   
   --global-code-bg-color: #{v.$code-bg-color-light};
   --global-text-color-light: #{v.$grey-color};
   --global-hover-text-color: #{v.$white-color};
-  --global-footer-bg-color: #{v.$grey-color-dark};
-  --global-footer-text-color: #{v.$grey-color-light};
-  --global-footer-link-color: #{v.$green-leaf};
+  --global-footer-bg-color: #{v.$global-footer-bg-color};
+  --global-footer-text-color: #{v.$global-footer-text-color};
+  --global-footer-link-color: #{v.$global-theme-color};
   --global-divider-color: rgba(0, 0, 0, 0.1);
   --global-card-bg-color: #{v.$white-color};
   --global-back-to-top-bg-color: rgba(143, 177, 98, 0.5);
@@ -30,32 +31,28 @@
   .only-dark { display: none; }
 
   #back-to-top {
-    position: fixed;
-    bottom: v.$back-to-top-bottom;
-    right: v.$back-to-top-right;
-    height: v.$back-to-top-height;
-    width: v.$back-to-top-width;
-    z-index: v.$back-to-top-z-index;
-    color: var(--global-back-to-top-text-color);
-    background: var(--global-back-to-top-bg-color);
+    position: fixed; bottom: v.$back-to-top-bottom; right: v.$back-to-top-right;
+    height: v.$back-to-top-height; width: v.$back-to-top-width; z-index: v.$back-to-top-z-index;
+    color: var(--global-back-to-top-text-color); background: var(--global-back-to-top-bg-color);
   }
 }
 
 html[data-theme="dark"] {
   color-scheme: dark;
-  // --- 深色模式映射 ---
-  --global-bg-color: #{v.$starry-night};
-  --global-card-bg-color: #{v.$starry-card};
-  --global-text-color: #{v.$text-light};
-  --global-theme-color: #{v.$star-gold};
-  --global-hover-color: #{v.$star-hover};
+  // --- 深色：星空蓝配色 (直接硬编码，防止变量未定义报错) ---
+  --global-bg-color: #0b1021;
+  --global-card-bg-color: #131b2f;
+  --global-text-color: #e0e6ed;
+  --global-theme-color: #ffd700;
+  --global-hover-color: #ffea00;
   
+  --global-header-color: #ffffff;
   --global-code-bg-color: rgba(255, 215, 0, 0.05);
   --global-text-color-light: #8b9ab3;
-  --global-hover-text-color: #{v.$starry-night};
+  --global-hover-text-color: #0b1021;
   --global-footer-bg-color: #080c18;
   --global-footer-text-color: #8b9ab3;
-  --global-footer-link-color: #{v.$star-gold};
+  --global-footer-link-color: #ffd700;
   --global-divider-color: rgba(255, 215, 0, 0.15);
   --global-back-to-top-bg-color: rgba(255, 215, 0, 0.5);
   --global-back-to-top-text-color: #0b1021;
@@ -64,7 +61,6 @@ html[data-theme="dark"] {
   .only-dark { display: block; }
 }
 
-// 切换按钮逻辑
 html[data-theme-setting="dark"] {
   #light-toggle-system { display: none; }
   #light-toggle-dark { display: inline-block; }
@@ -75,23 +71,17 @@ html[data-theme-setting="light"] {
 }
 
 .fa-half-sun-moon {
-  position: relative;
-  display: inline-block;
-  width: 1em; height: 1em;
+  position: relative; display: inline-block; width: 1em; height: 1em;
 }
 .fa-half-sun-moon::before, .fa-half-sun-moon::after {
-  content: "";
-  position: absolute; inset: 0;
-  font: var(--fa-font-solid);
+  content: ""; position: absolute; inset: 0; font: var(--fa-font-solid);
 }
 .fa-half-sun-moon::before {
-  content: "\f111"; 
-  color: var(--global-text-color);
+  content: "\f111"; color: var(--global-text-color);
   clip-path: polygon(0 0, 48% 0, 48% 100%, 0 100%);
 }
 .fa-half-sun-moon::after {
-  content: "\f185"; 
-  color: var(--global-text-color);
+  content: "\f185"; color: var(--global-text-color);
   clip-path: polygon(52% 0, 100% 0, 100% 100%, 52% 100%);
 }
 #light-toggle:hover .fa-half-sun-moon::before, #light-toggle:hover .fa-half-sun-moon::after {
