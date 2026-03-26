@@ -64,3 +64,24 @@ $back-to-top-width: $back-to-top-diameter;
 $max-content-width: 930px !default;
 
 $font-family-sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+
+html[data-theme='dark'] {
+  // 深蓝夜空背景与卡片
+  --global-bg-color: #0b1021;          // 极深的夜空蓝
+  --global-card-bg-color: #131b2f;     // 卡片稍浅，增加层次感
+  --global-footer-bg-color: #080c18;   // 页脚更深
+  
+  // 明黄星空点缀（主题色与悬停色）
+  --global-theme-color: #ffd700;       // 亮金色（星星的颜色）
+  --global-hover-color: #ffea00;       // 悬停时更耀眼的黄色
+  --navbar-light-active-color: #ffd700;// 导航栏高亮
+  
+  // 文字颜色适配
+  --global-text-color: #e0e6ed;        // 偏冷色的柔和亮白，护眼
+  --global-header-color: #ffffff;      // 纯白标题
+  --global-text-color-light: #8b9ab3;  // 较暗的次要文字
+  
+  // 细节微调
+  --global-divider-color: rgba(255, 255, 255, 0.1); 
+  --global-code-bg-color: rgba(255, 215, 0, 0.05); // 代码块带一丝丝黄光
+}
