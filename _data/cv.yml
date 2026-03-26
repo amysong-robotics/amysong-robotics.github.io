@@ -6,7 +6,7 @@ cv:
   website: "https://amysong-robotics.github.io"
 
   sections:
-    education:
+    Education:
       - institution: "Southern University of Science and Technology"
         location: "Shenzhen, China"
         area: "Robotics Engineering"
@@ -17,7 +17,7 @@ cv:
           - "Core Courses: Robot Operating System(100), Mechanics of Materials M(100), Robot Modeling and Control(97), Mechanical Design(97), CAD and Engineering Drawing(93), Intelligent Manufacturing System Technology(95), Signals and Systems(95), Theoretical Mechanics I-B(93), Cognitive Practice in Manufacturing Engineering(93), Fundamentals of Control Engineering(90)"
           - "Leadership: President, Student Organizations Council (SOC); President, Robotics Club; Class President, Dept. of Mechanical & Energy Engineering"
 
-    projects_and_research:
+    Projects:
       - name: "Slope Center-of-Mass (CoM) Assistance System for Human Gait"
         date: "12/2025 - Present"
         highlights:
@@ -70,7 +70,7 @@ cv:
           - "Developed an OpenCV vision pipeline (skeletonization, connected-component analysis) and a greedy Euclidean search algorithm to extract sub-pixel contours and generate optimized continuous toolpaths."
           - "Solved 6-DOF inverse kinematics (IK) via D-H parameters to orchestrate high-precision physical sketching on planar paper via MATLAB; expanded the framework to generate and validate 3D spatial trajectories for curved surfaces (e.g., cylinders) within Simulink."
 
-    honors_and_awards:
+    Awards:
       - name: "National Second Prize, China Undergraduate Engineering Practice and Innovation Ability Competition"
         date: "2025"
       - name: "Provincial First Prize, Guangdong Undergraduate Engineering Practice and Innovation Ability Competition"
@@ -84,7 +84,7 @@ cv:
       - name: "Second-Class Scholarship for Outstanding Students (2023-2024 Academic Year)"
         date: "2024"
 
-    skills:
+    Skills:
       - name: "Programming Languages"
         details: "C Language, C++, Python, MATLAB"
       - name: "Mechanical Design and Manufacturing Software"
