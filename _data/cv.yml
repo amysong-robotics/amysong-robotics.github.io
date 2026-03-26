@@ -1,87 +1,65 @@
-- title: "Contact Information"
-  type: "map"
-  contents:
-    - name: "Name"
-      value: "Yuzhen (Amy) Song"
-    - name: "Professional Title"
-      value: "Undergraduate Researcher in Robotics"
-    - name: "Email"
-      value: "12312836@mail.sustech.edu.cn"
-    - name: "Phone"
-      value: "+86 18186518423"
-    - name: "Location"
-      value: "Shenzhen, Guangdong"
-    - name: "Website"
-      value: "amysong-robotics.github.io"
-      url: "https://amysong-robotics.github.io"
-
-- title: "Education"
-  type: "time_table"
-  contents:
-    - title: "B.Eng. in Robotics Engineering"
-      institution: "Southern University of Science and Technology"
-      year: "2023 - Present"
-      description:
-        - "Overall GPA: 3.85 / 4.0 (Weighted Avg: 92.63/100)"
-        - "Core Courses: Robot Operating System(100), Mechanics of Materials(100), Robot Modeling and Control(97), Mechanical Design(97), Fundamentals of Control Engineering(90)"
-
-- title: "Projects and Research"
-  type: "time_table"
-  contents:
-    - title: "Slope Center-of-Mass (CoM) Assistance System"
-      institution: "Advisor: Prof. Chenglong Fu"
-      year: "2025 - Present"
-      description:
-        - "Designed an experimental testbed for dynamic traction (200 N peak) with <5% force error."
-        - "Developed STM32 control for motor torque regulation; achieved 20-30% reduction in metabolic cost."
-    - title: "Autonomous UAV Mission Navigation (Fast-Planner)"
-      institution: "Advisor: Prof. Boyu Zhou"
-      year: "2025"
-      description:
-        - "Deployed Fast-Planner on ROS for real-time trajectory generation in randomized environments."
-        - "Engineered custom circular benchmark tracks in RViz to validate obstacle avoidance."
-    - title: "ROS2-Based Mobile Manipulator with Multimodal HRI"
-      institution: "Advisor: Prof. Wende Ke"
-      year: "2025"
-      description:
-        - "Architected a ROS2 mobile manipulator with SLAM and Nav2; integrated EKF for sensor fusion."
-        - "Developed HRI interface using MediaPipe for gestures and Vosk for offline voice commands."
-        - "GitHub: https://github.com/amysong-robotics/ros2-mobile-manipulator"
-    - title: "Sim-to-Real Infrastructure for Dexterous Hand"
-      institution: "Advisor: Prof. Zhao Tang"
-      year: "2025"
-      description:
-        - "Established robust RL grasping pipelines in NVIDIA Isaac Sim and Webots."
-        - "Optimized URDF models and kinematic constraints for high-fidelity physics simulation."
-    - title: "Autonomous Intelligent Rescue Vehicle (National Competition)"
-      institution: "Advisor: Prof. Dong Lu"
-      year: "2024 - 2025"
-      description:
-        - "Won National Second Prize. Programmed STM32 FSM for chassis kinematics and servo grasping."
-        - "Trained YOLOv11 model for real-time multi-class recognition."
-    - title: "CV-Guided 6-DOF Robotic Sketching System"
-      institution: "Advisor: Prof. Chenglong Fu"
-      year: "2024"
-      description:
-        - "Developed OpenCV pipeline for sub-pixel contour extraction and solved 6-DOF IK via D-H parameters."
-
-- title: "Technical Skills"
-  type: "list"
-  contents:
-    - "<b>Programming Languages:</b> C++, Python, MATLAB, C"
-    - "<b>Frameworks and Libraries:</b> ROS/ROS2, Nav2, MoveIt 2, OpenCV, MediaPipe, PyTorch"
-    - "<b>Software and Simulation:</b> Gazebo, NVIDIA Isaac Sim, Webots, RViz2, SolidWorks, AutoCAD"
-
-- title: "Honors and Awards"
-  type: "time_table"
-  contents:
-    - year: "2025"
-      items: 
-        - "National Second Prize, China Undergraduate Engineering Practice and Innovation Ability Competition"
-        - "Provincial First Prize, Guangdong Undergraduate Engineering Practice and Innovation Ability Competition"
-        - "Provincial Second Prize, Guangdong Undergraduate Mechanical Innovational Competition"
-        - "First-Class Scholarship for Outstanding Students"
-    - year: "2024"
-      items:
-        - "Outstanding Student Award, Southern University of Science and Technology"
-        - "Second-Class Scholarship for Outstanding Students"
+[
+  {
+    "title": "Contact Information",
+    "type": "map",
+    "contents": [
+      { "name": "Name", "value": "Yuzhen (Amy) Song" },
+      { "name": "Email", "value": "12312836@mail.sustech.edu.cn" },
+      { "name": "Phone", "value": "+86 18186518423" },
+      { "name": "Location", "value": "Shenzhen, Guangdong" },
+      { "name": "Website", "value": "amysong-robotics.github.io", "url": "https://amysong-robotics.github.io" }
+    ]
+  },
+  {
+    "title": "Education",
+    "type": "time_table",
+    "contents": [
+      {
+        "title": "B.Eng. in Robotics Engineering",
+        "institution": "Southern University of Science and Technology",
+        "year": "2023 - Present",
+        "description": [
+          "Overall GPA: 3.85 / 4.0 (Weighted Avg: 92.63/100)",
+          "Core: ROS, Robot Modeling, Mechanical Design, Control Engineering"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Projects and Research",
+    "type": "time_table",
+    "contents": [
+      {
+        "title": "Slope Center-of-Mass (CoM) Assistance System",
+        "institution": "Advisor: Prof. Chenglong Fu",
+        "year": "2025 - Present",
+        "description": ["Achieved 20-30% reduction in metabolic cost."]
+      },
+      {
+        "title": "Autonomous UAV Navigation (Fast-Planner)",
+        "institution": "Advisor: Prof. Boyu Zhou",
+        "year": "2025",
+        "description": ["Deployed Fast-Planner on ROS for real-time trajectory generation."]
+      },
+      {
+        "title": "ROS2-Based Mobile Manipulator",
+        "institution": "Advisor: Prof. Wende Ke",
+        "year": "2025",
+        "description": ["Architected a ROS2 mobile manipulator with SLAM and Nav2."]
+      }
+    ]
+  },
+  {
+    "title": "Honors and Awards",
+    "type": "time_table",
+    "contents": [
+      {
+        "year": "2025",
+        "items": [
+          "National Second Prize, Engineering Practice Competition",
+          "First-Class Scholarship for Outstanding Students, SUSTech"
+        ]
+      }
+    ]
+  }
+]
