@@ -218,3 +218,60 @@ ul.timeline li::before {
      color: var(--global-text-color);
 }
 */
+
+/* =========================================================
+   自定义高级排版与字体注入 (Custom Typography & Layout)
+   ========================================================= */
+
+/* 1. 引入顶级现代无衬线字体 Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* 2. 导航栏和全局标题字体替换 */
+.navbar, .navbar-brand, .nav-link, h1, h2, h3, h4, h5 {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+/* 导航栏左侧你的名字：加粗、增加字间距，显得更大气 */
+.navbar-brand {
+    font-weight: 700 !important; 
+    letter-spacing: 0.5px;
+    font-size: 1.4rem !important;
+}
+
+/* 导航栏右侧菜单：适度加粗 */
+.nav-link {
+    font-weight: 500 !important;
+    font-size: 1.05rem !important;
+}
+
+/* 3. 彻底修复 CV 页面 (Awards/Experience) 的对齐与间距 */
+/* 强制年份徽章与右侧文字顶部对齐，告别错位 */
+table td {
+    vertical-align: top !important; 
+}
+
+/* 优化奖项和经历的上下间距，添加优雅的分割线 */
+.cv .card {
+    border: none !important;
+    box-shadow: none !important;
+    border-bottom: 1px dashed rgba(0,0,0,0.1) !important;
+    margin-bottom: 15px !important;
+    padding-bottom: 10px !important;
+}
+
+/* 美化左侧绿色的年份徽章 */
+.cv .badge {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    margin-top: 4px; 
+    border-radius: 6px; 
+}
+
+/* 4. 美化 Skills 区域 */
+.cv .list-group-item {
+    line-height: 2.0; /* 增加行距，彻底告别拥挤 */
+    font-size: 1.05rem;
+    border: none !important;
+    border-bottom: 1px dashed rgba(0,0,0,0.1) !important;
+    padding: 12px 0 !important;
+}
