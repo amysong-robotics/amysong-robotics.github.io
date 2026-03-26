@@ -1,0 +1,140 @@
+{
+  "basics": {
+    "name": "Yuzhen (Amy) Song",
+    "label": "Undergraduate Researcher in Robotics",
+    "image": "",
+    "email": "12312836@mail.sustech.edu.cn",
+    "phone": "+86 18186518423",
+    "url": "https://amysong-robotics.github.io",
+    "summary": "Robotics Engineering undergrad at SUSTech with a focus on UAV Trajectory Planning, SLAM, and Sim-to-Real deployment. Actively seeking Fall 2027 Ph.D. opportunities.",
+    "location": {
+      "city": "Shenzhen",
+      "region": "Guangdong",
+      "countryCode": "CN"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "amysong-robotics",
+        "url": "https://github.com/amysong-robotics"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Slope Center-of-Mass (CoM) Assistance System",
+      "position": "Advisor: Prof. Chenglong Fu",
+      "startDate": "2025-12",
+      "endDate": "Present",
+      "highlights": [
+        "Designed an experimental testbed for dynamic traction (200 N peak) with <5% force error.",
+        "Developed STM32 control for motor torque regulation; achieved 20-30% reduction in metabolic cost.",
+        "Manuscript in preparation for IROS."
+      ]
+    },
+    {
+      "name": "Autonomous UAV Mission Navigation (Fast-Planner)",
+      "position": "Advisor: Prof. Boyu Zhou",
+      "startDate": "2025-10",
+      "endDate": "2025-12",
+      "highlights": [
+        "Deployed Fast-Planner on ROS for real-time trajectory generation in randomized point-cloud environments.",
+        "Engineered custom circular benchmark tracks in RViz to validate obstacle avoidance."
+      ]
+    },
+    {
+      "name": "ROS2-Based Mobile Manipulator (Multimodal HRI)",
+      "position": "Advisor: Prof. Wende Ke",
+      "startDate": "2025-09",
+      "endDate": "2025-12",
+      "url": "https://github.com/amysong-robotics/ros2-mobile-manipulator",
+      "highlights": [
+        "Architected a ROS2 mobile manipulator with SLAM and Nav2; integrated EKF for sensor fusion.",
+        "Developed HRI interface using MediaPipe for gestures and Vosk for offline voice commands."
+      ]
+    },
+    {
+      "name": "Sim-to-Real Infrastructure for Dexterous Hand",
+      "position": "Advisor: Prof. Zhao Tang",
+      "startDate": "2025-07",
+      "endDate": "2025-11",
+      "highlights": [
+        "Established robust simulation environments in NVIDIA Isaac Sim and Webots for RL training.",
+        "Optimized URDF models and kinematic constraints for high-fidelity physics simulation."
+      ]
+    },
+    {
+      "name": "Autonomous Intelligent Rescue Vehicle",
+      "position": "Advisor: Prof. Dong Lu",
+      "startDate": "2024-11",
+      "endDate": "2025-08",
+      "highlights": [
+        "Won National Second Prize. Programmed STM32 FSM for chassis kinematics and servo grasping.",
+        "Trained YOLOv11 model for real-time multi-class recognition."
+      ]
+    },
+    {
+      "name": "CV-Guided 6-DOF Robotic Sketching System",
+      "position": "Advisor: Prof. Chenglong Fu",
+      "startDate": "2024-03",
+      "endDate": "2024-06",
+      "highlights": [
+        "Developed OpenCV pipeline for sub-pixel contour extraction and solved 6-DOF IK via D-H parameters."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Southern University of Science and Technology",
+      "area": "Robotics Engineering",
+      "studyType": "B.Eng.",
+      "startDate": "2023-08",
+      "endDate": "Present",
+      "score": "GPA: 3.85 / 4.0 (Weighted Avg: 92.63/100)",
+      "courses": [
+        "Core: ROS(100), Mechanics of Materials(100), Robot Modeling & Control(97), Mechanical Design(97), Control Engineering(90)"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "National Second Prize",
+      "awarder": "China Undergraduate Eng. Practice and Innovation Ability Competition",
+      "date": "2025"
+    },
+    {
+      "title": "Provincial First Prize",
+      "awarder": "Guangdong Undergraduate Eng. Practice and Innovation Ability Competition",
+      "date": "2025"
+    },
+    {
+      "title": "First-Class Scholarship for Outstanding Students",
+      "awarder": "SUSTech (2024-2025)",
+      "date": "2025"
+    },
+    {
+      "title": "Provincial Second Prize",
+      "awarder": "Guangdong Undergraduate Mechanical Innovational Competition",
+      "date": "2025"
+    },
+    {
+      "title": "Outstanding Student Award",
+      "awarder": "SUSTech",
+      "date": "2024, 2025"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Programming",
+      "keywords": ["C++", "Python", "MATLAB", "C"]
+    },
+    {
+      "name": "Frameworks",
+      "keywords": ["ROS/ROS2", "Nav2", "MoveIt 2", "OpenCV", "MediaPipe", "PyTorch"]
+    },
+    {
+      "name": "Simulation",
+      "keywords": ["Gazebo", "NVIDIA Isaac Sim", "Webots", "RViz2", "SolidWorks"]
+    }
+  ]
+}
