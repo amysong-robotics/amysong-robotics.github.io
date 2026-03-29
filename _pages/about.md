@@ -8,12 +8,13 @@ profile:
   align: right
   image: prof_pic.jpg
   image_circular: true
-  address: |
-    Southern University of Science and Technology
-    Shenzhen, China
+  more_info: >
+    <p>Southern University of Science and Technology</p>
+    <p>Shenzhen, China</p>
+    <p><a href="mailto:amysong.swimkim@gmail.com"><i class="fas fa-envelope"></i> Email Me</a></p>
 
 selected_papers: false 
-social: true
+social: true # <--- 关键！这行必须为 true，底部那排图标才会出来
 ---
 
 I am a highly motivated undergraduate researcher majoring in **Robotics Engineering** at the[Southern University of Science and Technology (SUSTech)](https://www.sustech.edu.cn/) with an overall GPA of 3.85/4.0. 
@@ -34,3 +35,5 @@ Ultimately, I aspire to pursue a Ph.D. in Robotics to continue pushing the bound
 > I am actively seeking **Summer & Fall 2026 Research Internships** (Availability: June – December 2026). I am extremely eager to bring my hands-on background in sim-to-real transfer, hardware integration, and algorithm deployment to a dynamic research group, with a strong aspiration to contribute to top-tier robotics labs at **UC Berkeley**.
 > 
 > <a href="{{ site.baseurl }}/assets/pdf/cv.pdf" target="_blank">[📄 Download My CV]</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="mailto:amysong.swimkim@gmail.com">[✉️ Email Me]</a>
+
+<a href="{{ site.baseurl }}/assets/pdf/cv.pdf" target="_blank" class="btn btn-outline-dark btn-sm"><i class="fas fa-file-pdf"></i> CV</a>&nbsp;&nbsp;<a href="mailto:amysong.swimkim@gmail.com" class="btn btn-outline-dark btn-sm"><i class="fas fa-envelope"></i> Email</a>
