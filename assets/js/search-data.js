@@ -411,14 +411,14 @@ ninja.data = [{
           description: "A system for human gait assistance on slopes using STM32 and motor-driven winch.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
-            },},{id: "projects-project-3-with-very-long-name",
-          title: 'project 3 with very long name',
-          description: "a project that redirects to another website",
+            },},{id: "projects-sim-to-real-dexterous-hand",
+          title: 'Sim-to-Real Dexterous Hand',
+          description: "Closed-loop infrastructure for multi-fingered robotic palm in Webots and Isaac Sim.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
-            },},{id: "projects-project-4",
-          title: 'project 4',
-          description: "another without an image",
+            },},{id: "projects-ros2-mobile-manipulator",
+          title: 'ROS2 Mobile Manipulator',
+          description: "4-DOF manipulator with Multimodal HRI, SLAM, and Visual Servoing.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/4_project/";
             },},{id: "projects-project-5",
