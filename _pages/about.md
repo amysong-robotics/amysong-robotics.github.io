@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-nav: true            # <--- 必须是 nav，修复之前的 hav
+nav: false            # <--- 必须是 nav，修复之前的 hav
 nav_order: 1         # 确保它排在第一个
 
 profile:
