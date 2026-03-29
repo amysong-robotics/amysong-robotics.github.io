@@ -401,9 +401,9 @@ ninja.data = [{
             },},{id: "news-",
           title: '',
           description: "",
-          section: "News",},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
+          section: "News",},{id: "projects-autonomous-uav-mission-navigation",
+          title: 'Autonomous UAV Mission Navigation',
+          description: "via Fast-Planner Framework. Real-time trajectory generation in randomized obstacle environments.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{id: "projects-project-2",
