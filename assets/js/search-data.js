@@ -406,9 +406,9 @@ ninja.data = [{
           description: "via Fast-Planner Framework. Real-time trajectory generation in randomized obstacle environments.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
-            },},{id: "projects-project-2",
-          title: 'project 2',
-          description: "a project with a background image and giscus comments",
+            },},{id: "projects-slope-com-assistance-system",
+          title: 'Slope CoM Assistance System',
+          description: "A system for human gait assistance on slopes using STM32 and motor-driven winch.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
             },},{id: "projects-project-3-with-very-long-name",
