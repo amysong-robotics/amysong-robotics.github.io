@@ -153,7 +153,7 @@ newsletter:
 
 
 # -----------------------------------------------------------------------------
-# Social integration
+# Social integration (这是我为你找回的缺失代码)
 # -----------------------------------------------------------------------------
 
 # scholar_userid: 
@@ -261,7 +261,7 @@ sass:
 
 jekyll-minifier:
   compress_javascript: false # set to false since we are using terser as the js minifier
-  exclude: ["robots.txt", "assets/js/search/*.js"]
+  exclude:["robots.txt", "assets/js/search/*.js"]
 
 # -----------------------------------------------------------------------------
 # Terser
@@ -286,14 +286,14 @@ jekyll-archives:
     enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
 
 display_tags:["formatting", "images", "links", "math", "code", "blockquotes"] # these tags will be displayed on the front page of your blog
-display_categories: ["external-services"] # these categories will be displayed on the front page of your blog
+display_categories:["external-services"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Yuzhen]
+  last_name:[Yuzhen]
   first_name: [Song]
 
   style: apa
