@@ -421,9 +421,9 @@ ninja.data = [{
           description: "4-DOF manipulator with Multimodal HRI, SLAM, and Visual Servoing.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/4_project/";
-            },},{id: "projects-project-5",
-          title: 'project 5',
-          description: "a project with a background image",
+            },},{id: "projects-autonomous-rescue-vehicle",
+          title: 'Autonomous Rescue Vehicle',
+          description: "National Second Prize winner. Features YOLOv11 object detection and FSM control.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/5_project/";
             },},{id: "projects-project-6",
