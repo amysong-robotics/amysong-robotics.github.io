@@ -2,10 +2,8 @@
 layout: about
 title: about
 permalink: /
-nav: true
-nav_order: 1
-subtitle: B.Eng. in Robotics Engineering @ <a href="https://www.sustech.edu.cn/">SUSTech</a> · 2027
-...
+nav: true            # <--- 必须是 nav，修复之前的 hav
+nav_order: 1         # 确保它排在第一个
 
 profile:
   align: right
