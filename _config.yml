@@ -14,7 +14,7 @@ footer_text: >
 keywords: robotics, ros2, sim-to-real, control
 lang: en
 icon: 🐱
-email: 12312836@mail.sustech.edu.cn
+email: amysong.swimkim@gmail.com
 
 url: "https://amysong-robotics.github.io"
 baseurl: ""
@@ -22,9 +22,9 @@ last_updated: false
 back_to_top: true
 
 social_icons:
-  email: "mailto:12312836@mail.sustech.edu.cn"
+  email: "mailto:amysong.swimkim@gmail.com"
   github: amysong-robotics
-  # linkedin: 
+  # linkedin: amysong # 等你以后注册了 LinkedIn，把这行前面的井号删掉就可以了
 
 # -----------------------------------------------------------------------------
 # Theme
@@ -197,7 +197,7 @@ kramdown:
       start_line: 1
 
 # Includes & excludes
-include: ["_pages", "_scripts"]
+include:["_pages", "_scripts"]
 exclude:
   - bin/
   - CONTRIBUTING.md
@@ -261,7 +261,7 @@ sass:
 
 jekyll-minifier:
   compress_javascript: false # set to false since we are using terser as the js minifier
-  exclude: ["robots.txt", "assets/js/search/*.js"]
+  exclude:["robots.txt", "assets/js/search/*.js"]
 
 # -----------------------------------------------------------------------------
 # Terser
@@ -277,13 +277,13 @@ terser:
 
 jekyll-archives:
   posts:
-    enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
+    enabled:[year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
     permalinks:
       year: "/blog/:year/"
       tags: "/blog/:type/:name/"
       categories: "/blog/:type/:name/"
   books:
-    enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
+    enabled:[year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
 
 display_tags: ["formatting", "images", "links", "math", "code", "blockquotes"] # these tags will be displayed on the front page of your blog
 display_categories: ["external-services"] # these categories will be displayed on the front page of your blog
@@ -326,8 +326,7 @@ enable_publication_badges:
   inspirehep: true # Inspire HEP badge (https://help.inspirehep.net/knowledge-base/citation-metrics/)
 
 # Filter out certain bibtex entry keywords used internally from the bib output
-filtered_bibtex_keywords:
-  [
+filtered_bibtex_keywords:[
     abbr,
     abstract,
     additional_info,
