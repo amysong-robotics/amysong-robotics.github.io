@@ -11,7 +11,7 @@ contact_note: >
 description: "Undergraduate Researcher in Robotics at SUSTech."
 icon: 🐱
 
-# 重点：直接写在这里，不要套在 social_icons 缩进里
+# 重点：直接写在这里，不要套在 social_icons 缩进
 email: amysong.swimkim@gmail.com
 github_username: amysong-robotics
 # linkedin_username: yuzhen-song  # 如果你有 LinkedIn，把前面的 # 删掉并填入 ID
