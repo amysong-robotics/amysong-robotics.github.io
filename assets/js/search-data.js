@@ -426,9 +426,9 @@ ninja.data = [{
           description: "National Second Prize winner. Features YOLOv11 object detection and FSM control.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/5_project/";
-            },},{id: "projects-project-6",
-          title: 'project 6',
-          description: "a project with no image",
+            },},{id: "projects-cv-guided-sketching-system",
+          title: 'CV-Guided Sketching System',
+          description: "6-DOF robotic sketching via OpenCV and MATLAB inverse kinematics.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/6_project/";
             },},{id: "projects-project-7",
