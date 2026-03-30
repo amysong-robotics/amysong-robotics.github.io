@@ -2,7 +2,7 @@
 layout: page
 title: Autonomous UAV Mission Navigation
 description: via Fast-Planner Framework. Real-time trajectory generation in randomized obstacle environments.
-img: assets/img/uav_thumb.jpg
+img: assets/img/UAV.png
 importance: 1
 category: research
 ---
