@@ -2,7 +2,7 @@
 layout: page
 title: ROS2 Mobile Manipulator
 description: 4-DOF manipulator with Multimodal HRI, SLAM, and Visual Servoing.
-img: assets/img/robot_thumb.jpg
+img: assets/img/ROS2.png
 importance: 1
 category: work
 ---
