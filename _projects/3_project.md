@@ -2,7 +2,7 @@
 layout: page
 title: Sim-to-Real Dexterous Hand
 description: Closed-loop infrastructure for multi-fingered robotic palm in Webots and Isaac Sim.
-img: assets/img/hand_thumb.jpg
+img: assets/img/closedloop.png
 importance: 3
 category: research
 ---
