@@ -2,7 +2,7 @@
 layout: page
 title: Slope CoM Assistance System
 description: A system for human gait assistance on slopes using STM32 and motor-driven winch.
-img: assets/img/gait_thumb.jpg
+img: assets/img/COM.png
 importance: 2
 category: research
 ---
