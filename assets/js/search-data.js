@@ -419,9 +419,9 @@ ninja.data = [{
           description: "National Second Prize winner. Features YOLOv11 object detection and FSM control.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/5_project/";
-            },},{id: "projects-cv-guided-sketching-system",
-          title: 'CV-Guided Sketching System',
-          description: "6-DOF robotic sketching via OpenCV and MATLAB inverse kinematics.",
+            },},{id: "projects-6-dof-robotic-sketching-amp-3d-projection",
+          title: '6-DOF Robotic Sketching &amp;amp; 3D Projection',
+          description: "A complete closed-loop robotic drawing system integrating computer vision, analytical IK, and compliant hardware design.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/6_project/";
             },},{id: "teachings-data-science-fundamentals",
