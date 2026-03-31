@@ -2,7 +2,7 @@
 layout: page
 title: "Replicating DDAT: Diffusion Policies for Robot Trajectories"
 description: An independent reproduction of DDAT in MuJoCo, evaluating the necessity of projection operators across four underactuated robotic systems.
-img: assets/img/walker_proj.gif
+img: assets/img/hopper_proj.gif
 importance: 4
 category: Research Projects
 ---
