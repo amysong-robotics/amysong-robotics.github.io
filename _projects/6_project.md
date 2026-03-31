@@ -49,10 +49,10 @@ This project implements a complete closed-loop pipeline for high-precision robot
 
 <div class="row">
     <div class="col-sm-6 mt-3 mt-md-0">
-        <img src="{{ '/assets/img/final_sketch1.jpg' | relative_url }}" class="img-fluid rounded z-depth-1">
+        <img src="{{ '/assets/img/final_sketch1.png' | relative_url }}" class="img-fluid rounded z-depth-1">
     </div>
     <div class="col-sm-6 mt-3 mt-md-0">
-        <img src="{{ '/assets/img/final_sketch2.jpg' | relative_url }}" class="img-fluid rounded z-depth-1">
+        <img src="{{ '/assets/img/final_sketch2.png' | relative_url }}" class="img-fluid rounded z-depth-1">
     </div>
 </div>
 <div class="caption">Final sketching outputs showcasing high reconstruction fidelity on paper.</div>
@@ -69,10 +69,10 @@ This project implements a complete closed-loop pipeline for high-precision robot
 
 <div class="row">
     <div class="col-sm-6 mt-3 mt-md-0">
-        <img src="{{ '/assets/img/sim_plot1.jpg' | relative_url }}" class="img-fluid rounded z-depth-1">
+        <img src="{{ '/assets/img/sim_plot1.png' | relative_url }}" class="img-fluid rounded z-depth-1">
     </div>
     <div class="col-sm-6 mt-3 mt-md-0">
-        <img src="{{ '/assets/img/sim_plot2.jpg' | relative_url }}" class="img-fluid rounded z-depth-1">
+        <img src="{{ '/assets/img/sim_plot2.png' | relative_url }}" class="img-fluid rounded z-depth-1">
     </div>
 </div>
 <div class="caption">Simulated trajectory data and joint-space movement analysis.</div>
@@ -82,7 +82,7 @@ This project implements a complete closed-loop pipeline for high-precision robot
 ### 🛠️ Hardware: Compliant Gripper & Setup
 <div class="row">
     <div class="col-sm-4 mt-3 mt-md-0">
-        <img src="{{ '/assets/img/gripper_detail.jpg' | relative_url }}" class="img-fluid rounded z-depth-1">
+        <img src="{{ '/assets/img/gripper_detail.png' | relative_url }}" class="img-fluid rounded z-depth-1">
         <div class="caption">Detailed view of the <b>spring-buffered compliant gripper</b>.</div>
     </div>
     <div class="col-sm-4 mt-3 mt-md-0">
