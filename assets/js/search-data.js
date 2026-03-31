@@ -424,6 +424,11 @@ ninja.data = [{
           description: "A complete closed-loop robotic drawing system integrating computer vision, analytical IK, and compliant hardware design.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/6_project/";
+            },},{id: "projects-replicating-ddat-diffusion-policies-for-robot-trajectories",
+          title: 'Replicating DDAT: Diffusion Policies for Robot Trajectories',
+          description: "An independent reproduction of DDAT in MuJoCo, evaluating the necessity of projection operators across four underactuated robotic systems.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/7_project/";
             },},{id: "teachings-data-science-fundamentals",
           title: 'Data Science Fundamentals',
           description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
