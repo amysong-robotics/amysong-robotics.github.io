@@ -411,7 +411,7 @@ ninja.data = [{
               window.location.href = "/projects/3_project/";
             },},{id: "projects-ros2-mobile-manipulator",
           title: 'ROS2 Mobile Manipulator',
-          description: "4-DOF manipulator with Multimodal HRI, SLAM, and Visual Servoing.",
+          description: "A 4-DOF autonomous robot integrated with SLAM, Nav2, and Multimodal Human-Robot Interaction.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/4_project/";
             },},{id: "projects-autonomous-rescue-vehicle",
