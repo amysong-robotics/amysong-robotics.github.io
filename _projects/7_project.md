@@ -114,3 +114,8 @@ While MuJoCo rendering is omitted for trajectory focus, the quantitative analysi
 - **Projection Mechanism:** My results confirm that the differentiable projection operator is the cornerstone of DDAT, ensuring that diffusion-generated samples remain within the feasible physics manifold.
 - **Generative Training:** I curated and trained diffusion-based datasets for each agent, experiencing the complexities of multi-modal task allocation.
 - **Stability Analysis:** Comparative plots highlight that without projection, high-dimensional open-loop systems suffer from accumulated error and rapid loss of equilibrium.
+
+  ---
+
+### ⚠️ Note on Variations
+Minor discrepancies in performance compared to the original DDAT paper may arise from differences in **MuJoCo engine versions** and subtle variations in **hyper-parameter tuning** during the independent replication process. Despite these minor deviations, the fundamental role of the projection operator in ensuring open-loop stability remains consistently verified across all tested agents.
