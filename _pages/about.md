@@ -25,7 +25,8 @@ I am a third-year undergraduate student majoring in Robotics Engineering at [Sou
 
 ---
 
-### 🚀 Seeking 2026 Research Internships (July – Dec 2026)
+### 🚀 Seeking 2026 Research Internships 
+###  (July – Dec 2026)
 I am seeking visiting researcher opportunities for the second half of 2026. Having completed most of my undergraduate coursework, I can fully dedicate myself to a 6-month full-time research project.
 
 <div style="margin-top: 15px;">
