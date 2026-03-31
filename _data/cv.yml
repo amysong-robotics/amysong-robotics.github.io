@@ -4,6 +4,10 @@ cv:
   phone: "+86 18186518423"
   location: "Shenzhen, China"
   website: "https://amysong-robotics.github.io"
+  github: "https://github.com/amysong-robotics"
+  
+  # 新增研究兴趣
+  interests: "Reinforcement Learning, Learning-based Control, Human-Robot Interaction, and Sim-to-Real Transfer"
 
   sections:
     Education:
@@ -15,87 +19,76 @@ cv:
         end_date: "present"
         highlights:
           - "Overall GPA: 3.85/4.0 , Weighted Avg: 92.63/100"
-          - "Core Courses: ROS, Robot Modeling and Control, Mechanical Design, Control Engineering"
-          - "Leadership: President, Student Organizations Council (SOC); President, Robotics Club"
+          - "Core Courses: Robot Modeling and Control (97), Mechanics of Materials M (100), Machine Learning (93), Control Engineering (90), ROS (100)"
+          - "Leadership: President of Robotics Club & Student Organizations Council (SOC)"
 
+    # 这里统一放在 Projects 下，但内容更新为科研级别的描述
     Projects:
       - name: "Slope Center-of-Mass (CoM) Assistance System"
-        start_date: "2025-12"
+        start_date: "2025-07"
         end_date: "present"
         summary: "Undergraduate Researcher | Advisor: Prof. Chenglong Fu"
         highlights:
-          - "Designed a compound pulley experimental testbed to deliver dynamic, regulated traction to the human CoM."
-          - "Developed an STM32 control architecture, achieving an estimated 20–30% reduction in metabolic cost under various incline conditions."
+          - "Designed a human-in-the-loop testbed with a compound pulley system delivering dynamic traction (up to 200 N) with <5% force control error."
+          - "Developed STM32 closed-loop control and performed biomechanical modeling to analyze gait parameters across multi-slope datasets."
+          - "Achieved 20–30% reduction in metabolic cost; manuscript in preparation for IEEE RA-L."
       - name: "Autonomous UAV Mission Navigation"
         start_date: "2025-10"
-        end_date: "2025-12"
+        end_date: "2026-01"
         summary: "Undergraduate Researcher | Advisor: Prof. Boyu Zhou"
         highlights:
-          - "Deployed Fast-Planner on ROS for real-time, kinodynamically feasible trajectory generation in obstacle environments."
-          - "Engineered a custom RViz benchmark track to validate autonomous waypoint traversal and obstacle avoidance."
-      - name: "ROS2-Based Mobile Manipulator"
+          - "Deployed Fast-Planner on ROS to generate kinodynamically feasible trajectories in randomized obstacle environments."
+          - "Engineered a custom sequential waypoint navigation pipeline in RViz and tuned stability margins for robust flight performance."
+      - name: "Simulation Infrastructure for RL-based Dexterous Manipulation"
+        start_date: "2025-06"
+        end_date: "2025-10"
+        summary: "Undergraduate Researcher | Advisor: Prof. Zhao Tang"
+        highlights:
+          - "Led the development of high-fidelity simulation environments in NVIDIA Isaac Sim and Webots for multi-fingered robotic palms."
+          - "Refined URDF models and resolved kinematic constraints, enabling RL policies to achieve underactuated concave-to-convex state transitions."
+      - name: "ROS2-Based Mobile Manipulator with Multimodal HRI"
         start_date: "2025-09"
         end_date: "2025-12"
         summary: "Project Leader | Advisor: Prof. Wende Ke"
         highlights:
-          - "Architected a two-wheeled differential drive mobile base with a 4-DOF manipulator in SolidWorks and URDF."
-          - "Deployed ROS2 Nav2, LiDAR SLAM, and Visual Servoing, achieving ±5 mm horizontal alignment accuracy."
-          - "Implemented multimodal HRI using MediaPipe and Vosk API."
-      - name: "Sim-to-Real Infrastructure for Dexterous Hand"
-        start_date: "2025-07"
-        end_date: "2025-11"
-        summary: "Undergraduate Researcher | Advisor: Prof. Zhao Tang"
+          - "Architected a differential drive base with a 4-DOF manipulator; integrated ROS2 Nav2 and LiDAR-based SLAM."
+          - "Engineered an Image-Based Visual Servoing (IBVS) pipeline with EKF sensor fusion, achieving ±5 mm alignment accuracy."
+          - "Implemented multimodal HRI using MediaPipe for gesture recognition and Vosk API for offline voice commands."
+      - name: "CV-Guided 6-DOF Robotic Sketching System"
+        start_date: "2025-03"
+        end_date: "2025-06"
+        summary: "Project Leader | Advisor: Prof. Chenglong Fu"
         highlights:
-          - "Refined a multi-fingered robotic palm URDF and established robust simulation environments in Webots and Isaac Sim."
-          - "Configured contact dynamics for future Reinforcement Learning (RL) grasping policy training."
+          - "Engineered a custom compliant end-effector with a spring-buffered linear guide for adaptive pressure regulation."
+          - "Solved 6-DOF inverse kinematics (IK) via D-H parameters for precise 2D robotic drawing on planar surfaces via MATLAB/Simulink."
       - name: "Autonomous Intelligent Rescue Vehicle"
-        start_date: "2024-11"
+        start_date: "2024-12"
         end_date: "2025-08"
         summary: "Project Leader | Advisors: Prof. Dong Lu, Yuanjian Huang"
         highlights:
-          - "Programmed STM32 for visual telemetry and deployed a custom YOLOv11 model for real-time object detection."
-          - "Led the team to win the National Second Prize and Provincial First Prize."
-      - name: "CV-Guided 6-DOF Robotic Sketching System"
-        start_date: "2024-03"
-        end_date: "2024-06"
-        summary: "Project Leader | Advisor: Prof. Chenglong Fu"
-        highlights:
-          - "Engineered an OpenCV vision pipeline for sub-pixel contour extraction and continuous toolpath generation."
-          - "Solved 6-DOF inverse kinematics via D-H parameters for high-precision physical sketching."
+          - "Programmed STM32 (C/C++) for autonomous retrieval: aligning prioritized colored targets to the visual center and managing PWM-servo grasping."
+          - "Deployed custom YOLOv11 for robust real-time recognition; Led team to win the National Second Prize and Provincial First Prize."
 
     Awards:
       - title: "National Second Prize, Engineering Practice & Innovation Ability Competition"
-        name: "National Second Prize, Engineering Practice & Innovation Ability Competition"
         date: "2025"
       - title: "Provincial First Prize, Engineering Practice & Innovation Ability Competition"
-        name: "Provincial First Prize, Engineering Practice & Innovation Ability Competition"
         date: "2025"
-      - title: "First-Class Scholarship for Outstanding Students"
-        name: "First-Class Scholarship for Outstanding Students"
+      - title: "First-Class Scholarship for Outstanding Students (Top 3%)"
         date: "2025"
       - title: "Provincial Second Prize, Mechanical Innovational Competition"
-        name: "Provincial Second Prize, Mechanical Innovational Competition"
         date: "2025"
       - title: "Outstanding Student Award"
-        name: "Outstanding Student Award"
-        date: "2025"
-      - title: "Outstanding Student Award"
-        name: "Outstanding Student Award"
-        date: "2024"
-      - title: "Second-Class Scholarship"
-        name: "Second-Class Scholarship"
+        date: "2024, 2025"
+      - title: "Second-Class Scholarship (Top 8%)"
         date: "2024"
 
     Skills:
       - name: "Programming Languages"
-        keywords:
-          - "C / C++, Python, MATLAB"
+        keywords: ["C/C++, Python, MATLAB"]
       - name: "Mechanical Design & Manufacturing"
-        keywords:
-          - "AutoCAD, SolidWorks, Edgecam, Abaqus"
-      - name: "IDEs"
-        keywords:
-          - "Visual Studio, VScode, Keil5, Arduino"
-      - name: "Robot Simulation & Visualization"
-        keywords:
-          - "Gazebo, Webots, Isaac Sim, Rviz2"
+        keywords: ["AutoCAD, SolidWorks, Edgecam, Abaqus"]
+      - name: "Integrated Development Environments (IDEs)"
+        keywords: ["Visual Studio, VScode, Keil5, Arduino"]
+      - name: "Simulation & Visualization"
+        keywords: ["Gazebo, Webots, NVIDIA Isaac Sim, Rviz2"]
