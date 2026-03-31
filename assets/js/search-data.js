@@ -406,7 +406,7 @@ ninja.data = [{
               window.location.href = "/projects/2_project/";
             },},{id: "projects-sim-to-real-dexterous-hand",
           title: 'Sim-to-Real Dexterous Hand',
-          description: "Closed-loop infrastructure for multi-fingered robotic palm in Webots and Isaac Sim.",
+          description: "Simulation infrastructure for a multi-fingered robotic palm in Webots and Isaac Sim.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
             },},{id: "projects-ros2-mobile-manipulator",
