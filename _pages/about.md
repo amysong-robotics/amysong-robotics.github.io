@@ -18,8 +18,6 @@ social: true
 
 I am a third-year undergraduate student majoring in Robotics Engineering at [Southern University of Science and Technology](https://www.sustech.edu.cn/). My research focus is on the intersection of **Reinforcement Learning**, **Learning-based Control**, and **Autonomous Systems**. 
 
-When I first started my research, I had not yet determined a specific focus. To find my direction, I explored several different areas through various projects, such as building a ROS2-based mobile manipulator from scratch and deploying real-time navigation for UAVs. While these projects spanned different fields, they helped me understand how robotic systems operate as a whole. Through this practical exploration, I eventually identified my primary interest in Reinforcement Learning and Sim-to-Real transfer.
-
 **Current Research Focus:**
 * **Sim-to-Real & Reinforcement Learning:** Developing high-fidelity simulation infrastructures in NVIDIA Isaac Sim and MuJoCo to train and deploy robust RL policies for robotic manipulation.
 * **Embedded Control Systems:** Designing STM32-based real-time control architectures for human gait assistance. I am currently finalizing a manuscript on this work for submission to **IEEE Robotics and Automation Letters (RA-L)**.
