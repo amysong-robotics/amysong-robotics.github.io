@@ -18,7 +18,7 @@ Developed a Fast-Planner framework on ROS to generate real-time, kinodynamically
     </div>
 </div>
 <div class="caption">
-    Autonomous traversal through a complex ring-shaped circuit in RViz (Fast-Planner).
+    <b>Replication of Fast-Planner:</b> Real-time trajectory generation and obstacle avoidance in a randomized point-cloud environment.
 </div>
 
 <div class="row">
@@ -27,5 +27,5 @@ Developed a Fast-Planner framework on ROS to generate real-time, kinodynamically
     </div>
 </div>
 <div class="caption">
-    Autonomous traversal through a complex ring-shaped circuit in RViz (Round).
+    <b>Autonomous Mission Logic:</b> Successfully traversed a self-designed circular benchmark circuit by engineering custom sequential waypoint navigation.
 </div>
