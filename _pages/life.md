@@ -3,7 +3,7 @@ layout: page
 title: life
 permalink: /life/
 description: Work hard, play hard. A glimpse into my life beyond robotics.
-nav: true
+nav: none
 nav_order: 4
 ---
 
