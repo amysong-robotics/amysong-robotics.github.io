@@ -9,7 +9,7 @@ last_name: Song
 contact_note: >
   Feel free to reach out for collaborations or research opportunities!
 description: "Undergraduate Researcher in Robotics at SUSTech."
-icon: 🐱
+icon: /assets/img/icon_cat.png
 
 # 重点：直接写在这里，不要套在 social_icons 缩进
 email: amysong.swimkim@gmail.com
