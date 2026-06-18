@@ -9,6 +9,15 @@ category: Competitions
 
 As the team leader, I led our group to win the **National Second Prize** in the China Undergraduate Engineering Practice and Innovation Ability Competition. We developed an autonomous vehicle capable of real-time target recognition and precise retrieval in complex environments.
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img src="{{ '/assets/img/saver.png' | relative_url }}" class="img-fluid rounded z-depth-1" alt="Autonomous Rescue Vehicle">
+    </div>
+</div>
+<div class="caption">
+    <b>Project Image:</b> Autonomous Rescue Vehicle
+</div>
+
 ### Competition & Team
 
 <div class="row">
