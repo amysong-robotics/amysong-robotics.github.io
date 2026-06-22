@@ -7,7 +7,7 @@ importance: 1
 category: Course Projects
 ---
 
-<!-- 1. Header (纯净版) -->
+<!-- 1. Header (科技感按钮区) -->
 <div class="text-center mb-5">
   <h1 style="font-weight: 800; letter-spacing: -1px; color: #1a1a1a; font-family: serif;">SplatSLAM</h1>
   <p class="lead" style="font-size: 1.15rem; color: #666; max-width: 800px; margin: 0 auto;">
@@ -19,6 +19,8 @@ category: Course Projects
   </div>
 
   <div class="links mt-4">
+    <!-- 这里插入了你的 Google Sites 链接 -->
+    <a href="https://sites.google.com/view/splatslam/home" class="btn btn-outline-dark btn-sm rounded-pill px-4 mx-1" target="_blank">🌐 Project Page (Interactive)</a>
     <a href="#" class="btn btn-outline-dark btn-sm rounded-pill px-4 mx-1">🎥 Demo Video</a>
     <a href="#" class="btn btn-outline-dark btn-sm rounded-pill px-4 mx-1">💻 GitHub Code</a>
   </div>
