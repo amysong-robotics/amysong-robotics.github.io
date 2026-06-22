@@ -429,9 +429,9 @@ ninja.data = [{
           description: "An independent reproduction of DDAT in MuJoCo, evaluating the necessity of projection operators across four underactuated robotic systems.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/7_project/";
-            },},{id: "projects-splatslam-dense-3d-reconstruction",
-          title: 'SplatSLAM: Dense 3D Reconstruction',
-          description: "End-to-End Indoor Scene Reconstruction Pipeline Based on Learning-based SLAM and 3D Gaussian Splatting.",
+            },},{id: "projects-splatslam",
+          title: 'SplatSLAM',
+          description: "Dense 3D Reconstruction from Monocular Video via Learning-based SLAM and Gaussian Splatting.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/splatslam/";
             },},{id: "teachings-data-science-fundamentals",
