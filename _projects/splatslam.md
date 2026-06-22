@@ -21,7 +21,6 @@ category: Course Projects
   <div class="links mt-4">
     <!-- 这里插入了你的 Google Sites 链接 -->
     <a href="https://sites.google.com/view/splatslam/home" class="btn btn-outline-dark btn-sm rounded-pill px-4 mx-1" target="_blank">🌐 Project Page (Interactive)</a>
-    <a href="#" class="btn btn-outline-dark btn-sm rounded-pill px-4 mx-1">🎥 Demo Video</a>
     <a href="#" class="btn btn-outline-dark btn-sm rounded-pill px-4 mx-1">💻 GitHub Code</a>
   </div>
 </div>
