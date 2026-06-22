@@ -47,7 +47,7 @@ category: Course Projects
 <div class="section mb-5">
   <h4 style="font-weight: 700; border-bottom: 2px solid #333; display: inline-block; margin-bottom: 30px;">Methodology</h4>
   <div class="text-center mb-4">
-    <img src="https://placehold.co/1200x350/f8f9fa/333333?text=Technical+Pipeline+Diagram" class="img-fluid rounded border">
+    <img src="{{ '/assets/img/pipeline.png' | relative_url }}" class="img-fluid rounded border shadow-sm" style="width: 100%;">
   </div>
   <div class="row text-left" style="font-size: 0.9rem; color: #555;">
     <div class="col-md-3"><strong>1. Preprocessing</strong><br>10 FPS Frame Extraction</div>
