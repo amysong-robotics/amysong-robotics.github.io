@@ -135,5 +135,3 @@ category: Research
     <strong>Acknowledgements:</strong> This project was developed as a final project for the <strong>Computer Vision</strong> course at Southern University of Science and Technology (SUSTech). Special thanks to <strong>Prof. Feng Zheng</strong> and <strong>Prof. Weiyu Wang</strong> for their guidance.
   </p>
 </div>
-}</pre>
-</div>
