@@ -129,18 +129,11 @@ category: Research
   </div>
 </div>
 
-<!-- 8. Acknowledgements & Citation -->
+<!-- 8. Footer -->
 <div class="section mb-5" style="border-top: 1px solid #eee; padding-top: 30px;">
-  <p style="font-size: 0.9rem; color: #666;">
-    <strong>Acknowledgements:</strong> Developed as a final project for the <strong>Computer Vision</strong> course at Southern University of Science and Technology (SUSTech). Special thanks to <strong>Prof. Feng Zheng</strong> and <strong>Prof. Weiyu Wang</strong>.
+  <p style="font-size: 0.85rem; color: #888; text-align: center;">
+    <strong>Acknowledgements:</strong> This project was developed as a final project for the <strong>Computer Vision</strong> course at Southern University of Science and Technology (SUSTech). Special thanks to <strong>Prof. Feng Zheng</strong> and <strong>Prof. Weiyu Wang</strong> for their guidance.
   </p>
-  
-  <p class="mt-4 mb-2" style="font-size: 0.75rem; font-weight: bold; color: #aaa; text-transform: uppercase; letter-spacing: 1px;">Citation</p>
-  <pre style="font-size: 0.7rem; background: #f8f9fa; padding: 15px; border-radius: 5px; color: #777; border: 1px solid #eee;">
-@article{splatslam2026,
-  title={SplatSLAM: Dense 3D Reconstruction via Learning-based SLAM and 3DGS},
-  author={Li, Jiacan, Song, Yuzhen, and Ma, Yiming},
-  journal={Computer Vision Course Project, SUSTech},
-  year={2026}
+</div>
 }</pre>
 </div>
