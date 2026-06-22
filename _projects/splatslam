@@ -1,28 +1,62 @@
 ---
 layout: page
 title: SplatSLAM
-description: End-to-End Indoor Scene Reconstruction Pipeline Based on MVS-SLAM and 3D Gaussian Splatting
-img: assets/img/your_teaser_image.jpg # 这里填你最帅的那张点云大图的文件名
+description: End-to-End Indoor Scene Reconstruction Pipeline Based on Learning-based SLAM and 3D Gaussian Splatting
+img: https://placehold.co/800x400?text=Classroom+Teaser+Result
 importance: 1
 category: work
 ---
 
-<!-- 1. 顶部导航锚点 (单页跳转) -->
+<!-- 1. 顶部学术导航与链接 -->
+<div class="row justify-content-center text-center">
+  <div class="col-sm-12">
+    <h2 class="project-title" style="font-weight: 800;">SplatSLAM</h2>
+    <p class="project-subtitle" style="font-size: 1.2rem;">Dense 3D Reconstruction from Monocular Video via Learning-based SLAM and Gaussian Splatting</p>
+    <p class="authors">
+      <strong>Jiacan Li*</strong> | <strong>Yuzhen Song*</strong> | <strong>Yiming Ma*</strong>
+    </p>
+    <p class="affiliation"><em>Southern University of Science and Technology (SUSTech)</em></p>
+  </div>
+</div>
+
 <div class="row justify-content-center text-center mb-4">
-  <div class="col-auto"><a href="#abstract">Abstract</a></div> |
-  <div class="col-auto"><a href="#methodology">Methodology</a></div> |
-  <div class="col-auto"><a href="#experiments">Experiments</a></div> |
-  <div class="col-auto"><a href="#interactive-demo">Interactive Demo</a></div>
+  <div class="col-auto"><a href="#demo-video" class="btn btn-sm z-depth-1" style="background-color: #f8f9fa;">🎥 Video</a></div>
+  <div class="col-auto"><a href="YOUR_GITHUB_LINK" class="btn btn-sm z-depth-1" style="background-color: #f8f9fa;">💻 Code</a></div>
+  <div class="col-auto"><a href="YOUR_PDF_LINK" class="btn btn-sm z-depth-1" style="background-color: #f8f9fa;">📝 Report</a></div>
+</div>
+
+<!-- 快速跳转导航条 -->
+<div style="background-color: #f1f3f5; padding: 10px; border-radius: 8px; text-align: center; margin-bottom: 30px; font-size: 0.95rem;">
+  <a href="#abstract">Abstract</a> &nbsp;|&nbsp; 
+  <a href="#methodology">Methodology</a> &nbsp;|&nbsp; 
+  <a href="#slam-bench">SLAM Benchmarking</a> &nbsp;|&nbsp; 
+  <a href="#geometry-analysis">Geometric Analysis</a> &nbsp;|&nbsp; 
+  <a href="#3dgs-eval">3DGS Evaluation</a> &nbsp;|&nbsp; 
+  <a href="#real-time">Real-time Analysis</a> &nbsp;|&nbsp; 
+  <a href="#interactive">Interactive Demo</a>
 </div>
 
 <hr>
 
 <!-- 2. Abstract 板块 -->
-<div id="abstract">
-  <h3>Abstract</h3>
-  <p style="text-align: justify;">
-    We present <strong>SplatSLAM</strong>, an end-to-end indoor scene reconstruction pipeline that bridges the gap between learning-based dense SLAM and photo-realistic novel view synthesis. Our method leverages <strong>MASt3R-SLAM</strong> to recover accurate camera trajectories and dense geometric point clouds from monocular RGB video captured by consumer smartphones. To address the inherent noise, we introduce a standardized point cloud post-processing workflow to initialize and train <strong>3D Gaussian Splatting (3DGS)</strong>, enabling real-time, high-fidelity rendering.
-  </p>
+<div id="abstract" class="row">
+  <div class="col-md-8">
+    <h3>Abstract</h3>
+    <p style="text-align: justify;">
+      We present <strong>SplatSLAM</strong>, an end-to-end indoor scene reconstruction pipeline that bridges the gap between learning-based dense SLAM and photo-realistic novel view synthesis. Our method leverages <strong>MASt3R-SLAM</strong> to recover accurate camera trajectories and dense geometric point clouds from monocular RGB video captured by smartphones. To address inherent SLAM noise, we introduce a standardized <strong>SOR (Statistical Outlier Removal)</strong> refinement module. By integrating these optimized priors, we initialize and train <strong>3D Gaussian Splatting (3DGS)</strong>, enabling real-time, high-fidelity digital twin generation for complex indoor environments.
+    </p>
+  </div>
+  <div class="col-md-4">
+    <div class="card p-3 shadow-sm" style="background-color: #fafafa; border: none; border-left: 4px solid #007bff;">
+      <h6 style="font-weight: bold;">Key Highlights</h6>
+      <ul style="list-style-type: none; padding-left: 0; font-size: 0.85rem; line-height: 1.6;">
+        <li>🚀 <strong>End-to-End:</strong> Raw Video to 3D.</li>
+        <li>📍 <strong>Precision:</strong> Sub-10cm ATE RMSE.</li>
+        <li>🧹 <strong>Denoising:</strong> 7.3% Noise Removed.</li>
+        <li>✨ <strong>Fidelity:</strong> Up to 49.46 dB PSNR.</li>
+      </ul>
+    </div>
+  </div>
 </div>
 
 <hr>
@@ -30,75 +64,134 @@ category: work
 <!-- 3. Methodology 板块 -->
 <div id="methodology">
   <h3>Methodology</h3>
-  <div class="row justify-content-center">
-    <!-- 这里插入你生成的流程图 SVG -->
-    {% include figure.html path="assets/img/pipeline.svg" title="System Pipeline" class="img-fluid rounded z-depth-1" %}
+  <div class="text-center mb-4">
+    <!-- 占位图：系统流程图 -->
+    <img src="https://placehold.co/1200x400/f8f9fa/333?text=System+Pipeline+SVG+Diagram" class="img-fluid rounded shadow-sm" style="width: 100%;">
+    <p class="mt-2 text-muted" style="font-size: 0.9rem;"><em>Figure 1: Overview of the SplatSLAM integrated pipeline.</em></p>
   </div>
-  <div class="mt-3">
-    <ol>
-      <li><strong>Data Preprocessing:</strong> Frame extraction at 10 FPS using FFmpeg.</li>
-      <li><strong>MASt3R-SLAM:</strong> Dense tracking and mapping from monocular video.</li>
-      <li><strong>Point Cloud Refinement:</strong> SOR denoising and voxel downsampling.</li>
-      <li><strong>3DGS Optimization:</strong> Training with Nerfstudio for photorealistic NVS.</li>
-    </ol>
-  </div>
-</div>
-
-<hr>
-
-<!-- 4. Experiments 板块 -->
-<div id="experiments">
-  <h3>Experiments & Evaluation</h3>
-  
-  <h4>Quantitative Trajectory Accuracy (TUM Dataset)</h4>
-  <div class="table-responsive">
-    <table class="table table-sm table-borderless">
-      <thead class="thead-light">
-        <tr>
-          <th>Sequence</th>
-          <th>ATE RMSE (m)</th>
-          <th>ATE Mean (m)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>fr1_room</td>
-          <td>0.0987</td>
-          <td>0.0909</td>
-        </tr>
-        <tr>
-          <td><strong>fr1_360</strong></td>
-          <td><strong>0.0717</strong></td>
-          <td><strong>0.0667</strong></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h4>PSNR Comparison across Scenes</h4>
-  <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/psnr_chart.png" title="PSNR Comparison" class="img-fluid rounded z-depth-1" %}
+  <div class="row" style="font-size: 0.95rem;">
+    <div class="col-md-6">
+      <p><strong>1. Data Preprocessing:</strong> 4K video is frame-extracted at 10 FPS using FFmpeg scripts to ensure multi-view consistency.</p>
+      <p><strong>2. MASt3R-SLAM:</strong> A Transformer-based front-end estimates per-frame depth and camera poses (TUM format).</p>
+    </div>
+    <div class="col-md-6">
+      <p><strong>3. SOR Refinement:</strong> Removing floaters via statistical neighbor analysis (nb=20, std=1.25) in CloudCompare.</p>
+      <p><strong>4. 3DGS Optimization:</strong> Training Gaussian ellipsoids for 30k-50k iterations using Nerfstudio.</p>
     </div>
   </div>
 </div>
 
 <hr>
 
-<!-- 5. 交互式 Demo (Sketchfab) -->
-<div id="interactive-demo">
-  <h3>Interactive 3D Demo</h3>
-  <div class="sketchfab-embed-wrapper">
-    <iframe title="MASt3R-SLAM Dense Pointcloud" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/26dffeeeb1e748d386671aeb205f9081/embed?autostart=1&ui_hint=0&ui_theme=dark" style="width: 100%; height: 500px;"></iframe>
+<!-- 4. SLAM 基准测试 (Point 1, 2) -->
+<div id="slam-bench">
+  <h3>Phase I: Quantitative SLAM Benchmarking</h3>
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <img src="https://placehold.co/600x400?text=ATE+Comparison+Chart" class="img-fluid rounded">
+    </div>
+    <div class="col-md-6">
+      <p>We evaluate <strong>MASt3R-SLAM</strong> on the TUM-RGBD dataset. The system achieves exceptional robustness in <strong>360° rotation</strong> sequences (0.071m ATE) compared to large-scale <strong>Room</strong> sequences (0.098m), proving it provides reliable camera priors for 3DGS initialization.</p>
+      <div style="background-color: #f8f9fa; padding: 10px; border-radius: 5px; font-family: monospace; font-size: 0.8rem;">
+        evo_ape tum gt.txt est.txt -as
+      </div>
+    </div>
   </div>
 </div>
 
 <hr>
 
-<!-- 6. 致谢页脚 -->
-<div id="acknowledgements" style="font-size: 0.9rem; color: gray;">
+<!-- 5. 几何与纹理分析 (Point 4, 5, 6) -->
+<div id="geometry-analysis">
+  <h3>Phase II: Geometric Integrity & Texture Saliency</h3>
+  <p>Our experiments demonstrate that reconstruction quality is highly correlated with <strong>Visual Saliency</strong>:</p>
+  <div class="row text-center">
+    <div class="col-md-4">
+      <img src="https://placehold.co/400x300?text=Pantry+PC" class="img-fluid rounded shadow-sm">
+      <p><small><strong>High Saliency (Pantry):</strong> Dense points, clean surfaces.</small></p>
+    </div>
+    <div class="col-md-4">
+      <img src="https://placehold.co/400x300?text=Meeting+Room+PC" class="img-fluid rounded shadow-sm">
+      <p><small><strong>Medium Saliency (Meeting):</strong> Good geometry, minor noise.</small></p>
+    </div>
+    <div class="col-md-4">
+      <img src="https://placehold.co/400x300?text=Blank+Corner+PC" class="img-fluid rounded shadow-sm">
+      <p><small style="color: red;"><strong>Low Saliency (Corner):</strong> Sparse points, major holes.</small></p>
+    </div>
+  </div>
+  <p class="mt-3"><em>Insight: Monocular SLAM reaches its physical limit in feature-less areas, resulting in floating artifacts.</em></p>
+</div>
+
+<hr>
+
+<!-- 6. 3DGS 训练评估 (Point 7, 8, 9, 10 + SOR Ablation) -->
+<div id="3dgs-eval">
+  <h3>Phase III: 3DGS Rendering Fidelity & The PSNR Trap</h3>
+  
+  <div class="row">
+    <div class="col-md-6 text-center">
+      <img src="https://placehold.co/600x350?text=Training+Convergence+Chart" class="img-fluid rounded">
+      <p class="mt-2"><small>3DGS Training Evolution: 7k (Structure) vs 50k (Fidelity)</small></p>
+    </div>
+    <div class="col-md-6">
+      <h5>The "Sweet Spot" Discovery</h5>
+      <p>While PSNR peaks at <strong>50,000 iterations</strong> (up to 44.29 dB), we identify <strong>7,000 iterations</strong> as the "Visual Sweet Spot." Beyond 21k, model risks <strong>anisotropic collapse</strong> (Gaussians becoming too flat), fitting pixels but sacrificing novel view consistency.</p>
+      
+      <h5>Ablation: Impact of SOR Denoising</h5>
+      <p>SOR refinement (removing 7.3% outliers) provides a <strong>+0.41 dB</strong> PSNR gain early (7k iter) and completely eliminates unphysical "floaters," ensuring a cleaner navigable scene.</p>
+    </div>
+  </div>
+
+  <h4 class="mt-5">Qualitative Results: GT vs Rendered</h4>
+  <div class="row text-center">
+    <div class="col-md-4"><img src="https://placehold.co/300x200?text=Ground+Truth" class="img-fluid rounded"><br><small>Ground Truth</small></div>
+    <div class="col-md-4"><img src="https://placehold.co/300x200?text=7k+Render" class="img-fluid rounded"><br><small>7,000 Iter (Draft)</small></div>
+    <div class="col-md-4"><img src="https://placehold.co/300x200?text=50k+Render" class="img-fluid rounded"><br><small>50,000 Iter (Final)</small></div>
+  </div>
+</div>
+
+<hr>
+
+<!-- 7. 实时硬件压力测试 (Bonus Part) -->
+<div id="real-time" style="background-color: #fffaf0; padding: 25px; border-radius: 12px; border: 1px solid #ffeeba;">
+  <h3>Bonus: Hardware Constraints & Real-time Live Demo</h3>
+  <div class="row align-items-center">
+    <div class="col-md-7 text-center">
+      <img src="https://placehold.co/800x450?text=Live+Demo+Video+Placeholder" class="img-fluid rounded shadow z-depth-1">
+    </div>
+    <div class="col-md-5">
+      <p><strong>8GB VRAM Stress Test:</strong> We performed a live execution on a local laptop (RTX 4060). The <strong>ViT-Large</strong> backbone caused significant latency (~2 FPS), highlighting the trade-off between model complexity and edge real-time performance. This confirms the necessity of our high-end server pipeline (RTX 4090) for production-grade digital twins.</p>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<!-- 8. 交互式 Demo (Point 1, 4, 5) -->
+<div id="interactive">
+  <h3>Interactive Demo</h3>
+  <p class="text-muted"><em>Rotate, pan, and zoom to explore the 3D structure of the SUSTech Classroom.</em></p>
+  <div class="sketchfab-embed-wrapper">
+    <iframe title="MASt3R-SLAM Dense Pointcloud" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" src="https://sketchfab.com/models/26dffeeeb1e748d386671aeb205f9081/embed?autostart=1&ui_theme=dark" style="width: 100%; height: 600px; border-radius: 12px;"></iframe>
+  </div>
+</div>
+
+<hr>
+
+<!-- 9. 致谢与引用 (BibTeX) -->
+<div id="acknowledgements" class="mt-5 mb-5">
   <h5>Acknowledgements</h5>
-  <p>
-    This project is developed for the <strong>Computer Vision</strong> course at SUSTech. Special thanks to <strong>Prof. Feng Zheng</strong> and <strong>Prof. Weiyu Wang</strong> for their guidance.
+  <p style="font-size: 0.9rem; color: #666;">
+    This project was developed as a final project for the <strong>Computer Vision</strong> course at Southern University of Science and Technology (SUSTech). We express our sincere gratitude to <strong>Prof. Feng Zheng</strong> and <strong>Prof. Weiyu Wang</strong> for their guidance and constant support.
   </p>
+  
+  <h5 class="mt-4">BibTeX</h5>
+  <div style="background-color: #f8f9fa; padding: 15px; border-radius: 5px; font-family: monospace; font-size: 0.8rem; border: 1px solid #eee;">
+    @article{splatslam2026,<br>
+    &nbsp;&nbsp;title={SplatSLAM: Dense 3D Reconstruction from Monocular Video via MVS-SLAM and Gaussian Splatting},<br>
+    &nbsp;&nbsp;author={Li, Jiacan and Song, Yuzhen and Ma, Yiming},<br>
+    &nbsp;&nbsp;journal={Computer Vision Course Project, SUSTech},<br>
+    &nbsp;&nbsp;year={2026}<br>
+    }
+  </div>
 </div>
