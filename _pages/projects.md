@@ -6,84 +6,137 @@ description: My Robotics Projects！🤖
 nav: true
 nav_order: 3
 display_categories: [Research Projects, Competitions, Course Projects ]
-horizontal: true
 ---
 
-<div class="projects">
-{% if site.enable_project_categories and page.display_categories %}
-  {% for category in page.display_categories %}
-  <a id="{{ category }}" href=".#{{ category }}">
-    <h2 class="category" style="margin-top: 3rem; border-bottom: 1px solid #eee; padding-bottom: 10px; font-weight: bold;">{{ category }}</h2>
-  </a>
-  {% assign categorized_projects = site.projects | where: "category", category %}
-  {% assign sorted_projects = categorized_projects | sort: "importance" %}
-  
-  <div class="container project-list">
-    <div class="row row-cols-1">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
+<div class="projects-container">
+  {% if site.enable_project_categories and page.display_categories %}
+    {% for category in page.display_categories %}
+      <h2 class="category-title">{{ category }}</h2>
+      <div class="project-list">
+        {% assign categorized_projects = site.projects | where: "category", category %}
+        {% assign sorted_projects = categorized_projects | sort: "importance" %}
+        
+        {% for project in sorted_projects %}
+        <div class="paper-item">
+          <!-- 左侧：图片 -->
+          <div class="paper-img-box">
+            <a href="{{ project.url | relative_url }}">
+              <img src="{{ project.img | relative_url }}" alt="project thumbnail">
+            </a>
+          </div>
+          
+          <!-- 右侧：文字内容 -->
+          <div class="paper-info">
+            <h3 class="paper-title">
+              <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
+            </h3>
+            <p class="paper-description">{{ project.description }}</p>
+            
+            {% if project.links %}
+            <div class="paper-links">
+              {% for link in project.links %}
+                <a href="{{ link.url }}" class="btn-link">[{{ link.name }}]</a>
+              {% endfor %}
+            </div>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
     {% endfor %}
-    </div>
-  </div>
-  {% endfor %}
-{% endif %}
+  {% endif %}
 </div>
 
 <style>
-/* 1. 彻底去掉卡片外框、背景和阴影 */
-.project-card-horizontal {
-  border: none !important;
-  box-shadow: none !important;
-  background-color: transparent !important;
-  margin-bottom: 40px !important; /* 每个项目之间的间距 */
-  padding: 0 !important;
+/* 强制样式重置 */
+.projects-container {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.project-card-horizontal .card {
-  border: none !important;
-  background: none !important;
+.category-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 40px 0 20px 0;
+  border-bottom: 2px solid #333;
+  padding-bottom: 10px;
 }
 
-/* 2. 统一左侧图片的尺寸和比例 */
-.project-card-horizontal .card-img {
-  width: 100% !important;
-  aspect-ratio: 16 / 10 !important; /* 强制图片为统一比例，防止高矮不一 */
-  object-fit: contain !important;  /* contain保证图片内容不被裁剪，cover则会撑满 */
-  background-color: #fff; /* 如果图片比例不一致，空白处填白色 */
-  border: 1px solid #f0f0f0; /* 给图片一个很浅的边框，防止和网页背景混在一起 */
-  border-radius: 4px !important;
+/* 论文式列表项：左图右文 */
+.paper-item {
+  display: flex !important;
+  flex-direction: row;
+  margin-bottom: 40px;
+  align-items: flex-start;
+  gap: 30px; /* 左右间距 */
 }
 
-/* 3. 调整右侧文字样式，向学术风格靠拢 */
-.project-card-horizontal .card-title {
-  color: #007bff !important; /* 标题改为蓝色，像超链接 */
-  font-size: 1.5rem !important;
-  font-weight: 600 !important;
-  margin-bottom: 8px !important;
+/* 图片容器：强制统一大小 */
+.paper-img-box {
+  flex: 0 0 280px; /* 强制图片宽度为 280px */
+  max-width: 280px;
 }
 
-.project-card-horizontal .card-text {
-  font-size: 0.95rem !important;
-  color: #444 !important;
-  line-height: 1.6 !important;
+.paper-img-box img {
+  width: 100%;
+  height: 180px;   /* 强制图片高度统一为 180px */
+  object-fit: cover; /* 裁剪多余部分，保证不缩放变形 */
+  border-radius: 4px;
+  border: 1px solid #eee;
+  transition: transform 0.3s ease;
 }
 
-/* 4. 这里的控制很关键：调整图片和文字的左右比例 */
-/* 如果你想让图片小一点，文字多一点，可以调整这里的宽度 */
-@media (min-width: 768px) {
-  .project-card-horizontal .row .col-md-6 { 
-    flex: 0 0 35% !important; /* 图片占 35% 宽度 */
-    max-width: 35% !important;
+.paper-img-box img:hover {
+  transform: scale(1.02);
+}
+
+/* 文字区域 */
+.paper-info {
+  flex: 1;
+}
+
+.paper-title {
+  margin: 0 0 10px 0 !important;
+  font-size: 1.4rem !important;
+  font-weight: 600;
+}
+
+.paper-title a {
+  color: #0056b3 !important;
+  text-decoration: none;
+}
+
+.paper-title a:hover {
+  text-decoration: underline;
+}
+
+.paper-description {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.paper-links a {
+  font-size: 0.9rem;
+  color: #007bff;
+  margin-right: 10px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* 手机端适配：改为上下排列 */
+@media (max-width: 768px) {
+  .paper-item {
+    flex-direction: column;
   }
-  .project-card-horizontal .row .col-md-6 + .col-md-6 {
-    flex: 0 0 65% !important; /* 文字占 65% 宽度 */
-    max-width: 65% !important;
-    padding-left: 30px !important; /* 文字距离图片的间隙 */
+  .paper-img-box {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 100%;
   }
-}
-
-/* 移除自带的 badge 样式（如果有） */
-.badge {
-  display: none !important;
+  .paper-img-box img {
+    height: auto;
+  }
 }
 </style>
