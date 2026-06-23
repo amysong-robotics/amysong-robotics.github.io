@@ -102,12 +102,14 @@ display_categories: [Research Projects, Competitions, Course Projects ]
 }
 
 .paper-title a {
-  color: #0056b3 !important;
+  color: #333 !important; /* 换成深灰色 */
   text-decoration: none;
+  transition: color 0.2s ease; /* 增加一个平滑过渡 */
 }
 
 .paper-title a:hover {
-  text-decoration: underline;
+  color: #007bff !important; /* 鼠标悬停时变成蓝色，提醒这是个链接 */
+  text-decoration: none;
 }
 
 .paper-description {
