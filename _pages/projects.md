@@ -17,10 +17,14 @@ display_categories: [Research Projects, Competitions, Course Projects ]
         {% assign sorted_projects = categorized_projects | sort: "importance" %}
         
         {% for project in sorted_projects %}
+        {% assign project_href = project.url | relative_url %}
+        {% if project.redirect %}
+          {% assign project_href = project.redirect %}
+        {% endif %}
         <div class="paper-item">
           <!-- 左侧：图片 -->
           <div class="paper-img-box">
-            <a href="{{ project.url | relative_url }}">
+            <a href="{{ project_href }}">
               <img src="{{ project.img | relative_url }}" alt="project thumbnail">
             </a>
           </div>
@@ -28,7 +32,7 @@ display_categories: [Research Projects, Competitions, Course Projects ]
           <!-- 右侧：文字内容 -->
           <div class="paper-info">
             <h3 class="paper-title">
-              <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
+              <a href="{{ project_href }}">{{ project.title }}</a>
             </h3>
             <p class="paper-description">{{ project.description }}</p>
             
