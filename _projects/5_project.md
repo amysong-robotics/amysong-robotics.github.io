@@ -2,7 +2,7 @@
 layout: page
 title: Autonomous Rescue Vehicle
 description: National Second Prize winner. Features YOLOv11 object detection and FSM control.
-img: /assets/img/saver.png
+img: assets/img/saver.png
 importance: 2
 category: Competitions
 ---
