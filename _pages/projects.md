@@ -61,22 +61,30 @@ display_categories: [Research Projects, Competitions, Course Projects ]
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  font-size: 1.45rem;
+  margin: 1.8rem 0 0.85rem;
+  padding: 0.55rem 0.85rem;
+  background: linear-gradient(90deg, rgba(143, 177, 98, 0.22), rgba(241, 223, 145, 0.45));
+  border: 1px solid rgba(143, 177, 98, 0.22);
+  border-left: 5px solid #8fb162;
+  border-radius: 14px;
+  color: #33402a;
+  font-size: 1.36rem;
   font-weight: 800;
-  margin: 1.7rem 0 1rem;
-  color: #2f2b26;
 }
 
 .category-title::after {
   content: "";
   flex: 1;
   height: 1px;
-  background: linear-gradient(90deg, rgba(182, 90, 52, 0.34), transparent);
+  background: linear-gradient(90deg, rgba(143, 177, 98, 0.45), transparent);
 }
 
 .project-list {
   display: grid;
-  gap: 1rem;
+  gap: 0.95rem;
+  padding: 0.35rem 0.45rem 0.6rem;
+  background: rgba(238, 245, 223, 0.32);
+  border-radius: 16px;
 }
 
 .paper-item {
@@ -84,19 +92,19 @@ display_categories: [Research Projects, Competitions, Course Projects ]
   grid-template-columns: 250px minmax(0, 1fr);
   align-items: stretch;
   gap: 1.15rem;
-  padding: 0.85rem;
+  padding: 0.9rem;
   margin-bottom: 0;
-  background: rgba(255, 255, 255, 0.72);
-  border: 1px solid rgba(55, 45, 35, 0.09);
+  background: linear-gradient(135deg, rgba(244, 240, 201, 0.88), rgba(238, 245, 223, 0.88));
+  border: 1px solid rgba(143, 177, 98, 0.24);
   border-radius: 18px;
-  box-shadow: 0 10px 28px rgba(58, 48, 35, 0.06);
+  box-shadow: 0 10px 24px rgba(105, 130, 67, 0.1);
   transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 }
 
 .paper-item:hover {
   transform: translateY(-3px);
-  border-color: rgba(182, 90, 52, 0.24);
-  box-shadow: 0 16px 38px rgba(58, 48, 35, 0.1);
+  border-color: rgba(143, 177, 98, 0.44);
+  box-shadow: 0 16px 34px rgba(105, 130, 67, 0.16);
 }
 
 .paper-img-box {
@@ -114,8 +122,8 @@ display_categories: [Research Projects, Competitions, Course Projects ]
   height: 160px;
   object-fit: cover;
   border-radius: 13px;
-  border: 1px solid rgba(55, 45, 35, 0.08);
-  background: #fff;
+  border: 1px solid rgba(143, 177, 98, 0.24);
+  background: #fbf7dc;
   transition: transform 0.3s ease;
 }
 
@@ -139,19 +147,19 @@ display_categories: [Research Projects, Competitions, Course Projects ]
 }
 
 .paper-title a {
-  color: #2f2b26 !important;
+  color: #2f3428 !important;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .paper-title a:hover {
-  color: #b65a34 !important;
+  color: #5f7f3a !important;
 }
 
 .paper-description {
   max-width: 680px;
   margin-bottom: 0.65rem;
-  color: #5f584f;
+  color: #59614c;
   font-size: 0.93rem;
   line-height: 1.55;
 }
@@ -167,16 +175,16 @@ display_categories: [Research Projects, Competitions, Course Projects ]
   align-items: center;
   padding: 0.22rem 0.58rem;
   border-radius: 999px;
-  background: rgba(182, 90, 52, 0.09);
-  color: #a84f2f;
+  background: rgba(143, 177, 98, 0.16);
+  color: #5f7f3a;
   font-size: 0.82rem;
   font-weight: 700;
   text-decoration: none;
 }
 
 .paper-links a:hover {
-  background: rgba(143, 177, 98, 0.16);
-  color: #66863e;
+  background: rgba(241, 223, 145, 0.55);
+  color: #8a6b16;
 }
 
 @media (max-width: 768px) {
