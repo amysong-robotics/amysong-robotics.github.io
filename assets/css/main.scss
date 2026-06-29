@@ -92,3 +92,229 @@ h1, h2, h3, .navbar-brand {
 .post {
   padding-top: 2rem;
 }
+
+// ==========================================
+// Reference-inspired homepage layout
+// ==========================================
+
+body {
+  line-height: 1.62;
+}
+
+.post:has(.home-shell) {
+  max-width: 920px;
+  margin: 0 auto;
+  padding-top: 1.25rem;
+}
+
+.post:has(.home-shell) > .post-header {
+  display: none;
+}
+
+.home-shell {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.home-intro {
+  margin-bottom: 0.85rem;
+}
+
+.home-name {
+  margin: 0;
+  color: #171a14;
+  font-family: 'Outfit', sans-serif;
+  font-size: 2.15rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.home-subtitle {
+  margin: 0.25rem 0 0;
+  color: #606854;
+  font-size: 0.86rem;
+}
+
+.hero-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) 220px;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 1.05rem;
+  background: linear-gradient(135deg, rgba(252, 253, 249, 0.96), rgba(238, 245, 223, 0.9));
+  border: 1px solid rgba(143, 177, 98, 0.2);
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(143, 177, 98, 0.13);
+}
+
+.eyebrow,
+.section-kicker {
+  margin: 0 0 0.35rem;
+  color: #8fb162;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.hero-copy h1 {
+  margin: 0 0 0.55rem;
+  color: #12140f;
+  font-size: clamp(1.55rem, 3vw, 2.25rem);
+  font-weight: 850 !important;
+  line-height: 1.08;
+  letter-spacing: -0.055em;
+}
+
+.hero-copy p {
+  margin-bottom: 0.7rem;
+  color: #4b5140;
+  font-size: 0.9rem;
+}
+
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.38rem;
+}
+
+.hero-tags span {
+  display: inline-flex;
+  padding: 0.25rem 0.55rem;
+  background: rgba(238, 193, 77, 0.18);
+  border: 1px solid rgba(143, 177, 98, 0.18);
+  border-radius: 999px;
+  color: #6c8148;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.hero-profile {
+  margin: 0;
+  padding: 0.55rem;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(143, 177, 98, 0.16);
+  border-radius: 14px;
+}
+
+.hero-profile img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(143, 177, 98, 0.16);
+}
+
+.hero-profile p {
+  margin: 0.55rem 0 0;
+  color: #545c48;
+  font-size: 0.74rem;
+  line-height: 1.45;
+}
+
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.15rem;
+}
+
+.highlight-card {
+  min-height: 86px;
+  padding: 0.9rem;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(143, 177, 98, 0.16);
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(143, 177, 98, 0.08);
+}
+
+.highlight-card strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: #8fb162;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 850;
+  line-height: 1;
+}
+
+.highlight-card span {
+  display: block;
+  color: #5c6352;
+  font-size: 0.75rem;
+  line-height: 1.35;
+}
+
+.content-section {
+  margin-top: 1rem;
+}
+
+.content-section h2 {
+  margin: 0 0 0.65rem;
+  color: #171a14;
+  font-size: 1.12rem;
+  font-weight: 800 !important;
+}
+
+.interest-list {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.interest-list article,
+.compact-section {
+  padding: 0.78rem 0.9rem;
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(143, 177, 98, 0.15);
+  border-left: 4px solid #8fb162;
+  border-radius: 12px;
+}
+
+.interest-list h3 {
+  margin: 0 0 0.2rem;
+  color: #20251b;
+  font-size: 0.92rem;
+  font-weight: 800 !important;
+}
+
+.interest-list p,
+.compact-section p {
+  margin: 0;
+  color: #59614f;
+  font-size: 0.82rem;
+  line-height: 1.48;
+}
+
+.home-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+}
+
+.home-actions .btn {
+  border-color: rgba(143, 177, 98, 0.45) !important;
+  color: #546c34 !important;
+  background: rgba(252, 253, 249, 0.72);
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.home-actions .btn:hover {
+  background: rgba(238, 193, 77, 0.18);
+}
+
+@media (max-width: 768px) {
+  .home-shell {
+    max-width: 100%;
+  }
+
+  .hero-card,
+  .highlight-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-profile {
+    max-width: 260px;
+  }
+}
