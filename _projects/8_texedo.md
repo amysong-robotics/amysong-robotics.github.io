@@ -3,7 +3,7 @@ layout: page
 title: "TEXEDO: Controller-aware Humanoid Motion Generation"
 description: A UC Berkeley collaboration on test-time scaling for controller-aware, language-conditioned humanoid motion generation.
 img: assets/img/texedo_overview.png
-importance: 5
+importance: 0
 category: Research Projects
 redirect: https://jianuocao.github.io/TEXEDO/
 links:
