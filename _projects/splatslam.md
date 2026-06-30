@@ -79,7 +79,7 @@ category: Course Projects
       </article>
     </div>
 
-    <figure class="splatslam-figure reference-small">
+    <figure class="splatslam-figure pipeline-figure">
       <img src="{{ '/assets/img/pipeline.png' | relative_url }}" alt="SplatSLAM processing pipeline">
       <figcaption>SplatSLAM processing pipeline: video preprocessing, MASt3R-SLAM mapping, point-cloud refinement, and 3DGS rendering.</figcaption>
     </figure>
@@ -92,6 +92,11 @@ category: Course Projects
     <p><strong>Datasets:</strong> 7-Scenes public indoor SLAM benchmark and self-collected SUSTech campus scenes including classrooms and kitchens.</p>
     <p><strong>Hardware:</strong> NVIDIA RTX 4090 with 24GB VRAM.</p>
     <p><strong>Software:</strong> PyTorch, Nerfstudio, and CloudCompare.</p>
+
+    <figure class="splatslam-figure">
+      <img src="{{ '/assets/img/scene_comparison_table_en.png' | relative_url }}" alt="Scene comparison table">
+      <figcaption>Experimental scene comparison summarizing texture richness, geometry completeness, and reconstruction difficulty.</figcaption>
+    </figure>
   </section>
 
   <section class="splatslam-section">
@@ -122,16 +127,10 @@ category: Course Projects
 
     <p><strong>ATE</strong> measures the absolute distance between estimated and ground-truth camera poses. <strong>RMSE</strong> represents the overall average error across frames. Since monocular SLAM cannot recover absolute scale, we perform <strong>Sim(3) Umeyama alignment</strong> before calculating the error for fair comparison.</p>
 
-    <div class="splatslam-figure-grid two-col">
-      <figure>
-        <img src="{{ '/assets/img/mast3r_slam_ate_tum_dataset.png' | relative_url }}" alt="TUM-RGBD SLAM benchmarking result">
-        <figcaption>TUM-RGBD SLAM benchmarking result from the original project page.</figcaption>
-      </figure>
-      <figure>
-        <img src="{{ '/assets/img/scene_comparison_table_en.png' | relative_url }}" alt="Additional SLAM benchmarking figure">
-        <figcaption>Scene-level comparison table used to summarize reconstruction difficulty and visual saliency.</figcaption>
-      </figure>
-    </div>
+    <figure class="splatslam-figure single-centered">
+      <img src="{{ '/assets/img/mast3r_slam_ate_tum_dataset.png' | relative_url }}" alt="TUM-RGBD SLAM benchmarking result">
+      <figcaption>TUM-RGBD SLAM benchmarking result from the original project page.</figcaption>
+    </figure>
   </section>
 
   <section class="splatslam-section">
@@ -139,16 +138,10 @@ category: Course Projects
     <p>By comparing self-collected scenes, we observe that reconstruction quality is highly dependent on <strong>visual saliency</strong>. The pantry yields denser point clouds due to rich textures, while blank corners and texture-less walls result in sparse geometry and floating artifacts.</p>
     <p>Evaluated scenes include meeting room 360, meeting room, tea room, and corner scenes.</p>
 
-    <div class="splatslam-figure-grid two-col">
-      <figure>
-        <img src="{{ '/assets/img/scene_difficulty_comparison.png' | relative_url }}" alt="Scene saliency comparison">
-        <figcaption>Scene difficulty comparison across self-collected indoor environments.</figcaption>
-      </figure>
-      <figure>
-        <img src="{{ '/assets/img/capture_method_comparison.png' | relative_url }}" alt="Geometric robustness visualization">
-        <figcaption>Capture-method comparison showing how viewpoint coverage affects reconstruction completeness.</figcaption>
-      </figure>
-    </div>
+    <figure class="splatslam-figure">
+      <img src="{{ '/assets/img/scene_difficulty_comparison.png' | relative_url }}" alt="Scene saliency comparison">
+      <figcaption>Scene difficulty comparison across self-collected indoor environments.</figcaption>
+    </figure>
   </section>
 
   <section class="splatslam-section">
@@ -158,17 +151,18 @@ category: Course Projects
     <h3>Texture Sensitivity: From Pantry to Blank Wall</h3>
     <p>We evaluate environments with varying texture densities. Richly textured pantry scenes yield more complete geometry, while blank walls are a failure case for monocular SLAM because the lack of salient features leads to sparse points and floating artifacts.</p>
 
-    <div class="splatslam-figure-grid two-col">
+    <figure class="splatslam-figure single-centered">
+      <img src="{{ '/assets/img/test10_training_convergence.png' | relative_url }}" alt="Training convergence result">
+      <figcaption>Training convergence analysis for the test10 reconstruction setting.</figcaption>
+    </figure>
+
+    <div class="splatslam-figure-grid full-width">
       <figure>
-        <img src="{{ '/assets/img/test10_training_convergence.png' | relative_url }}" alt="Texture sensitivity result">
-        <figcaption>Training convergence analysis for the test10 reconstruction setting.</figcaption>
-      </figure>
-      <figure>
-        <img src="{{ '/assets/img/iteration_comparison_frame0000.png' | relative_url }}" alt="3DGS rendering fidelity result">
+        <img src="{{ '/assets/img/iteration_comparison_frame0000.png' | relative_url }}" alt="3DGS rendering fidelity result at frame 0000">
         <figcaption>Iteration comparison at frame 0000 under SOR and opacity reset.</figcaption>
       </figure>
       <figure>
-        <img src="{{ '/assets/img/iteration_comparison_frame0017.png' | relative_url }}" alt="Training convergence visualization">
+        <img src="{{ '/assets/img/iteration_comparison_frame0017.png' | relative_url }}" alt="3DGS rendering fidelity result at frame 0017">
         <figcaption>Iteration comparison at frame 0017 showing consistency across different views.</figcaption>
       </figure>
     </div>
@@ -190,23 +184,29 @@ category: Course Projects
     <h3>The PSNR Trap — Overfitting vs. Generalization</h3>
     <p>We compare two capture strategies in the same meeting room. A stationary rotation with 11 frames achieves high PSNR but overfits by memorizing training views. A full walkthrough with 40 frames yields lower PSNR but reconstructs a more complete and navigable digital twin.</p>
 
-    <figure class="splatslam-figure">
-      <img src="{{ '/assets/img/test10_method_comparison.png' | relative_url }}" alt="PSNR trap comparison">
-      <figcaption>Capture-method comparison: high PSNR from limited views can overfit, while wider coverage improves generalization.</figcaption>
-    </figure>
+    <div class="splatslam-figure-grid full-width">
+      <figure>
+        <img src="{{ '/assets/img/capture_method_comparison.png' | relative_url }}" alt="Capture method comparison">
+        <figcaption>Capture-method comparison showing why viewpoint coverage matters more than a high score from limited views.</figcaption>
+      </figure>
+      <figure>
+        <img src="{{ '/assets/img/test10_method_comparison.png' | relative_url }}" alt="PSNR trap comparison">
+        <figcaption>PSNR trap comparison: high PSNR from limited views can overfit, while wider coverage improves generalization.</figcaption>
+      </figure>
+    </div>
   </section>
 
   <section class="splatslam-section">
     <h2>Real-time Execution &amp; Hardware Constraints</h2>
     <p>The main experiments use an NVIDIA RTX 4090 with 24GB VRAM. Real-time execution remains constrained by dense transformer matching, high-resolution point cloud processing, and 3DGS optimization. These constraints motivate lighter SLAM backbones, more efficient point cloud refinement, and faster training pipelines.</p>
 
-    <div class="splatslam-figure-grid two-col">
+    <div class="splatslam-figure-grid full-width metrics-figures">
       <figure>
-        <img src="{{ '/assets/img/iteration_metrics_table_en.png' | relative_url }}" alt="Real-time hardware constraint result">
+        <img src="{{ '/assets/img/iteration_metrics_table_en.png' | relative_url }}" alt="Iteration metrics table in English">
         <figcaption>Iteration metrics table summarizing rendering quality across training settings.</figcaption>
       </figure>
       <figure>
-        <img src="{{ '/assets/img/iteration_metrics_table.png' | relative_url }}" alt="Real-time execution result">
+        <img src="{{ '/assets/img/iteration_metrics_table.png' | relative_url }}" alt="Original iteration metrics table">
         <figcaption>Original iteration metrics table retained for consistency with the project analysis.</figcaption>
       </figure>
     </div>
@@ -295,6 +295,12 @@ category: Course Projects
   margin: 1.35rem 0;
 }
 
+.splatslam-figure.single-centered {
+  max-width: 680px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .splatslam-figure img,
 .splatslam-figure-grid img {
   width: 100%;
@@ -312,10 +318,35 @@ category: Course Projects
   background: #fff;
 }
 
-.splatslam-figure-grid.two-col {
+.pipeline-figure {
+  max-width: 760px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.pipeline-figure img {
+  object-fit: contain;
+  background: #fff;
+}
+
+.splatslam-figure-grid.two-col,
+.splatslam-figure-grid.full-width {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
+}
+
+.splatslam-figure-grid.two-col {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.splatslam-figure-grid.full-width {
+  grid-template-columns: 1fr;
+}
+
+.metrics-figures {
+  max-width: 760px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .splatslam-figure-grid figure,
@@ -371,6 +402,7 @@ category: Course Projects
 
 @media (max-width: 768px) {
   .splatslam-figure-grid.two-col,
+  .splatslam-figure-grid.full-width,
   .splatslam-embed-grid.two-col {
     grid-template-columns: 1fr;
   }
