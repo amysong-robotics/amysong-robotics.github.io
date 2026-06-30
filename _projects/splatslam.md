@@ -10,9 +10,9 @@ category: Course Projects
 <div class="splatslam-page">
   <header class="splatslam-header">
     <h1>Dense 3D Reconstruction from Monocular Video via Learning-based SLAM and Gaussian Splatting</h1>
-    <p class="splatslam-authors"><strong>Jiacan Li*</strong> · <strong>Yuzhen Song*</strong> · <strong>Yiming Ma*</strong></p>
     <p class="splatslam-affiliation">Southern University of Science and Technology</p>
     <nav class="splatslam-links" aria-label="SplatSLAM page navigation">
+      <a href="https://github.com/SplatSLAM-Project/SplatSLAM" target="_blank" rel="noopener noreferrer">GitHub</a>
       <a href="https://sites.google.com/view/splatslam/home" target="_blank" rel="noopener noreferrer">Original Google Site</a>
       <a href="#demo">Demo</a>
       <a href="#abstract">Abstract</a>
@@ -170,7 +170,7 @@ category: Course Projects
     <h3>Ablation Study: Impact of SOR Denoising</h3>
     <p>To bridge noisy SLAM outputs and high-fidelity rendering, we integrate <strong>Statistical Outlier Removal</strong> as a crucial refinement step. By pruning <strong>7.3%</strong> of raw data, reducing approximately 1,000k points to 927k points, we eliminate floaters and improve visual stability. The PSNR difference is small, but the qualitative enhancement is substantial.</p>
 
-    <div class="splatslam-figure-grid two-col">
+    <div class="splatslam-figure-grid full-width sor-figures">
       <figure>
         <img src="{{ '/assets/img/sor_explanation.png' | relative_url }}" alt="SOR denoising ablation">
         <figcaption>SOR explanation: statistical outlier removal removes floaters from noisy SLAM point clouds.</figcaption>
@@ -200,16 +200,10 @@ category: Course Projects
     <h2>Real-time Execution &amp; Hardware Constraints</h2>
     <p>The main experiments use an NVIDIA RTX 4090 with 24GB VRAM. Real-time execution remains constrained by dense transformer matching, high-resolution point cloud processing, and 3DGS optimization. These constraints motivate lighter SLAM backbones, more efficient point cloud refinement, and faster training pipelines.</p>
 
-    <div class="splatslam-figure-grid full-width metrics-figures">
-      <figure>
-        <img src="{{ '/assets/img/iteration_metrics_table_en.png' | relative_url }}" alt="Iteration metrics table in English">
-        <figcaption>Iteration metrics table summarizing rendering quality across training settings.</figcaption>
-      </figure>
-      <figure>
-        <img src="{{ '/assets/img/iteration_metrics_table.png' | relative_url }}" alt="Original iteration metrics table">
-        <figcaption>Original iteration metrics table retained for consistency with the project analysis.</figcaption>
-      </figure>
-    </div>
+    <figure class="splatslam-figure single-centered metrics-figures">
+      <img src="{{ '/assets/img/iteration_metrics_table_en.png' | relative_url }}" alt="Iteration metrics table in English">
+      <figcaption>Iteration metrics table summarizing rendering quality across training settings.</figcaption>
+    </figure>
   </section>
 
   <section class="splatslam-section">
