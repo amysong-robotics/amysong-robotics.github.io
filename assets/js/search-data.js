@@ -436,7 +436,7 @@ ninja.data = [{
               window.location.href = "/projects/8_texedo/";
             },},{id: "projects-splatslam",
           title: 'SplatSLAM',
-          description: "End-to-End Indoor Scene Reconstruction from Monocular Video via MASt3R-SLAM and 3DGS.",
+          description: "Dense 3D Reconstruction from Monocular Video via Learning-based SLAM and Gaussian Splatting.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/splatslam/";
             },},{id: "teachings-data-science-fundamentals",
