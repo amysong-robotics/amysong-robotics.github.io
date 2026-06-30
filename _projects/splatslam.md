@@ -12,20 +12,18 @@ category: Course Projects
     <h1>Dense 3D Reconstruction from Monocular Video via Learning-based SLAM and Gaussian Splatting</h1>
     <p class="splatslam-authors"><strong>Jiacan Li*</strong> · <strong>Yuzhen Song*</strong> · <strong>Yiming Ma*</strong></p>
     <p class="splatslam-affiliation">Southern University of Science and Technology</p>
-    <div class="splatslam-links">
+    <nav class="splatslam-links" aria-label="SplatSLAM page navigation">
       <a href="https://sites.google.com/view/splatslam/home" target="_blank" rel="noopener noreferrer">Original Google Site</a>
       <a href="#demo">Demo</a>
       <a href="#abstract">Abstract</a>
       <a href="#methodology">Methodology</a>
       <a href="#experiments">Experiments</a>
-    </div>
+    </nav>
   </header>
 
   <section id="demo" class="splatslam-section">
     <h2>Demo</h2>
-    <p>
-      We place the demos first so the reconstruction results can be viewed immediately. The embedded videos and interactive point-cloud viewers are migrated from the original Google Site.
-    </p>
+    <p>We place the demos first so the reconstruction results can be viewed immediately. These embedded videos and interactive viewers are migrated from the original Google Site.</p>
 
     <h3>Video Previews</h3>
     <div class="splatslam-embed-grid two-col">
@@ -35,26 +33,20 @@ category: Course Projects
 
     <h3>Interactive Point-cloud / Reconstruction Viewers</h3>
     <div class="splatslam-embed-grid two-col">
-      <iframe title="SplatSLAM demo 1" src="https://sketchfab.com/models/26dffeeeb1e748d386671aeb205f9081/embed?autostart=1&ui_hint=0&ui_theme=dark" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe>
-      <iframe title="SplatSLAM demo 2" src="https://sketchfab.com/models/2bd98d5914124023a06100404945fe2f/embed?autostart=1&ui_hint=0&ui_theme=dark" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe>
-      <iframe title="SplatSLAM demo 3" src="https://sketchfab.com/models/35db1e88d8ba4204b576b6774a51308e/embed?autostart=1&ui_hint=0&ui_theme=dark" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe>
-      <iframe title="SplatSLAM demo 4" src="https://sketchfab.com/models/556f95d2d32645e0b144cdb9038f934b/embed?autostart=1&ui_hint=0&ui_theme=dark" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe>
-      <iframe title="SplatSLAM demo 5" src="https://sketchfab.com/models/a2e3aa48facd46de8a9e1d70bd4858be/embed?autostart=1&ui_hint=0&ui_theme=dark&transparent=1" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe>
-      <iframe title="SplatSLAM demo 6" src="https://sketchfab.com/models/fd0c1cbb08ef47e8b6b8e5704b4a71d8/embed?autostart=1&ui_hint=0&ui_theme=dark" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe>
+      <iframe title="SplatSLAM interactive demo 1" src="https://sketchfab.com/models/556f95d2d32645e0b144cdb9038f934b/embed?autostart=1&ui_hint=0&ui_theme=dark" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe>
+      <iframe title="SplatSLAM interactive demo 2" src="https://sketchfab.com/models/a2e3aa48facd46de8a9e1d70bd4858be/embed?autostart=1&ui_hint=0&ui_theme=dark&transparent=1" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe>
+      <iframe title="SplatSLAM interactive demo 3" src="https://sketchfab.com/models/35db1e88d8ba4204b576b6774a51308e/embed?autostart=1&ui_hint=0&ui_theme=dark" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe>
+      <iframe title="SplatSLAM interactive demo 4" src="https://sketchfab.com/models/fd0c1cbb08ef47e8b6b8e5704b4a71d8/embed?autostart=1&ui_hint=0&ui_theme=dark" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe>
+      <iframe title="SplatSLAM interactive demo 5" src="https://sketchfab.com/models/26dffeeeb1e748d386671aeb205f9081/embed?autostart=1&ui_hint=0&ui_theme=dark" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe>
+      <iframe title="SplatSLAM interactive demo 6" src="https://sketchfab.com/models/2bd98d5914124023a06100404945fe2f/embed?autostart=1&ui_hint=0&ui_theme=dark" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe>
     </div>
   </section>
 
   <section id="abstract" class="splatslam-section">
     <h2>Abstract</h2>
-    <p>
-      We present <strong>SplatSLAM</strong>, an end-to-end indoor scene reconstruction pipeline that bridges the gap between learning-based dense SLAM and photo-realistic novel view synthesis. Our method leverages <strong>MASt3R-SLAM</strong> to recover accurate camera trajectories and dense geometric point clouds from monocular RGB video captured by consumer smartphones.
-    </p>
-    <p>
-      To address the inherent noise and outliers in raw SLAM outputs, we introduce a standardized point cloud post-processing workflow—including <strong>Statistical Outlier Removal (SOR)</strong> and voxel downsampling—as a crucial transition module. By integrating these optimized priors, we initialize and train <strong>3D Gaussian Splatting (3DGS)</strong>, enabling real-time, high-fidelity rendering of complex indoor environments.
-    </p>
-    <p>
-      Evaluations on the <strong>7-Scenes benchmark</strong> and self-collected SUSTech campus datasets demonstrate that our pipeline significantly improves localization accuracy compared to traditional feature-based SLAM, while delivering superior visual reconstruction quality.
-    </p>
+    <p>We present <strong>SplatSLAM</strong>, an end-to-end indoor scene reconstruction pipeline that bridges the gap between learning-based dense SLAM and photo-realistic novel view synthesis. Our method leverages <strong>MASt3R-SLAM</strong> to recover accurate camera trajectories and dense geometric point clouds from monocular RGB video captured by consumer smartphones.</p>
+    <p>To address the inherent noise and outliers in raw SLAM outputs, we introduce a standardized point cloud post-processing workflow, including <strong>Statistical Outlier Removal (SOR)</strong> and voxel downsampling, as a crucial transition module. By integrating these optimized priors, we initialize and train <strong>3D Gaussian Splatting (3DGS)</strong>, enabling real-time, high-fidelity rendering of complex indoor environments.</p>
+    <p>Evaluations on the <strong>7-Scenes benchmark</strong> and self-collected SUSTech campus datasets demonstrate that our pipeline significantly improves localization accuracy compared to traditional feature-based SLAM, while delivering superior visual reconstruction quality.</p>
 
     <ul class="splatslam-highlights">
       <li><strong>End-to-End Workflow:</strong> bridging monocular mobile video input to interactive 3D digital twins.</li>
@@ -66,53 +58,45 @@ category: Course Projects
 
   <section id="methodology" class="splatslam-section">
     <h2>Methodology</h2>
-    <p>
-      Our pipeline integrates transformer-based SLAM with explicit radiance-field rendering. The workflow is divided into four core modules.
-    </p>
+    <p>Our pipeline integrates advanced transformer-based SLAM with explicit radiance field rendering to achieve high-fidelity reconstruction. The workflow is divided into four core modules.</p>
 
-    <ol class="splatslam-steps">
-      <li>
-        <strong>Data Preprocessing & Standardization.</strong>
-        We capture 4K monocular videos using smartphones and extract frames at 10 FPS using FFmpeg, standardizing resolution and file naming for public benchmarks and self-collected SUSTech datasets.
-      </li>
-      <li>
-        <strong>Dense Tracking and Mapping with MASt3R-SLAM.</strong>
-        MASt3R-SLAM estimates camera trajectories and generates dense colored point clouds through pixel-level transformer matching and global bundle adjustment, without requiring depth sensors.
-      </li>
-      <li>
-        <strong>Standardized Point Cloud Refinement.</strong>
-        We apply Statistical Outlier Removal, voxel downsampling, and manual masking in CloudCompare to remove floating noise, reduce point density, and focus on the target scene.
-      </li>
-      <li>
-        <strong>3D Gaussian Splatting & Novel View Synthesis.</strong>
-        The refined point cloud initializes Gaussian ellipsoids, and the splatfacto framework optimizes position, covariance, and color through photometric loss minimization.
-      </li>
-    </ol>
-
-    <div class="splatslam-figure-grid compact-reference">
-      <figure>
-        <img src="{{ '/assets/img/splatslam/google_site_02.png' | relative_url }}" alt="Reference figure for MASt3R-SLAM rotation-heavy motion">
-        <figcaption>Reference figure used for explaining rotation-heavy motion. This is not presented as the main contribution.</figcaption>
-      </figure>
-      <figure>
-        <img src="{{ '/assets/img/splatslam/google_site_03.png' | relative_url }}" alt="SplatSLAM methodology or pipeline figure">
-        <figcaption>Pipeline / methodology illustration from the project site.</figcaption>
-      </figure>
+    <div class="splatslam-method-list">
+      <article>
+        <h3>1. Data Preprocessing &amp; Standardization</h3>
+        <p>We capture 4K monocular videos using smartphones and extract frames at a fixed rate of 10 FPS using FFmpeg. This standardizes image resolution and naming conventions across public benchmarks and self-collected SUSTech datasets.</p>
+      </article>
+      <article>
+        <h3>2. Dense Tracking and Mapping with MASt3R-SLAM</h3>
+        <p>The system employs MASt3R-SLAM as the front-end. Pixel-level transformer matching and global bundle adjustment estimate camera trajectories and generate dense colored point clouds without requiring depth sensors.</p>
+      </article>
+      <article>
+        <h3>3. Standardized Point Cloud Refinement</h3>
+        <p>We use CloudCompare for SOR denoising, voxel downsampling, and manual masking, removing floating artifacts and improving training efficiency for 3DGS.</p>
+      </article>
+      <article>
+        <h3>4. 3D Gaussian Splatting &amp; NVS</h3>
+        <p>The refined point cloud initializes Gaussian ellipsoids. The splatfacto framework optimizes position, covariance, and color through photometric loss minimization for real-time novel view synthesis.</p>
+      </article>
     </div>
+
+    <figure class="splatslam-figure reference-small">
+      <img src="{{ '/assets/img/splatslam/google_site_02.png' | relative_url }}" alt="Reference image used to explain reconstruction motivation">
+      <figcaption>Reference illustration used for explaining the reconstruction setting; not the main contribution of this project.</figcaption>
+    </figure>
   </section>
 
   <section id="experiments" class="splatslam-section">
     <h2>Experiments</h2>
 
     <h3>Experimental Setup</h3>
-    <p><strong>Datasets:</strong> 7-Scenes public indoor SLAM benchmark and self-collected SUSTech classroom / kitchen videos.</p>
+    <p><strong>Datasets:</strong> 7-Scenes public indoor SLAM benchmark and self-collected SUSTech campus scenes including classrooms and kitchens.</p>
     <p><strong>Hardware:</strong> NVIDIA RTX 4090 with 24GB VRAM.</p>
-    <p><strong>Software:</strong> PyTorch, Nerfstudio, CloudCompare.</p>
+    <p><strong>Software:</strong> PyTorch, Nerfstudio, and CloudCompare.</p>
+  </section>
 
-    <h3>Phase I: Quantitative SLAM Benchmarking</h3>
-    <p>
-      We evaluate MASt3R-SLAM on the TUM-RGBD benchmark. The system achieves higher precision in 360° rotation scenes due to dense feature matching compared with the larger-scale room sequence.
-    </p>
+  <section class="splatslam-section">
+    <h2>Phase I: Quantitative SLAM Benchmarking</h2>
+    <p>We evaluate MASt3R-SLAM on the TUM-RGBD benchmark. The system achieves higher precision in 360° rotation scenes due to dense feature matching, compared with the larger-scale room sequence.</p>
 
     <table class="splatslam-table">
       <thead>
@@ -136,62 +120,101 @@ category: Course Projects
       </tbody>
     </table>
 
-    <p>
-      <strong>ATE</strong> measures the absolute distance between estimated and ground-truth camera poses. Since monocular SLAM cannot recover absolute scale directly, we perform <strong>Sim(3) Umeyama alignment</strong> before calculating the error for fair comparison.
-    </p>
+    <p><strong>ATE</strong> measures the absolute distance between estimated and ground-truth camera poses. <strong>RMSE</strong> represents the overall average error across frames. Since monocular SLAM cannot recover absolute scale, we perform <strong>Sim(3) Umeyama alignment</strong> before calculating the error for fair comparison.</p>
 
-    <div class="splatslam-figure-grid result-strip">
+    <div class="splatslam-figure-grid two-col">
       <figure>
-        <img src="{{ '/assets/img/splatslam/google_site_08.png' | relative_url }}" alt="Quantitative SLAM benchmarking result">
-        <figcaption>Quantitative SLAM benchmarking result.</figcaption>
+        <img src="{{ '/assets/img/splatslam/google_site_03.png' | relative_url }}" alt="TUM-RGBD SLAM benchmarking result">
+        <figcaption>TUM-RGBD SLAM benchmarking result from the original project page.</figcaption>
       </figure>
       <figure>
-        <img src="{{ '/assets/img/splatslam/google_site_09.png' | relative_url }}" alt="Trajectory or metric comparison result">
-        <figcaption>Trajectory / metric comparison result.</figcaption>
+        <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUCrU1rw64Nf5PfJfTkyj9_C5JJZeFvwe2C98awxHti58hSn3CcGw0DOJDlO75c46b1UoL5oOd4IGQJiZCq-foXBEd_xB51NYy20Asfi23XCF78zM-l73CdMV8Wm6Qr8Y9JcwtYDabzQ-2DtGjSgiaq1U1Y6HcLIcA621epoWfmgLzdSHGKLx0NnTNdFu8nAZJuhyt-8J-w7C47PNmV9bY7FhVEFPnCcZidnYuXf=w1280" alt="Additional SLAM benchmarking figure">
+        <figcaption>Additional trajectory / benchmarking visualization placed in the same order as the Google Site.</figcaption>
       </figure>
     </div>
-
-    <h3>Phase II: Geometric Robustness & Scene Saliency</h3>
-    <p>
-      Reconstruction quality is strongly affected by <strong>visual saliency</strong>. Rich-texture scenes such as pantry / tea room scenes produce denser point clouds, while blank corners and texture-less walls lead to sparse geometry and floaters.
-    </p>
-    <p>Evaluated self-collected scenes include meeting room 360, meeting room, tea room, and corner scenes.</p>
-
-    <div class="splatslam-figure-grid">
-      <figure>
-        <img src="{{ '/assets/img/splatslam/google_site_12.png' | relative_url }}" alt="Geometric robustness and scene saliency result">
-        <figcaption>Geometric robustness and scene saliency result.</figcaption>
-      </figure>
-      <figure>
-        <img src="{{ '/assets/img/splatslam/google_site_14.png' | relative_url }}" alt="Point cloud or rendering result">
-        <figcaption>Point cloud / rendering result from self-collected scenes.</figcaption>
-      </figure>
-    </div>
-
-    <h3>Phase III: Rendering Fidelity & Convergence</h3>
-    <p>
-      We analyze 3DGS training from 7k to 50k iterations. For small-scale indoor scenes, <strong>7,000 iterations</strong> provide a practical visual sweet spot, while longer training can achieve higher PSNR but may introduce high-frequency artifacts and overfitting.
-    </p>
-    <p>
-      In the SOR ablation study, pruning <strong>7.3%</strong> of raw points—from approximately 1,000k to 927k points—effectively removes floaters. The PSNR difference is small (<strong>44.37 vs. 44.29 dB</strong>), but visual stability improves substantially.
-    </p>
-    <p>
-      We also observe the <strong>PSNR trap</strong>: a stationary 11-frame rotation sequence can reach 49.5 dB by memorizing training views, while a 40-frame walkthrough obtains lower PSNR but reconstructs a more complete and navigable digital twin. For practical novel view synthesis, scene coverage and visual integrity are more important than raw PSNR alone.
-    </p>
   </section>
 
   <section class="splatslam-section">
-    <h2>Real-time Execution & Hardware Constraints</h2>
-    <p>
-      The main experiments use an NVIDIA RTX 4090 with 24GB VRAM. Real-time execution remains constrained by dense transformer matching, high-resolution point cloud processing, and 3DGS optimization. This motivates future work on lighter SLAM backbones, more efficient point cloud refinement, and faster training pipelines.
-    </p>
+    <h2>Phase II: Geometric Robustness &amp; Scene Saliency</h2>
+    <p>By comparing self-collected scenes, we observe that reconstruction quality is highly dependent on <strong>visual saliency</strong>. The pantry yields denser point clouds due to rich textures, while blank corners and texture-less walls result in sparse geometry and floating artifacts.</p>
+    <p>Evaluated scenes include meeting room 360, meeting room, tea room, and corner scenes.</p>
+
+    <div class="splatslam-figure-grid two-col">
+      <figure>
+        <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUAiSwLQR6_rlHY-QMJAIZ9-upf0tEF3qpDlEVEfZhfpCRKCaeXEh1dpNy-LLZmquWUjNP1aSv_yTngC50qhTqAgH0O60C54q7Onkz4klpXXKQo2pZRzwef_am3TeKHo7J6aDSglxCPdFkfqFzcrPobVJDI6M3JwiLzYAOGQu-rAYscspL11rc8DMztWPNrIuEqO3KMEVcmwg8ebA2WqEeGoKx8Rbsgw0jBYFnCCzfU=w1280" alt="Scene saliency comparison">
+        <figcaption>Scene saliency comparison from the Google Site.</figcaption>
+      </figure>
+      <figure>
+        <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUBPjSDKzRLykypxDtUYdPRCjHDZgR2TojxEla3YGIGKGrN5FUJCBn_YZQxJeP2s0Y_fVMkoAS4WiARLpFiRkQPvDgaluE2c2Nzl8U1IN4uSBzMaRVOV2ujFbiwjHVSbhc-QXgrbDZS_F_qCJroUjRk6fBbqyY9fZw9RDhy1Mcgb5IzIvxnlsj1NbtLxTatrbVCsRFTLm9zXYt-vREtznh5nkID_s0E5Mr6shMZ3knE=w1280" alt="Geometric robustness visualization">
+        <figcaption>Geometric robustness visualization corresponding to the Phase II discussion.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="splatslam-section">
+    <h2>Phase III: Rendering Fidelity &amp; Convergence</h2>
+    <p>We analyze the 3DGS training evolution from 7k to 50k iterations. The visual quality reaches a practical sweet spot around <strong>7,000 iterations</strong> for small-scale indoor scenes, while 50k iterations can achieve higher PSNR and more photorealistic specular details.</p>
+
+    <h3>Texture Sensitivity: From Pantry to Blank Wall</h3>
+    <p>We evaluate environments with varying texture densities. Richly textured pantry scenes yield more complete geometry, while blank walls are a failure case for monocular SLAM because the lack of salient features leads to sparse points and floating artifacts.</p>
+
+    <div class="splatslam-figure-grid two-col">
+      <figure>
+        <img src="{{ '/assets/img/splatslam/google_site_07.png' | relative_url }}" alt="Texture sensitivity result">
+        <figcaption>Texture sensitivity and scene reconstruction comparison.</figcaption>
+      </figure>
+      <figure>
+        <img src="{{ '/assets/img/splatslam/google_site_08.png' | relative_url }}" alt="3DGS rendering fidelity result">
+        <figcaption>Rendering fidelity / convergence visualization.</figcaption>
+      </figure>
+      <figure>
+        <img src="{{ '/assets/img/splatslam/google_site_09.png' | relative_url }}" alt="Training convergence visualization">
+        <figcaption>Training convergence visualization from the original site.</figcaption>
+      </figure>
+    </div>
+
+    <h3>Ablation Study: Impact of SOR Denoising</h3>
+    <p>To bridge noisy SLAM outputs and high-fidelity rendering, we integrate <strong>Statistical Outlier Removal</strong> as a crucial refinement step. By pruning <strong>7.3%</strong> of raw data, reducing approximately 1,000k points to 927k points, we eliminate floaters and improve visual stability. The PSNR difference is small, but the qualitative enhancement is substantial.</p>
+
+    <div class="splatslam-figure-grid two-col">
+      <figure>
+        <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUA7tJMZuDT2SoYpUTqLShRspUIFnxNZiKutFWsoEKb3SpWAZH0QzYkXxwY1oadlbDvXAxJhzxttNQd9xTfoDHqqFtVbKCdhFVImJzWNVB2TnSsscXanIJeUUT5SEpNxslvqz7z9SowQ9IYGPqys_92MhZsb825_ypcxCVh5XxF3OPPze0732s81SPYsA5sNSHlOFZzXhQBa2ZTAkzM0ABQotg_xfKobDI9sUcAwuIg=w1280" alt="SOR denoising ablation">
+        <figcaption>SOR denoising ablation image corresponding to the Google Site discussion.</figcaption>
+      </figure>
+      <figure>
+        <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUCvFHacX8GuVIhWWtbYp5JUlWPK_uL-_IhT21uAGxHS2kYZP7-zC-IhPVg9KpEg7h4Vc4NS-3dBbGJqiHUZbfBUUC-RGlTep-J6RQD3tt4g9PitvpTyqBz5LgrUI9Q3zmgiBPYbpohTO4WxGpJdQYBdjctNpSYJvbY6ERkgJQmcCOEzpUf8Aj3m4sOXGhdH8iNtwfJAHhW1atveY64BVvIKox1dk1MT-7aM4TYR=w1280" alt="Cleaned reconstruction after SOR">
+        <figcaption>Cleaned reconstruction / visual stability after refinement.</figcaption>
+      </figure>
+    </div>
+
+    <h3>The PSNR Trap — Overfitting vs. Generalization</h3>
+    <p>We compare two capture strategies in the same meeting room. A stationary rotation with 11 frames achieves high PSNR but overfits by memorizing training views. A full walkthrough with 40 frames yields lower PSNR but reconstructs a more complete and navigable digital twin.</p>
+
+    <figure class="splatslam-figure">
+      <img src="{{ '/assets/img/splatslam/google_site_12.png' | relative_url }}" alt="PSNR trap comparison">
+      <figcaption>PSNR trap comparison: high score does not necessarily imply better generalization.</figcaption>
+    </figure>
+  </section>
+
+  <section class="splatslam-section">
+    <h2>Real-time Execution &amp; Hardware Constraints</h2>
+    <p>The main experiments use an NVIDIA RTX 4090 with 24GB VRAM. Real-time execution remains constrained by dense transformer matching, high-resolution point cloud processing, and 3DGS optimization. These constraints motivate lighter SLAM backbones, more efficient point cloud refinement, and faster training pipelines.</p>
+
+    <div class="splatslam-figure-grid two-col">
+      <figure>
+        <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUB3vMWeC0dWnYogenIB8vTtiM9mtH0mY68P17s1LagPUC3FGv8wuY_wV37cmySyXiyCDJdr3YKl0rFn-ZwE7jBNGvpHWSd-bu40w9Y2Rkve-GRMSskxPs-8NAVaza4ufokFxwiHr2NH_-l6fNmG7eQ2BL1OaZbtbQTbmhGSSIJOhPEUP17usgMWUzRwgWdpOC-oeNqaiFCWfqSrnEzQUYLfGRJvq2m2HSIzSO3aG1M=w1280" alt="Real-time hardware constraint result">
+        <figcaption>Hardware constraint visualization from the original page.</figcaption>
+      </figure>
+      <figure>
+        <img src="{{ '/assets/img/splatslam/google_site_14.png' | relative_url }}" alt="Real-time execution result">
+        <figcaption>Real-time execution / reconstruction result.</figcaption>
+      </figure>
+    </div>
   </section>
 
   <section class="splatslam-section">
     <h2>Acknowledgements</h2>
-    <p>
-      This project was developed as a final project for the <strong>Computer Vision</strong> course at Southern University of Science and Technology. We sincerely thank <strong>Prof. Feng Zheng</strong> and <strong>Prof. Weiyu Wang</strong> for their guidance, suggestions, and support throughout this work.
-    </p>
+    <p>This project was developed as a final project for the <strong>Computer Vision</strong> course at Southern University of Science and Technology. We sincerely thank <strong>Prof. Feng Zheng</strong> and <strong>Prof. Weiyu Wang</strong> for their guidance, suggestions, and support throughout this work.</p>
   </section>
 </div>
 
@@ -201,67 +224,130 @@ category: Course Projects
   margin: 0 auto;
 }
 
-.splatslam-header {
-  margin-bottom: 1.8rem;
-  text-align: center;
-}
-
 .splatslam-header h1 {
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.75rem;
+  color: #20251b;
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800 !important;
-  line-height: 1.12;
+  line-height: 1.1;
 }
 
 .splatslam-authors,
 .splatslam-affiliation {
-  margin-bottom: 0.3rem;
-  color: #555;
+  margin-bottom: 0.35rem;
+  color: #4f5942;
 }
 
 .splatslam-links {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 0.55rem;
-  margin-top: 1rem;
+  margin: 1.1rem 0 1.8rem;
 }
 
 .splatslam-links a {
   padding: 0.32rem 0.72rem;
   border: 1px solid rgba(143, 177, 98, 0.45);
   border-radius: 999px;
-  color: #5f7f3a;
-  font-size: 0.88rem;
-  font-weight: 600;
+  color: #6a8644;
   text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
 .splatslam-section {
-  margin-top: 2.15rem;
+  margin-top: 2rem;
 }
 
 .splatslam-section h2 {
   margin-bottom: 0.9rem;
   padding-bottom: 0.35rem;
   border-bottom: 2px solid rgba(143, 177, 98, 0.45);
+  color: #20251b;
+  font-size: 1.55rem;
   font-weight: 750 !important;
 }
 
 .splatslam-section h3 {
   margin-top: 1.35rem;
-  font-size: 1.15rem;
+  color: #2f3428;
+  font-size: 1.08rem;
   font-weight: 700 !important;
 }
 
 .splatslam-section p,
-.splatslam-section li {
+.splatslam-section li,
+.splatslam-table {
+  color: #444;
   line-height: 1.65;
 }
 
-.splatslam-highlights,
-.splatslam-steps {
-  padding-left: 1.25rem;
+.splatslam-highlights {
+  padding-left: 1.15rem;
+}
+
+.splatslam-method-list article {
+  margin-bottom: 1rem;
+}
+
+.splatslam-figure,
+.splatslam-figure-grid {
+  margin: 1.35rem 0;
+}
+
+.splatslam-figure img,
+.splatslam-figure-grid img {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.reference-small {
+  max-width: 520px;
+}
+
+.reference-small img {
+  max-height: 230px;
+  object-fit: contain;
+  background: #fff;
+}
+
+.splatslam-figure-grid.two-col {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.splatslam-figure-grid figure,
+.splatslam-figure figure {
+  margin: 0;
+}
+
+.splatslam-figure-grid figcaption,
+.splatslam-figure figcaption {
+  margin-top: 0.42rem;
+  color: #777;
+  font-size: 0.84rem;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.splatslam-embed-grid {
+  display: grid;
+  gap: 1rem;
+  margin: 1rem 0 1.4rem;
+}
+
+.splatslam-embed-grid.two-col {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.splatslam-embed-grid iframe {
+  width: 100%;
+  height: 360px;
+  border: 0;
+  border-radius: 8px;
+  background: #000;
 }
 
 .splatslam-table {
@@ -274,71 +360,23 @@ category: Course Projects
 .splatslam-table th,
 .splatslam-table td {
   padding: 0.55rem 0.65rem;
-  border: 1px solid rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(143, 177, 98, 0.25);
   vertical-align: top;
 }
 
 .splatslam-table th {
-  background: rgba(143, 177, 98, 0.12);
-}
-
-.splatslam-figure-grid,
-.splatslam-embed-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-  margin: 1.2rem 0;
-}
-
-.splatslam-figure-grid figure {
-  margin: 0;
-}
-
-.splatslam-figure-grid img {
-  width: 100%;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 6px;
-}
-
-.splatslam-figure-grid figcaption {
-  margin-top: 0.35rem;
-  color: #777;
-  font-size: 0.82rem;
-  text-align: center;
-}
-
-.splatslam-figure-grid.compact-reference {
-  grid-template-columns: 0.78fr 1fr;
-  align-items: start;
-}
-
-.splatslam-figure-grid.compact-reference figure:first-child img {
-  max-height: 230px;
-  object-fit: contain;
-  background: #fff;
-}
-
-.splatslam-figure-grid.result-strip {
-  grid-template-columns: 1fr;
-}
-
-.splatslam-embed-grid iframe {
-  width: 100%;
-  height: 340px;
-  border: 0;
-  border-radius: 6px;
-  background: #000;
+  background: rgba(143, 177, 98, 0.11);
+  color: #2f3428;
 }
 
 @media (max-width: 768px) {
-  .splatslam-figure-grid,
-  .splatslam-figure-grid.compact-reference,
-  .splatslam-embed-grid {
+  .splatslam-figure-grid.two-col,
+  .splatslam-embed-grid.two-col {
     grid-template-columns: 1fr;
   }
 
   .splatslam-embed-grid iframe {
-    height: 310px;
+    height: 320px;
   }
 }
 </style>
