@@ -3,7 +3,7 @@ layout: page
 title: 6-DOF Robotic Sketching & 3D Projection
 description: A complete closed-loop robotic drawing system integrating computer vision, analytical IK, and compliant hardware design.
 img: assets/img/CV-Sketch.jpg
-importance: 3
+importance: 4
 category: Course Projects
 ---
 
