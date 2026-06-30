@@ -2,7 +2,7 @@
 layout: page
 title: "SplatSLAM"
 description: "Dense 3D Reconstruction from Monocular Video via Learning-based SLAM and Gaussian Splatting."
-img: assets/img/splatslam/google_site_14.png
+img: assets/img/scene_difficulty_comparison.png
 importance: 5
 category: Course Projects
 ---
@@ -80,8 +80,8 @@ category: Course Projects
     </div>
 
     <figure class="splatslam-figure reference-small">
-      <img src="{{ '/assets/img/splatslam/google_site_02.png' | relative_url }}" alt="Reference image used to explain reconstruction motivation">
-      <figcaption>Reference illustration used for explaining the reconstruction setting; not the main contribution of this project.</figcaption>
+      <img src="{{ '/assets/img/pipeline.png' | relative_url }}" alt="SplatSLAM processing pipeline">
+      <figcaption>SplatSLAM processing pipeline: video preprocessing, MASt3R-SLAM mapping, point-cloud refinement, and 3DGS rendering.</figcaption>
     </figure>
   </section>
 
@@ -124,12 +124,12 @@ category: Course Projects
 
     <div class="splatslam-figure-grid two-col">
       <figure>
-        <img src="{{ '/assets/img/splatslam/google_site_03.png' | relative_url }}" alt="TUM-RGBD SLAM benchmarking result">
+        <img src="{{ '/assets/img/mast3r_slam_ate_tum_dataset.png' | relative_url }}" alt="TUM-RGBD SLAM benchmarking result">
         <figcaption>TUM-RGBD SLAM benchmarking result from the original project page.</figcaption>
       </figure>
       <figure>
-        <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUCrU1rw64Nf5PfJfTkyj9_C5JJZeFvwe2C98awxHti58hSn3CcGw0DOJDlO75c46b1UoL5oOd4IGQJiZCq-foXBEd_xB51NYy20Asfi23XCF78zM-l73CdMV8Wm6Qr8Y9JcwtYDabzQ-2DtGjSgiaq1U1Y6HcLIcA621epoWfmgLzdSHGKLx0NnTNdFu8nAZJuhyt-8J-w7C47PNmV9bY7FhVEFPnCcZidnYuXf=w1280" alt="Additional SLAM benchmarking figure">
-        <figcaption>Additional trajectory / benchmarking visualization placed in the same order as the Google Site.</figcaption>
+        <img src="{{ '/assets/img/scene_comparison_table_en.png' | relative_url }}" alt="Additional SLAM benchmarking figure">
+        <figcaption>Scene-level comparison table used to summarize reconstruction difficulty and visual saliency.</figcaption>
       </figure>
     </div>
   </section>
@@ -141,12 +141,12 @@ category: Course Projects
 
     <div class="splatslam-figure-grid two-col">
       <figure>
-        <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUAiSwLQR6_rlHY-QMJAIZ9-upf0tEF3qpDlEVEfZhfpCRKCaeXEh1dpNy-LLZmquWUjNP1aSv_yTngC50qhTqAgH0O60C54q7Onkz4klpXXKQo2pZRzwef_am3TeKHo7J6aDSglxCPdFkfqFzcrPobVJDI6M3JwiLzYAOGQu-rAYscspL11rc8DMztWPNrIuEqO3KMEVcmwg8ebA2WqEeGoKx8Rbsgw0jBYFnCCzfU=w1280" alt="Scene saliency comparison">
-        <figcaption>Scene saliency comparison from the Google Site.</figcaption>
+        <img src="{{ '/assets/img/scene_difficulty_comparison.png' | relative_url }}" alt="Scene saliency comparison">
+        <figcaption>Scene difficulty comparison across self-collected indoor environments.</figcaption>
       </figure>
       <figure>
-        <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUBPjSDKzRLykypxDtUYdPRCjHDZgR2TojxEla3YGIGKGrN5FUJCBn_YZQxJeP2s0Y_fVMkoAS4WiARLpFiRkQPvDgaluE2c2Nzl8U1IN4uSBzMaRVOV2ujFbiwjHVSbhc-QXgrbDZS_F_qCJroUjRk6fBbqyY9fZw9RDhy1Mcgb5IzIvxnlsj1NbtLxTatrbVCsRFTLm9zXYt-vREtznh5nkID_s0E5Mr6shMZ3knE=w1280" alt="Geometric robustness visualization">
-        <figcaption>Geometric robustness visualization corresponding to the Phase II discussion.</figcaption>
+        <img src="{{ '/assets/img/capture_method_comparison.png' | relative_url }}" alt="Geometric robustness visualization">
+        <figcaption>Capture-method comparison showing how viewpoint coverage affects reconstruction completeness.</figcaption>
       </figure>
     </div>
   </section>
@@ -160,16 +160,16 @@ category: Course Projects
 
     <div class="splatslam-figure-grid two-col">
       <figure>
-        <img src="{{ '/assets/img/splatslam/google_site_07.png' | relative_url }}" alt="Texture sensitivity result">
-        <figcaption>Texture sensitivity and scene reconstruction comparison.</figcaption>
+        <img src="{{ '/assets/img/test10_training_convergence.png' | relative_url }}" alt="Texture sensitivity result">
+        <figcaption>Training convergence analysis for the test10 reconstruction setting.</figcaption>
       </figure>
       <figure>
-        <img src="{{ '/assets/img/splatslam/google_site_08.png' | relative_url }}" alt="3DGS rendering fidelity result">
-        <figcaption>Rendering fidelity / convergence visualization.</figcaption>
+        <img src="{{ '/assets/img/iteration_comparison_frame0000.png' | relative_url }}" alt="3DGS rendering fidelity result">
+        <figcaption>Iteration comparison at frame 0000 under SOR and opacity reset.</figcaption>
       </figure>
       <figure>
-        <img src="{{ '/assets/img/splatslam/google_site_09.png' | relative_url }}" alt="Training convergence visualization">
-        <figcaption>Training convergence visualization from the original site.</figcaption>
+        <img src="{{ '/assets/img/iteration_comparison_frame0017.png' | relative_url }}" alt="Training convergence visualization">
+        <figcaption>Iteration comparison at frame 0017 showing consistency across different views.</figcaption>
       </figure>
     </div>
 
@@ -178,12 +178,12 @@ category: Course Projects
 
     <div class="splatslam-figure-grid two-col">
       <figure>
-        <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUA7tJMZuDT2SoYpUTqLShRspUIFnxNZiKutFWsoEKb3SpWAZH0QzYkXxwY1oadlbDvXAxJhzxttNQd9xTfoDHqqFtVbKCdhFVImJzWNVB2TnSsscXanIJeUUT5SEpNxslvqz7z9SowQ9IYGPqys_92MhZsb825_ypcxCVh5XxF3OPPze0732s81SPYsA5sNSHlOFZzXhQBa2ZTAkzM0ABQotg_xfKobDI9sUcAwuIg=w1280" alt="SOR denoising ablation">
-        <figcaption>SOR denoising ablation image corresponding to the Google Site discussion.</figcaption>
+        <img src="{{ '/assets/img/sor_explanation.png' | relative_url }}" alt="SOR denoising ablation">
+        <figcaption>SOR explanation: statistical outlier removal removes floaters from noisy SLAM point clouds.</figcaption>
       </figure>
       <figure>
-        <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUCvFHacX8GuVIhWWtbYp5JUlWPK_uL-_IhT21uAGxHS2kYZP7-zC-IhPVg9KpEg7h4Vc4NS-3dBbGJqiHUZbfBUUC-RGlTep-J6RQD3tt4g9PitvpTyqBz5LgrUI9Q3zmgiBPYbpohTO4WxGpJdQYBdjctNpSYJvbY6ERkgJQmcCOEzpUf8Aj3m4sOXGhdH8iNtwfJAHhW1atveY64BVvIKox1dk1MT-7aM4TYR=w1280" alt="Cleaned reconstruction after SOR">
-        <figcaption>Cleaned reconstruction / visual stability after refinement.</figcaption>
+        <img src="{{ '/assets/img/sor_comparison_5frames.png' | relative_url }}" alt="Cleaned reconstruction after SOR">
+        <figcaption>Five-frame SOR comparison showing cleaner rendering after point-cloud refinement.</figcaption>
       </figure>
     </div>
 
@@ -191,8 +191,8 @@ category: Course Projects
     <p>We compare two capture strategies in the same meeting room. A stationary rotation with 11 frames achieves high PSNR but overfits by memorizing training views. A full walkthrough with 40 frames yields lower PSNR but reconstructs a more complete and navigable digital twin.</p>
 
     <figure class="splatslam-figure">
-      <img src="{{ '/assets/img/splatslam/google_site_12.png' | relative_url }}" alt="PSNR trap comparison">
-      <figcaption>PSNR trap comparison: high score does not necessarily imply better generalization.</figcaption>
+      <img src="{{ '/assets/img/test10_method_comparison.png' | relative_url }}" alt="PSNR trap comparison">
+      <figcaption>Capture-method comparison: high PSNR from limited views can overfit, while wider coverage improves generalization.</figcaption>
     </figure>
   </section>
 
@@ -202,12 +202,12 @@ category: Course Projects
 
     <div class="splatslam-figure-grid two-col">
       <figure>
-        <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUB3vMWeC0dWnYogenIB8vTtiM9mtH0mY68P17s1LagPUC3FGv8wuY_wV37cmySyXiyCDJdr3YKl0rFn-ZwE7jBNGvpHWSd-bu40w9Y2Rkve-GRMSskxPs-8NAVaza4ufokFxwiHr2NH_-l6fNmG7eQ2BL1OaZbtbQTbmhGSSIJOhPEUP17usgMWUzRwgWdpOC-oeNqaiFCWfqSrnEzQUYLfGRJvq2m2HSIzSO3aG1M=w1280" alt="Real-time hardware constraint result">
-        <figcaption>Hardware constraint visualization from the original page.</figcaption>
+        <img src="{{ '/assets/img/iteration_metrics_table_en.png' | relative_url }}" alt="Real-time hardware constraint result">
+        <figcaption>Iteration metrics table summarizing rendering quality across training settings.</figcaption>
       </figure>
       <figure>
-        <img src="{{ '/assets/img/splatslam/google_site_14.png' | relative_url }}" alt="Real-time execution result">
-        <figcaption>Real-time execution / reconstruction result.</figcaption>
+        <img src="{{ '/assets/img/iteration_metrics_table.png' | relative_url }}" alt="Real-time execution result">
+        <figcaption>Original iteration metrics table retained for consistency with the project analysis.</figcaption>
       </figure>
     </div>
   </section>
