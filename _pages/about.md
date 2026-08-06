@@ -16,18 +16,14 @@ selected_papers: false
 social: true
 ---
 
-I am a third-year undergraduate student majoring in Robotics Engineering at [Southern University of Science and Technology](https://www.sustech.edu.cn/). My research focus is on the intersection of **Reinforcement Learning**, **Learning-based Control**, and **Autonomous Systems**. 
+I am a third-year undergraduate student majoring in Robotics Engineering at [Southern University of Science and Technology](https://www.sustech.edu.cn/). I work with [Prof. Chenglong Fu](https://faculty.sustech.edu.cn/?tagid=fucl&iscss=1&snapid=1&orderby=date&go=2) in the [Human Augmentation and Rehabilitation Laboratory (HAR Lab)](https://www.harlab.site/).
 
-**Current Research Focus:**
-* **Sim-to-Real & Reinforcement Learning:** Developing high-fidelity simulation infrastructures in NVIDIA Isaac Sim and MuJoCo to train and deploy robust RL policies for robotic manipulation.
-* **Embedded Control Systems:** Designing STM32-based real-time control architectures for human gait assistance. I am currently finalizing a manuscript on this work for submission to **IEEE Robotics and Automation Letters (RA-L)**.
-* **Autonomous Navigation:** Implementing full-stack autonomous pipelines (SLAM, Nav2, Fast-Planner) to enable real-time trajectory planning for both aerial and ground robots in complex environments.
+I am also involved in a UC Berkeley collaboration with the [Mechanical Systems Control Laboratory (MSC Lab)](https://msc.berkeley.edu/), directed by [Prof. Masayoshi Tomizuka](https://me.berkeley.edu/people/masayoshi-tomizuka/), at [University of California, Berkeley](https://www.berkeley.edu/).
 
 ---
 
-### 🚀 Seeking 2026 Research Internships 
-###  (July – Dec 2026)
-I am seeking visiting researcher opportunities for the second half of 2026. Having completed most of my undergraduate coursework, I can fully dedicate myself to a 6-month full-time research project.
+### Applying for 2027 Fall PhD Programs
+I am currently applying for PhD programs starting in Fall 2027.
 
 <div style="margin-top: 15px;">
   <a href="{{ site.baseurl }}/assets/pdf/cv.pdf" target="_blank" class="btn btn-outline-dark btn-sm">Download CV</a>
