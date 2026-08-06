@@ -16,13 +16,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/academic/";
           },
-        },{id: "nav-research",
-          title: "Research",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/research/";
-          },
         },{id: "nav-projects",
           title: "Projects",
           description: "My Robotics Projects！🤖",
@@ -443,11 +436,6 @@ ninja.data = [{
           description: "An independent reproduction of DDAT in MuJoCo, evaluating the necessity of projection operators across four underactuated robotic systems.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/7_project/";
-            },},{id: "projects-texedo-controller-aware-humanoid-motion-generation",
-          title: 'TEXEDO: Controller-aware Humanoid Motion Generation',
-          description: "A UC Berkeley collaboration on test-time scaling for controller-aware, language-conditioned humanoid motion generation.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/8_texedo/";
             },},{id: "projects-splatslam",
           title: 'SplatSLAM',
           description: "Dense 3D Reconstruction from Monocular Video via Learning-based SLAM and Gaussian Splatting.",
