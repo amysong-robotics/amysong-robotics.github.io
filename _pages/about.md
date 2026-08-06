@@ -16,9 +16,9 @@ selected_papers: false
 social: true
 ---
 
-I am a third-year undergraduate student majoring in Robotics Engineering at [Southern University of Science and Technology](https://www.sustech.edu.cn/). I work with [Prof. Chenglong Fu](https://faculty.sustech.edu.cn/?tagid=fucl&iscss=1&snapid=1&orderby=date&go=2) in the [Human Augmentation and Rehabilitation Laboratory (HAR Lab)](https://www.harlab.site/).
+I am a third-year undergraduate student majoring in Robotics Engineering at [<strong><u>Southern University of Science and Technology</u></strong>](https://www.sustech.edu.cn/). I work with [<strong><u>Prof. Chenglong Fu</u></strong>](https://faculty.sustech.edu.cn/?tagid=fucl&iscss=1&snapid=1&orderby=date&go=2) in the [<strong><u>Human Augmentation and Rehabilitation Laboratory (HAR Lab)</u></strong>](https://www.harlab.site/).
 
-I am also involved in a UC Berkeley collaboration with the [Mechanical Systems Control Laboratory (MSC Lab)](https://msc.berkeley.edu/), directed by [Prof. Masayoshi Tomizuka](https://me.berkeley.edu/people/masayoshi-tomizuka/), at [University of California, Berkeley](https://www.berkeley.edu/).
+I am also involved in a UC Berkeley collaboration with the [<strong><u>Mechanical Systems Control Laboratory (MSC Lab)</u></strong>](https://msc.berkeley.edu/), directed by [<strong><u>Prof. Masayoshi Tomizuka</u></strong>](https://me.berkeley.edu/people/masayoshi-tomizuka/), at [<strong><u>University of California, Berkeley</u></strong>](https://www.berkeley.edu/).
 
 ---
 
