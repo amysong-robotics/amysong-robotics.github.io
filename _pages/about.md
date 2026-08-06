@@ -18,7 +18,7 @@ social: true
 
 <div class="about-intro">
   <p>
-    I am a third-year undergraduate student majoring in Robotics Engineering at
+    I am a senior undergraduate student majoring in Robotics Engineering at
     <a class="about-link" href="https://www.sustech.edu.cn/">Southern University of Science and Technology</a>.
     I work with
     <a class="about-link" href="https://faculty.sustech.edu.cn/?tagid=fucl&iscss=1&snapid=1&orderby=date&go=2">Prof. Chenglong Fu</a>
@@ -60,7 +60,7 @@ social: true
 
 .about-link {
   color: #8fb162 !important;
-  font-weight: 800;
+  font-weight: 600;
   text-decoration: underline !important;
   text-decoration-thickness: 1.5px;
   text-underline-offset: 2px;
