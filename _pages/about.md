@@ -60,7 +60,7 @@ social: true
 
 .about-link {
   color: #8fb162 !important;
-  font-weight: 600;
+  font-weight: 400;
   text-decoration: underline !important;
   text-decoration-thickness: 1.5px;
   text-underline-offset: 2px;
