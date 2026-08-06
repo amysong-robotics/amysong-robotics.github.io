@@ -11,6 +11,9 @@ profile:
   image_circular: true
   more_info: >
     <p>SUSTech, Shenzhen</p>
+    <p>Yuzhen Song</p>
+    <p>12312836@mail.sustech.edu.cn</p>
+    <p>+86 18186518423</p>
 
 selected_papers: false 
 social: true
