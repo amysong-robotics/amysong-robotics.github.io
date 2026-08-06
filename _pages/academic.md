@@ -24,7 +24,7 @@ nav_order: 3
         </a>
       </h3>
       <p class="academic-authors">
-        Jianuo Cao, Yuxin Chen*, <strong>Yuzhen Song</strong>, Masayoshi Tomizuka, Chenran Li, Thomas Tian
+        Jianuo Cao*, Yuxin Chen*, <strong>Yuzhen Song</strong>, Masayoshi Tomizuka, Chenran Li, Thomas Tian
       </p>
       <p class="academic-status"><em>Accepted by RSS WCBM Workshop</em><br><em>Under Review</em></p>
       <p class="academic-links">
