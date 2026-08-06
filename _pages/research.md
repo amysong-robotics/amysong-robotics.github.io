@@ -1,31 +1,133 @@
 ---
 layout: page
-title: research    # 这里的 title 会显示在网页顶部的导航栏
-permalink: /research/   # 这里的路径决定了你的网址
-description: "Selected research projects and ongoing manuscripts."
-nav: false          # 确保这个是 true，导航栏才会显示
-nav_order: 2       # 导航栏排序，你可以根据需要调整数字
----
-<!-- 第一部分：展示在投/准备中的论文 (Manuscripts) -->
-## Manuscripts in Preparation
-
-- **Yuzhen Song**, et al. "Slope Center-of-Mass (CoM) Assistance System for Human Gait." *Targeting International Conference on Intelligent Robots and Systems (IROS 2026).*
-  <br><small>Key contribution: Designed an experimental testbed with <5% force control error and validated 20-30% reduction in metabolic cost.</small>
-
+title: Research
+permalink: /research/
+description: Selected academic work.
+nav: true
+nav_order: 3
 ---
 
-<!-- 第二部分：展示正在进行的科研方向 (Ongoing Research) -->
-## Ongoing Research
+<div class="research-page">
+  <h2>Academic Paper</h2>
 
-### Autonomous UAV Navigation via Fast-Planner
-**Advisor: Prof. Boyu Zhou**
-Working on real-time, kinodynamically feasible trajectory generation. Currently evaluating system performance in constrained circular circuits within RViz.
+  <article class="research-item">
+    <div class="research-media">
+      <video autoplay muted loop playsinline preload="metadata" aria-label="TEXEDO project teaser">
+        <source src="https://jianuocao.github.io/TEXEDO/videos/optimized/teaser.webm" type="video/webm">
+      </video>
+    </div>
 
-### Sim-to-Real Infrastructure for Dexterous Hands
-**Advisor: Prof. Zhao Tang**
-Developing a foundational pipeline in NVIDIA Isaac Sim for multi-fingered robotic palms. Focused on contact dynamics and closed-loop feedback experiments.
+    <div class="research-content">
+      <h3>
+        <a href="https://arxiv.org/pdf/2606.22998" target="_blank" rel="noopener noreferrer">
+          TEXEDO: Test Time Scaling for Controller-aware Language-conditioned Humanoid Motion Generation
+        </a>
+      </h3>
+      <p class="research-authors">
+        Jianuo Cao, Yuxin Chen*, <strong>Yuzhen Song</strong>, Masayoshi Tomizuka, Chenran Li, Thomas Tian
+      </p>
+      <p class="research-status"><em>Accepted by RSS WCBM Workshop</em><br><em>Under Review</em></p>
+      <p class="research-links">
+        <a href="https://arxiv.org/pdf/2606.22998" target="_blank" rel="noopener noreferrer">arXiv</a>
+        <span>/</span>
+        <a href="https://github.com/JianuoCao/TEXEDO" target="_blank" rel="noopener noreferrer">code</a>
+        <span>/</span>
+        <a href="https://jianuocao.github.io/TEXEDO/" target="_blank" rel="noopener noreferrer">website</a>
+        <span>/</span>
+        <a href="https://huggingface.co/JianuoCao/TEXEDO-Checkpoint" target="_blank" rel="noopener noreferrer">model</a>
+        <span>/</span>
+        <a href="https://huggingface.co/datasets/JianuoCao/TEXEDO" target="_blank" rel="noopener noreferrer">dataset</a>
+      </p>
+    </div>
+  </article>
+</div>
 
----
+<style>
+.research-page {
+  max-width: 960px;
+  margin: 0 auto;
+}
 
-<!-- 如果你想以后用 BibTeX 自动排版，可以保留下面这行作为备用 -->
-<!-- {% bibliography %} -->
+.research-page > h2 {
+  margin: 0 0 2rem;
+  color: #20251b;
+  font-size: 1.8rem;
+  font-weight: 750 !important;
+}
+
+.research-item {
+  display: grid;
+  grid-template-columns: minmax(260px, 34%) 1fr;
+  gap: 1.75rem;
+  align-items: start;
+}
+
+.research-media {
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: #151812;
+  border-radius: 8px;
+}
+
+.research-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.research-content h3 {
+  margin: 0 0 0.45rem;
+  font-size: 1.2rem;
+  font-weight: 750 !important;
+  line-height: 1.25;
+}
+
+.research-content h3 a,
+.research-links a {
+  color: #2879bd;
+  text-decoration: none;
+}
+
+.research-content h3 a:hover,
+.research-links a:hover {
+  color: #1b5f95;
+  text-decoration: underline;
+}
+
+.research-authors,
+.research-status,
+.research-links {
+  margin: 0 0 0.35rem;
+  line-height: 1.45;
+}
+
+.research-authors {
+  color: #252525;
+  font-size: 1rem;
+}
+
+.research-status {
+  color: #333;
+}
+
+.research-links {
+  margin-top: 0.9rem;
+  color: #777;
+  font-size: 1rem;
+}
+
+.research-links span {
+  margin: 0 0.22rem;
+  color: #777;
+}
+
+@media (max-width: 700px) {
+  .research-item {
+    grid-template-columns: 1fr;
+  }
+
+  .research-media {
+    max-width: 520px;
+  }
+}
+</style>
