@@ -5,7 +5,7 @@ permalink: /projects/
 description: My Robotics Projects！🤖
 nav: true
 nav_order: 3
-display_categories: [Competitions, Course Projects ]
+display_categories: [Research Projects, Competitions, Course Projects ]
 ---
 
 <div class="projects-container">
