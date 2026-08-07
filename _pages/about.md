@@ -10,11 +10,12 @@ profile:
   image: prof_pic.jpg
   image_circular: true
   more_info: >
-    <div class="profile-contact" style="margin-top: 0.85rem; padding-top: 0.85rem; border-top: 1px solid rgba(143, 177, 98, 0.28); font-size: 0.9rem; line-height: 1.45;">
-      <div style="display: grid; grid-template-columns: 4.5rem minmax(0, 1fr); gap: 0.45rem; margin: 0.32rem 0; align-items: baseline;"><span style="color: #8fb162; font-weight: 600;">Location</span><span>SUSTech, Shenzhen</span></div>
-      <div style="display: grid; grid-template-columns: 4.5rem minmax(0, 1fr); gap: 0.45rem; margin: 0.32rem 0; align-items: baseline;"><span style="color: #8fb162; font-weight: 600;">Name</span><span>Yuzhen Song</span></div>
-      <div style="display: grid; grid-template-columns: 4.5rem minmax(0, 1fr); gap: 0.45rem; margin: 0.32rem 0; align-items: baseline;"><span style="color: #8fb162; font-weight: 600;">Email</span><a href="mailto:12312836@mail.sustech.edu.cn" style="color: inherit; text-decoration: underline; text-underline-offset: 2px; overflow-wrap: anywhere;">12312836@mail.sustech.edu.cn</a></div>
-      <div style="display: grid; grid-template-columns: 4.5rem minmax(0, 1fr); gap: 0.45rem; margin: 0.32rem 0; align-items: baseline;"><span style="color: #8fb162; font-weight: 600;">Phone</span><a href="tel:+8618186518423" style="color: inherit; text-decoration: underline; text-underline-offset: 2px;">+86 18186518423</a></div>
+    <div class="profile-contact-card">
+      <div class="profile-contact-name">Yuzhen Song</div>
+      <ul class="profile-contact-education">
+        <li>2023–present, B.E. in Robotics Engineering,<br>Southern University of Science and Technology</li>
+      </ul>
+      <a class="profile-contact-email" href="mailto:12312836@mail.sustech.edu.cn">12312836@mail.sustech.edu.cn</a>
     </div>
 
 selected_papers: false 
@@ -54,31 +55,39 @@ social: true
 </div>
 
 <style>
-.profile-contact {
-  margin-top: 0.75rem;
-  padding-top: 0.85rem;
-  border-top: 1px solid rgba(143, 177, 98, 0.28);
-  font-size: 0.88rem;
-  line-height: 1.45;
+.profile-contact-card {
+  margin-top: 1.05rem;
+  text-align: center;
+  line-height: 1.55;
 }
 
-.profile-contact p {
-  display: grid;
-  grid-template-columns: 4.2rem 1fr;
-  gap: 0.45rem;
-  margin: 0.28rem 0;
-  align-items: baseline;
+.profile-contact-name {
+  margin-bottom: 0.65rem;
+  color: #20251b;
+  font-size: 1.35rem;
+  font-weight: 500;
 }
 
-.profile-contact span {
+.profile-contact-education {
+  display: inline-block;
+  margin: 0 auto 0.85rem;
+  padding-left: 1.15rem;
+  color: #333;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.profile-contact-email {
+  display: block;
+  color: #20251b;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  font-size: 0.95rem;
+}
+
+.profile-contact-email:hover {
   color: #8fb162;
-  font-weight: 600;
-}
-
-.profile-contact a {
-  color: inherit;
   text-decoration: underline;
-  text-underline-offset: 2px;
 }
 
 .about-intro {
