@@ -10,12 +10,12 @@ profile:
   image: prof_pic.jpg
   image_circular: true
   more_info: >
-    <div class="profile-contact-card">
-      <div class="profile-contact-name">Yuzhen Song</div>
-      <ul class="profile-contact-education">
-        <li>2023–present, B.E. in Robotics Engineering,<br>Southern University of Science and Technology</li>
-      </ul>
-      <a class="profile-contact-email" href="mailto:12312836@mail.sustech.edu.cn">12312836@mail.sustech.edu.cn</a>
+    <div class="profile-contact-card" style="display: flex; flex-direction: column; align-items: center; margin-top: 0.95rem; color: #20251b; font-family: Inter, Helvetica Neue, Arial, sans-serif; line-height: 1.38; letter-spacing: -0.015em; text-align: center;">
+      <div class="profile-contact-name" style="width: 100%; margin-bottom: 0.55rem; color: #20251b; font-size: 1.3rem; font-weight: 500; letter-spacing: -0.02em; text-align: center;">Yuzhen Song</div>
+      <div class="profile-contact-education" style="width: 100%; max-width: 18rem; margin: 0 auto 0.7rem; color: #333; text-align: center; font-size: 0.92rem; line-height: 1.45; letter-spacing: -0.01em;">
+        2023–present, B.E. in Robotics Engineering<br>Southern University of Science and Technology
+      </div>
+      <a class="profile-contact-email" href="mailto:12312836@mail.sustech.edu.cn" style="display: block; width: 100%; color: #20251b; text-align: center; text-decoration: none; overflow-wrap: anywhere; font-size: 0.92rem; letter-spacing: -0.01em;">12312836@mail.sustech.edu.cn</a>
     </div>
 
 selected_papers: false 
@@ -56,25 +56,34 @@ social: true
 
 <style>
 .profile-contact-card {
-  margin-top: 1.05rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0.95rem;
+  color: #20251b;
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.38;
+  letter-spacing: -0.015em;
   text-align: center;
-  line-height: 1.55;
 }
 
 .profile-contact-name {
-  margin-bottom: 0.65rem;
+  margin-bottom: 0.55rem;
   color: #20251b;
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   font-weight: 500;
+  letter-spacing: -0.02em;
 }
 
 .profile-contact-education {
   display: inline-block;
-  margin: 0 auto 0.85rem;
-  padding-left: 1.15rem;
+  margin: 0 auto 0.7rem;
+  padding-left: 1rem;
   color: #333;
   text-align: left;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
 }
 
 .profile-contact-email {
@@ -82,7 +91,8 @@ social: true
   color: #20251b;
   text-decoration: none;
   overflow-wrap: anywhere;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
+  letter-spacing: -0.01em;
 }
 
 .profile-contact-email:hover {
