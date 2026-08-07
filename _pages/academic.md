@@ -19,7 +19,7 @@ nav_order: 3
 
     <div class="academic-content">
       <h3>
-        <a href="https://arxiv.org/abs/2606.22998" target="_blank" rel="noopener noreferrer">
+        <a href="https://arxiv.org/pdf/2606.22998" target="_blank" rel="noopener noreferrer">
           TEXEDO: Test Time Scaling for Controller-aware Language-conditioned Humanoid Motion Generation
         </a>
       </h3>
@@ -28,7 +28,7 @@ nav_order: 3
       </p>
       <p class="academic-status"><em>Accepted by RSS WCBM Workshop</em><br><em>Under Review</em></p>
       <p class="academic-links">
-        <a href="https://arxiv.org/pdf/2606.22998" target="_blank" rel="noopener noreferrer">arXiv</a>
+        <a href="https://arxiv.org/abs/2606.22998" target="_blank" rel="noopener noreferrer">arXiv</a>
         <span>/</span>
         <a href="https://github.com/JianuoCao/TEXEDO" target="_blank" rel="noopener noreferrer">code</a>
         <span>/</span>
