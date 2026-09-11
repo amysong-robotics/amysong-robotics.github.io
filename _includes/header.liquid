@@ -49,7 +49,7 @@
           <!-- About -->
           <li class="nav-item dock-nav-item {% if page.permalink == '/' %}active{% endif %}">
             <a class="nav-link dock-nav-link" href="{{ '/' | relative_url }}" aria-label="Home" title="Home">
-              <span class="dock-nav-icon dock-home-icon" aria-hidden="true"></span>
+              <i class="dock-nav-icon fas fa-home" aria-hidden="true"></i>
               <span class="dock-nav-label">{{- about_title }}</span>
               {% if page.permalink == '/' %}
                 <span class="sr-only">(current)</span>
@@ -110,11 +110,11 @@
                   {%- endif %}
                   <a class="nav-link dock-nav-link" href="{{ url | relative_url }}" title="{{ p.title }}">
                     {% if p.title == 'Academic' %}
-                      <span class="dock-nav-icon dock-academic-icon" aria-hidden="true"></span>
+                      <i class="dock-nav-icon fas fa-book-open" aria-hidden="true"></i>
                     {% elsif p.title == 'Projects' %}
-                      <span class="dock-nav-icon dock-projects-icon" aria-hidden="true"></span>
+                      <i class="dock-nav-icon fas fa-layer-group" aria-hidden="true"></i>
                     {% else %}
-                      <span class="dock-nav-icon dock-page-icon" aria-hidden="true"></span>
+                      <i class="dock-nav-icon fas fa-file-alt" aria-hidden="true"></i>
                     {% endif %}
                     <span class="dock-nav-label">{{- p.title }}</span>
                     {% if page.url contains p.url %}
@@ -127,7 +127,7 @@
           {% endfor %}
           <li class="nav-item dock-nav-item">
             <a class="nav-link dock-nav-link" href="https://github.com/amysong-robotics" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
-              <span class="dock-nav-icon dock-github-icon" aria-hidden="true"></span>
+              <i class="dock-nav-icon fab fa-github" aria-hidden="true"></i>
               <span class="dock-nav-label">GitHub</span>
             </a>
           </li>
