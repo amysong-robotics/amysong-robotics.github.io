@@ -84,13 +84,43 @@ h1, h2, h3, .navbar-brand {
 }
 
 // 4. 个人照片美化
-.profile img {
-  border-radius: 20px !important; // 圆角照片
-  box-shadow: 0 15px 35px rgba(143, 177, 98, 0.15) !important; // 浅绿色柔和阴影
-  transition: transform 0.3s ease;
-  
-  &:hover {
-    transform: translateY(-5px); // 鼠标指上去轻轻浮起
+.profile-photo-overlap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(143, 177, 98, 0.15);
+}
+
+.profile-photo-original,
+.profile-photo-hover {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 20px !important;
+}
+
+.profile-photo-original {
+  position: relative;
+  z-index: 1;
+}
+
+.profile-photo-hover {
+  position: absolute;
+  z-index: 2;
+  top: -100%;
+  left: 0;
+  transition: top 0.5s ease;
+}
+
+.profile-photo-overlap:hover .profile-photo-hover,
+.profile-photo-overlap:focus-within .profile-photo-hover {
+  top: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .profile-photo-hover {
+    transition: none;
   }
 }
 
