@@ -41,15 +41,16 @@
       </button>
 
       <div class="collapse navbar-collapse text-right" id="navbarNav">
-        <ul class="navbar-nav ml-auto flex-nowrap">
+        <ul class="navbar-nav ml-auto flex-nowrap dock-nav">
           {% for page in site.pages %}
             {% if page.permalink == '/' %} {% assign about_title = page.title %} {% endif %}
           {% endfor %}
 
           <!-- About -->
-          <li class="nav-item {% if page.permalink == '/' %}active{% endif %}">
-            <a class="nav-link" href="{{ '/' | relative_url }}">
-              {{- about_title }}
+          <li class="nav-item dock-nav-item {% if page.permalink == '/' %}active{% endif %}">
+            <a class="nav-link dock-nav-link" href="{{ '/' | relative_url }}" aria-label="Home" title="Home">
+              <span class="dock-nav-icon dock-home-icon" aria-hidden="true"></span>
+              <span class="dock-nav-label">{{- about_title }}</span>
               {% if page.permalink == '/' %}
                 <span class="sr-only">(current)</span>
               {% endif %}
@@ -99,7 +100,7 @@
                 </li>
               {% else %}
                 {% assign parent_link = p.permalink | remove: 'index.html' %}
-                <li class="nav-item {% if page.url contains parent_link %}active{% endif %}">
+                <li class="nav-item dock-nav-item {% if page.url contains parent_link %}active{% endif %}">
                   {%- if p.permalink contains '://' -%}
                     {%- assign url = p.permalink -%}
                   {%- elsif p.permalink contains '/blog/' -%}
@@ -107,8 +108,15 @@
                   {%- else -%}
                     {%- assign url = p.url -%}
                   {%- endif %}
-                  <a class="nav-link" href="{{ url | relative_url }}">
-                    {{- p.title }}
+                  <a class="nav-link dock-nav-link" href="{{ url | relative_url }}" title="{{ p.title }}">
+                    {% if p.title == 'Academic' %}
+                      <span class="dock-nav-icon dock-academic-icon" aria-hidden="true"></span>
+                    {% elsif p.title == 'Projects' %}
+                      <span class="dock-nav-icon dock-projects-icon" aria-hidden="true"></span>
+                    {% else %}
+                      <span class="dock-nav-icon dock-page-icon" aria-hidden="true"></span>
+                    {% endif %}
+                    <span class="dock-nav-label">{{- p.title }}</span>
                     {% if page.url contains p.url %}
                       <span class="sr-only">(current)</span>
                     {% endif %}
@@ -117,6 +125,12 @@
               {% endif %}
             {% endif %}
           {% endfor %}
+          <li class="nav-item dock-nav-item">
+            <a class="nav-link dock-nav-link" href="https://github.com/amysong-robotics" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+              <span class="dock-nav-icon dock-github-icon" aria-hidden="true"></span>
+              <span class="dock-nav-label">GitHub</span>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
