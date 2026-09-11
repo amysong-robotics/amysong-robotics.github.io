@@ -35,12 +35,38 @@
 
 body {
   // 1. 增加极简波点背景（类似工程绘图纸）
+  position: relative;
   background-color: #fcfdf9;
   background-image: radial-gradient(#d1d8c1 0.6px, transparent 0.6px);
   background-size: 24px 24px;
   
   font-family: 'Inter', sans-serif !important;
   color: #333;
+}
+
+body::before {
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    circle 150px at var(--dot-cursor-x, 50%) var(--dot-cursor-y, 50%),
+    rgba(209, 216, 193, 0.2),
+    transparent 75%
+  );
+  content: "";
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+body.dot-background-active::before {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce), (hover: none) {
+  body::before {
+    display: none;
+  }
 }
 
 // 2. 标题美化
