@@ -79,10 +79,6 @@ category: Course Projects
       </article>
     </div>
 
-    <figure class="splatslam-figure pipeline-figure">
-      <img src="{{ '/assets/img/pipeline.png' | relative_url }}" alt="SplatSLAM processing pipeline">
-      <figcaption>SplatSLAM processing pipeline: video preprocessing, MASt3R-SLAM mapping, point-cloud refinement, and 3DGS rendering.</figcaption>
-    </figure>
   </section>
 
   <section id="experiments" class="splatslam-section">
