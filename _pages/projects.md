@@ -14,13 +14,19 @@ display_categories: [Research Projects, Course Projects, Competitions]
       <h2 class="category-title">{{ category }}</h2>
       <div class="project-list">
         {% assign categorized_projects = site.projects | where: "category", category %}
+        {% if category == "Research Projects" %}
+          {% assign beat_project = site.projects | where: "title", "BEAT: Posture-Independent Wrist Blood Pressure Monitor" | first %}
+          {% if beat_project %}
+            {% assign categorized_projects = categorized_projects | push: beat_project %}
+          {% endif %}
+        {% endif %}
         {% assign visible_projects = "" | split: "" %}
         {% for project in categorized_projects %}
           {% unless project.title == "Autonomous UAV Mission Navigation" or project.title == "Replicating DDAT: Diffusion Policies for Robot Trajectories" %}
             {% assign visible_projects = visible_projects | push: project %}
           {% endunless %}
         {% endfor %}
-        {% assign sorted_projects = visible_projects | sort: "importance" %}
+        {% assign sorted_projects = visible_projects | sort: "importance" | uniq %}
         
         {% for project in sorted_projects %}
         {% assign project_href = project.url | relative_url %}
