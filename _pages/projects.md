@@ -24,6 +24,9 @@ display_categories: [Research Projects, Course Projects, Competitions]
         
         {% for project in sorted_projects %}
         {% assign project_href = project.url | relative_url %}
+        {% if project.title == "BEAT: Posture-Independent Wrist Blood Pressure Monitor" %}
+          {% assign project_href = '/projects/beat/' | relative_url %}
+        {% endif %}
         {% if project.redirect %}
           {% assign project_href = project.redirect %}
         {% endif %}
