@@ -34,7 +34,11 @@ display_categories: [Research Projects, Course Projects, Competitions]
           <!-- 左侧：图片 -->
           <div class="paper-img-box">
             <a href="{{ project_href }}">
-              <img src="{{ project.img | relative_url }}" alt="project thumbnail">
+              {% if project.title == "BEAT: Posture-Independent Wrist Blood Pressure Monitor" %}
+                <div class="beat-project-cover" role="img" aria-label="BEAT blood pressure project cover"></div>
+              {% else %}
+                <img src="{{ project.img | relative_url }}" alt="project thumbnail">
+              {% endif %}
             </a>
           </div>
           
@@ -90,7 +94,8 @@ display_categories: [Research Projects, Course Projects, Competitions]
   max-width: 280px;
 }
 
-.paper-img-box img {
+.paper-img-box img,
+.beat-project-cover {
   width: 100%;
   height: 180px;   /* 强制图片高度统一为 180px */
   object-fit: cover; /* 裁剪多余部分，保证不缩放变形 */
@@ -99,8 +104,13 @@ display_categories: [Research Projects, Course Projects, Competitions]
   transition: transform 0.3s ease;
 }
 
-.paper-img-box img:hover {
+.paper-img-box img:hover,
+.beat-project-cover:hover {
   transform: scale(1.02);
+}
+
+.beat-project-cover {
+  background: #f5f5f1 url("{{ '/assets/img/pressure_with_different_postures.pdf' | relative_url }}") center / cover no-repeat;
 }
 
 /* 文字区域 */
