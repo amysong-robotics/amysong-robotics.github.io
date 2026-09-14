@@ -52,6 +52,22 @@ display_categories: [Research Projects, Course Projects, Competitions]
           </div>
         </div>
         {% endfor %}
+
+        {% if category == "Research Projects" %}
+        <div class="paper-item">
+          <div class="paper-img-box">
+            <a href="{{ '/projects/8_project/' | relative_url }}">
+              <img src="{{ '/assets/img/pressure_with_different_postures-cover.png' | relative_url }}" alt="BEAT blood pressure project cover">
+            </a>
+          </div>
+          <div class="paper-info">
+            <h3 class="paper-title">
+              <a href="{{ '/projects/8_project/' | relative_url }}">BEAT: Posture-Independent Wrist Blood Pressure Monitor</a>
+            </h3>
+            <p class="paper-description">A barometric-inertial sensing system for compensating hydrostatic errors in wrist blood pressure measurement.</p>
+          </div>
+        </div>
+        {% endif %}
       </div>
     {% endfor %}
   {% endif %}
