@@ -5,7 +5,6 @@ description: A barometric-inertial sensing system for compensating hydrostatic e
 img: assets/img/pressure_with_different_postures-cover.png
 importance: 5
 category: Research Projects
-permalink: /projects/beat/
 ---
 
 ## Overview

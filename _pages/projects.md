@@ -24,9 +24,6 @@ display_categories: [Research Projects, Course Projects, Competitions]
         
         {% for project in sorted_projects %}
         {% assign project_href = project.url | relative_url %}
-        {% if project.title == "BEAT: Posture-Independent Wrist Blood Pressure Monitor" %}
-          {% assign project_href = '/projects/beat/' | relative_url %}
-        {% endif %}
         {% if project.redirect %}
           {% assign project_href = project.redirect %}
         {% endif %}
@@ -34,8 +31,10 @@ display_categories: [Research Projects, Course Projects, Competitions]
           <!-- 左侧：图片 -->
           <div class="paper-img-box">
             <a href="{{ project_href }}">
-              {% if project.title == "BEAT: Posture-Independent Wrist Blood Pressure Monitor" %}
-                <div class="beat-project-cover" role="img" aria-label="BEAT blood pressure project cover"></div>
+              {% if project.img contains '.pdf' %}
+                <object data="{{ project.img | relative_url }}" type="application/pdf" aria-label="{{ project.title }} project cover">
+                  <div class="pdf-project-cover">{{ project.title }}</div>
+                </object>
               {% else %}
                 <img src="{{ project.img | relative_url }}" alt="project thumbnail">
               {% endif %}
@@ -95,7 +94,8 @@ display_categories: [Research Projects, Course Projects, Competitions]
 }
 
 .paper-img-box img,
-.beat-project-cover {
+.paper-img-box object,
+.pdf-project-cover {
   width: 100%;
   height: 180px;   /* 强制图片高度统一为 180px */
   object-fit: cover; /* 裁剪多余部分，保证不缩放变形 */
@@ -105,12 +105,19 @@ display_categories: [Research Projects, Course Projects, Competitions]
 }
 
 .paper-img-box img:hover,
-.beat-project-cover:hover {
+.paper-img-box object:hover {
   transform: scale(1.02);
 }
 
-.beat-project-cover {
-  background: #f5f5f1 url("{{ '/assets/img/pressure_with_different_postures.pdf' | relative_url }}") center / cover no-repeat;
+.pdf-project-cover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: #f5f5f1;
+  color: #6f8f45;
+  text-align: center;
+  font-weight: 700;
 }
 
 /* 文字区域 */
@@ -165,8 +172,11 @@ display_categories: [Research Projects, Course Projects, Competitions]
     width: 100%;
     max-width: 100%;
   }
-  .paper-img-box img {
+  .paper-img-box img,
+  .paper-img-box object,
+  .pdf-project-cover {
     height: auto;
+    min-height: 180px;
   }
 }
 </style>
