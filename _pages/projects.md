@@ -37,13 +37,7 @@ display_categories: [Research Projects, Course Projects, Competitions]
           <!-- 左侧：图片 -->
           <div class="paper-img-box">
             <a href="{{ project_href }}">
-              {% if project.img contains '.pdf' %}
-                <object data="{{ project.img | relative_url }}" type="application/pdf" aria-label="{{ project.title }} project cover">
-                  <div class="pdf-project-cover">{{ project.title }}</div>
-                </object>
-              {% else %}
-                <img src="{{ project.img | relative_url }}" alt="project thumbnail">
-              {% endif %}
+              <img src="{% if project.title == 'BEAT: Posture-Independent Wrist Blood Pressure Monitor' %}{{ '/assets/img/pressure_with_different_postures-cover.png' | relative_url }}{% else %}{{ project.img | relative_url }}{% endif %}" alt="project thumbnail">
             </a>
           </div>
           
@@ -99,31 +93,18 @@ display_categories: [Research Projects, Course Projects, Competitions]
   max-width: 280px;
 }
 
-.paper-img-box img,
-.paper-img-box object,
-.pdf-project-cover {
+.paper-img-box img {
   width: 100%;
-  height: 180px;   /* 强制图片高度统一为 180px */
-  object-fit: cover; /* 裁剪多余部分，保证不缩放变形 */
+  height: 180px;   /* 统一封面区域高度 */
+  object-fit: contain;
+  background: #f5f5f1;
   border-radius: 4px;
   border: 1px solid #eee;
   transition: transform 0.3s ease;
 }
 
-.paper-img-box img:hover,
-.paper-img-box object:hover {
+.paper-img-box img:hover {
   transform: scale(1.02);
-}
-
-.pdf-project-cover {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  background: #f5f5f1;
-  color: #6f8f45;
-  text-align: center;
-  font-weight: 700;
 }
 
 /* 文字区域 */
@@ -178,11 +159,8 @@ display_categories: [Research Projects, Course Projects, Competitions]
     width: 100%;
     max-width: 100%;
   }
-  .paper-img-box img,
-  .paper-img-box object,
-  .pdf-project-cover {
-    height: auto;
-    min-height: 180px;
+  .paper-img-box img {
+    height: 180px;
   }
 }
 </style>

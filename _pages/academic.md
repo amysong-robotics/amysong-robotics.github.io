@@ -26,7 +26,7 @@ nav_order: 3
       <p class="academic-authors">
         Jianuo Cao*, Yuxin Chen*, <strong>Yuzhen Song</strong>, Masayoshi Tomizuka, Chenran Li, Thomas Tian
       </p>
-      <p class="academic-status"><em>Accepted and presented at RSS 2026 WCBM &amp; RoboData Workshops</em></p>
+      <p class="academic-status"><em>Accepted by CoRL 2026</em><br><em>Presented at RSS 2026 WCBM &amp; RoboData Workshops</em></p>
       <p class="academic-links">
         <a href="https://arxiv.org/abs/2606.22998" target="_blank" rel="noopener noreferrer">arXiv</a>
         <span>/</span>
