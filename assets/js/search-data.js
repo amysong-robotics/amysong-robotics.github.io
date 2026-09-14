@@ -429,9 +429,9 @@ ninja.data = [{
           description: "An independent reproduction of DDAT in MuJoCo, evaluating the necessity of projection operators across four underactuated robotic systems.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/7_project/";
-            },},{id: "projects-",
-          title: '',
-          description: "",
+            },},{id: "projects-beat-posture-independent-wrist-blood-pressure-monitor",
+          title: 'BEAT: Posture-Independent Wrist Blood Pressure Monitor',
+          description: "A barometric-inertial sensing system for compensating hydrostatic errors in wrist blood pressure measurement.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/8_project/";
             },},{id: "projects-splatslam",
