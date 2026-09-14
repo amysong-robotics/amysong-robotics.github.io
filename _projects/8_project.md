@@ -9,6 +9,11 @@ category: Research Projects
 
 ## Overview
 
+<figure class="beat-cover-figure">
+  <img src="{{ '/assets/img/pressure_with_different_postures-cover.png' | relative_url }}" alt="BEAT posture-independent blood pressure measurement workflow">
+  <figcaption>Two-phase BEAT workflow: heart-level calibration followed by posture-independent wrist blood pressure measurement.</figcaption>
+</figure>
+
 BEAT (Barometric Elevation and Attitude Tracking) is a wrist blood pressure monitoring system designed to reduce posture-related measurement errors. Wrist-worn monitors are convenient, but a vertical offset between the wrist and heart can introduce a hydrostatic pressure error of approximately 0.77 mmHg per centimeter.
 
 The system uses a detachable sensing module. First, the module is placed at heart level to record a zero-reference atmospheric pressure. It is then re-attached to the wrist cuff, where barometric and inertial sensing tracks the wrist's elevation and orientation during measurement. The system applies a real-time hydrostatic compensation to the oscillometric blood-pressure estimate.
@@ -94,6 +99,29 @@ This project was developed for the **Fundamentals of Sensing Technology** course
 .beat-project-button:hover {
   background: #6f8f45;
   transform: translateY(-2px);
+}
+
+.beat-cover-figure {
+  max-width: 920px;
+  margin: 1rem auto 1.75rem;
+  text-align: center;
+}
+
+.beat-cover-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background: #f7f8f5;
+  border: 1px solid rgba(143, 177, 98, 0.2);
+  border-radius: 8px;
+}
+
+.beat-cover-figure figcaption {
+  margin-top: 0.5rem;
+  color: #777;
+  font-size: 0.88rem;
+  line-height: 1.45;
 }
 
 .beat-figure {
