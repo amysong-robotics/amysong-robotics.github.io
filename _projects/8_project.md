@@ -1,6 +1,6 @@
 ---
 layout: page
-title: BEAT: Posture-Independent Wrist Blood Pressure Monitor
+title: "BEAT: Posture-Independent Wrist Blood Pressure Monitor"
 description: A barometric-inertial sensing system for compensating hydrostatic errors in wrist blood pressure measurement.
 img: assets/img/pressure_with_different_postures-cover.png
 importance: 5
