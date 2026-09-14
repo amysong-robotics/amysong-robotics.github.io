@@ -5,7 +5,7 @@ permalink: /projects/
 description: My Robotics Projects！🤖
 nav: true
 nav_order: 4
-display_categories: [Research Projects, Competitions, Course Projects ]
+display_categories: [Research Projects, Course Projects, Competitions]
 ---
 
 <div class="projects-container">
@@ -14,7 +14,13 @@ display_categories: [Research Projects, Competitions, Course Projects ]
       <h2 class="category-title">{{ category }}</h2>
       <div class="project-list">
         {% assign categorized_projects = site.projects | where: "category", category %}
-        {% assign sorted_projects = categorized_projects | sort: "importance" %}
+        {% assign visible_projects = "" | split: "" %}
+        {% for project in categorized_projects %}
+          {% unless project.title == "Autonomous UAV Mission Navigation" or project.title == "Replicating DDAT: Diffusion Policies for Robot Trajectories" %}
+            {% assign visible_projects = visible_projects | push: project %}
+          {% endunless %}
+        {% endfor %}
+        {% assign sorted_projects = visible_projects | sort: "importance" %}
         
         {% for project in sorted_projects %}
         {% assign project_href = project.url | relative_url %}
