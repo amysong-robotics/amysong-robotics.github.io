@@ -26,7 +26,7 @@ The system uses a detachable sensing module. First, the module is placed at hear
 
 <div class="beat-project-links">
   <a class="beat-project-button" href="{{ '/assets/pdf/beat-paper.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">Paper</a>
-  <a class="beat-project-button" href="#" aria-label="GitHub repository placeholder">GitHub (coming soon)</a>
+  <span class="beat-project-button beat-project-button-disabled" aria-label="GitHub repository placeholder">GitHub (coming soon)</span>
 </div>
 
 ## System Design
